@@ -1,0 +1,482 @@
+% !TEX TS-program = xelatex
+\documentclass[12pt,a4paper]{article}
+
+% House style preamble
+\input{.house-style/preamble.tex}
+
+% Additional packages for this paper
+\usepackage{setspace}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{pifont} % For checkmarks
+
+% Custom commands for this paper
+\newcommand{\cmark}{\ding{51}} % Checkmark
+\newcommand{\xmark}{\ding{55}} % X mark
+\newcommand{\qmark}{?}         % Question mark for marginal
+
+% Title
+\title{The Homeostatic Maintenance of Countability:\\Bidirectional Inference and the Stability of Grammatical Clusters}
+\author{Brett Reynolds\\Humber Polytechnic \& University of Toronto}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+English count properties (singular--plural contrast, \term{a}(\term{n}), low numerals, \term{many/few}, distributive quantifiers, plural agreement) form an exceptionally tight cluster, yet in quasi-count nouns (\term{cattle}, \term{police}, \term{clergy}) they dissociate in a constrained order. Existing accounts stipulate the clustering or describe its gradience without explaining its stability or the directionality of dissociation.
+
+I argue that morphosyntactic countability~-- distinct from ontological discreteness and semantic individuation~-- is a homeostatic property cluster sustained by bidirectional inference: count syntax cues individuated construals in comprehension; individuated construals license count syntax in production. Because count properties differ in the precision of individuation they demand, when individuation weakens, properties dissociate in a predictable hierarchy: tight properties (singular, \term{a}(\term{n}), low cardinals) fail before loose ones (\term{many}, high round numerals, plural agreement).
+
+The account derives the quasi-count pattern documented in \textit{CGEL}, the triangular noun $\times$ property matrix, the stability of \term{cattle}/\term{police} (functional anchoring via \term{cow}/\term{officer}), and the instability of boundary cases like \term{folks}. Cross-linguistic and diachronic predictions follow that are absent from alternative approaches.
+\end{abstract}
+
+\doublespacing
+
+%--------------------------------------------------
+\section{Introduction: The puzzle of stable clustering}
+%--------------------------------------------------
+
+Count properties in English hang together strikingly: singular--plural contrast, \term{a}(\term{n}) selection, low cardinals, \term{many/few} vs.\ \term{much/little}, plural agreement, demonstratives, and distributive quantifiers almost always align. But quasi-count plurals such as \term{cattle} and \term{police} peel off the tightest properties first while keeping the looser ones. The pattern is implicational and stable over time.
+
+Feature-bundle accounts (e.g., \citealt{lyons1968,quirk1985}) encode the clustering but can't explain why it persists. Prototype descriptions (e.g., \citealt{taylor2003,aarts2007}) capture gradience but not the ordering. A homeostatic property cluster view does better: countability is a cluster maintained by causal mechanisms rather than mere resemblance. The puzzle is why the cluster is so resistant to random drift but still allows orderly partial dissociation.
+
+On the HPC view, a kind is held together by mechanisms that make its properties mutually reinforcing rather than by a single essence. Members can vary, some properties can fail locally, and the cluster stays recognisable because causal feedback pushes it back toward coherence \citep{boyd1991,khalidi2013}. Biological species are the textbook case; as far as I know, \textcite{miller2021} is the first to apply HPCs in linguistics, doing so for words, and I claim English countability is another such case.
+
+I argue that bidirectional inference between form and meaning provides the homeostasis. Count morphosyntax evidences an individuated construal in comprehension; an individuated construal licences count morphosyntax in production. When individuation weakens, tight-linkage properties fail first, yielding the familiar hierarchy; stable intermediates arise when functional alternatives (e.g., \term{officer} for \term{police}) bleed pressure to complete the cluster.
+
+Empirically, I assemble a noun $\times$ property matrix for English diagnostic nouns and report a small acceptability probe targeting the hierarchy's predicted asymmetries. The account predicts no reverse patterns (tight without loose), explains the determiner and demonstrative facts, and yields cross-linguistic and diachronic expectations. The rest of the paper develops the mechanism (\S\ref{sec:mechanism}), the hierarchy (\S\ref{sec:hierarchy}), and the quasi-count evidence, then contrasts alternative approaches before sketching extensions.
+
+%--------------------------------------------------
+\section{Three levels of countability}
+%--------------------------------------------------
+
+The term \term{countability} conflates three distinct levels. Ontological discreteness (whether referents exist as bounded units in the world), semantic individuation (whether speakers construe referents as discrete units), and morphosyntactic countability (whether nouns exhibit the grammatical cluster examined here) don't always align. Conflating them obscures the causal structure this paper proposes.
+
+\textbf{Ontological discreteness} concerns world structure: whether referents exist as bounded, individuable units independent of how language carves them. Rice grains, cattle, furniture items, and books are all physically discrete. Yet \term{rice} and \term{furniture} are mass, \term{cattle} is quasi-count, and \term{book} is fully count. Physical discreteness doesn't determine grammatical behaviour, so it can't be the direct input to morphosyntax.
+
+\textbf{Semantic individuation} is a construal operation: whether a noun packages its referents as atomic units accessible to quantification \citep{chierchia1998,rothstein2010,grimm2018}. This is the level at which \term{furniture} and \term{equipment} differ from \term{chairs} and \term{devices}. The referents may be equally discrete in the world, but the nouns construe them differently. \term{Furniture} denotes discrete objects, but the noun doesn't support tight individuation~-- it resists \ungram{\term{a furniture}} and \ungram{\term{three furnitures}} even though its referents are countable in principle. Individuation can shift in context~-- \term{three coffees} individuates portions; \term{much coffee} construes the same substance as mass~-- and alternations like \term{beer/a beer}, \term{glass/a glass} show that a single lexeme can encode both profiles.
+
+\textbf{Morphosyntactic countability} is the grammatical cluster \citep[pp.~333--336]{huddleston2002,allan1980}: singular--plural contrast, \term{a}(\term{n}) selection, numeral compatibility, \term{many/few} vs.\ \term{much/little}, plural agreement, demonstrative selection, distributive quantifiers. For a given noun sense in English, its \textbf{countability profile} is the pattern it shows across these diagnostics. These properties cluster tightly in \term{book}, partially in \term{cattle} and \term{police}, and are absent in \term{furniture}.
+
+The three levels dissociate systematically:
+
+\begin{itemize}
+\item \term{Rice} and \term{sand}: ontologically discrete, but semantically non-individuated (construed as granular aggregates), morphosyntactically mass.
+\item \term{Furniture}: ontologically discrete (composed of distinct objects), but semantically construed as an unbounded superordinate category rather than enumerable items, hence morphosyntactically mass.
+\item \term{Cattle} and \term{police}: ontologically discrete, semantically grouped as aggregates of individuals, morphosyntactically intermediate (quasi-count).
+\end{itemize}
+
+These dissociations aren't random~-- they follow the hierarchy proposed in \S\ref{sec:hierarchy}. Much confusion in the literature arises from sliding between levels. Claims that \enquote{mass nouns denote stuff without boundaries} conflate semantics with ontology. Claims that \enquote{count nouns have plurals} mistake one salient property for the cluster as a whole.
+
+This paper addresses morphosyntactic countability: why the grammatical properties cluster and how they dissociate when individuation weakens. The mechanism links semantic individuation (a construal operation) to morphosyntactic forms (the count cluster) through bidirectional inference. Ontological discreteness matters only insofar as it influences construal; it doesn't directly trigger grammatical properties. The three-level distinction lets us locate the causal mechanism precisely: between individuation and morphosyntax, not between world structure and grammar.
+
+\textbf{Scope.} The data here are drawn from descriptive grammars of contemporary standard English, primarily \textit{CGEL}; the hierarchy's applicability to other varieties, registers, and historical stages is an empirical question the framework generates but does not resolve. Register variation (e.g., agricultural speakers accepting \term{three cattle}) is not noise to be filtered but evidence for the precision-demand story: when communicative context raises the need for exact enumeration, even quasi-count nouns can be pressed into tight-linkage frames.
+
+%--------------------------------------------------
+\section{The homeostatic mechanism: Bidirectional inference}\label{sec:mechanism}
+%--------------------------------------------------
+
+\subsection{The mechanism specified}\label{sec:mechanism-spec}
+
+Morphosyntactic countability in English comprises a cluster of properties: singular--plural contrast, \term{a}(\term{n}) selection, numeral compatibility, \term{many/few} vs.\ \term{much/little}, distributive quantifiers, plural agreement. These properties co-occur across the lexicon, but standard accounts either stipulate the bundle or gesture at prototypes without explaining stability.
+
+The account developed here rests on three claims.
+
+\textbf{Representational claim.} There is a semantic variable~-- call it the \textit{individuation parameter}~-- whose value ranges from ``no atomic units accessible'' (mass construal) to ``fully discrete units accessible'' (count construal). This parameter is gradient, not binary; it can take intermediate values where atoms are partially but not fully accessible to enumeration.
+
+\textbf{Mapping claim.} Each count property is associated with a threshold on that parameter~-- the minimum degree of individuation it requires. The thresholds differ:
+
+\begin{itemize}
+\item \term{a}(\term{n}) and low cardinals require high-precision individuation: selecting exactly one atom or an exact $n$-tuple of atoms.
+\item \term{several} requires discrete atoms but tolerates a vague lower bound (``more than two, not many'').
+\item \term{many} and high round numerals require only magnitude assessment against a contextual threshold; atoms need not be sharply bounded.
+\item Plural agreement requires only that the referent be construed as non-singular.
+\end{itemize}
+
+\textbf{Inference claim.} In comprehension, morphosyntax generates expectations about the individuation parameter; in production, the speaker's construal of that parameter biases morphosyntactic choice. This is the bidirectional link. Hearing \term{three dogs} leads hearers to infer a high-precision individuated construal; a speaker who has such a construal will choose \term{three dogs} over \term{much dog}. The same mapping operates in acquisition: children infer these form--meaning correspondences from distributional evidence, acquiring the cluster as a unit because the construal, not each property, is what they track \citep{bybee2010}; cf.\ \textcite{tomasello2003}.
+
+Because every property cues the same underlying variable, the cluster is inferentially connected rather than accidentally co-occurring \citep{boyd1991,khalidi2013}. The mechanisms that maintain this connection are detailed in \S\ref{sec:homeostasis}; the resulting dissociation hierarchy appears in \S\ref{sec:hierarchy}.
+
+\subsection{Why this produces homeostasis}\label{sec:homeostasis}
+
+A cluster is homeostatic when mechanisms push it back toward coherence after perturbation. Bidirectional inference does this by making count properties mutually predictive through individuation. In \textcite{boyd1991}'s terms, these are the stabilising mechanisms that keep enough of the cluster together for projectible generalisations: if a noun takes \term{many}, one can reliably predict it will take plural agreement; if it takes \term{a}(\term{n}), one can predict it will take low cardinals. That mutual predictiveness distinguishes the HPC account from prototype and feature-bundle approaches. Prototype accounts allow gradience but don't explain why properties stay linked; feature bundles encode clustering but not its persistence.
+
+This is what makes the cluster \enquote{homeostatic} in \textcite{boyd1991}'s sense: the mechanisms of learning, processing, and production tend to restore a coherent pattern when it is perturbed.
+
+In acquisition, children don't learn count properties one by one. They learn that count morphosyntax correlates with individuation. When a noun exhibits some count properties, they generalize: this noun supports individuation, so other count frames should work~-- a pattern consistent with schema extension and entrenchment effects in usage-based morphology \citep{bybee2010}; cf.\ \textcite{tomasello2003}. The cluster is acquired as a unit because the construal, not each property, is what learners track. The account predicts overgeneralization: children who hear \term{many police} may extend to \ungram{\term{three police}}, treating one count property as evidence that others are licensed \citep{barner2005}.
+
+During processing, one count property activates the individuation construal and primes expectations for the rest. Hearing \term{many cattle} suggests quantification over discrete cattle units and raises expectations that other count properties are available. This helps explain why \term{three cattle} feels degraded even though \term{many cattle} is acceptable: \term{many} activates individuation, while \term{three} demands more precision than \term{cattle} comfortably supplies. Violations of cluster coherence create processing costs and reinforce the clustering.
+On any reasonable processing account, such mismatches incur extra cost; at the very least, they violate entrenched expectations about which forms co-occur.
+
+In production, an individuated construal makes the whole count cluster available. Cherry-picking (choosing \term{many} while blocking \term{three}) would require suppressing the inference that the noun supports full individuation. That suppression is cognitively costly and communicatively risky because hearers expect coherence.
+
+The homeostatic pressure is real but not deterministic. The mechanism biases the system toward full count or full mass, but it doesn't guarantee convergence. Intermediate states can persist when functional pressures stabilise them.
+
+A noun like \term{police} has remained quasi-count for centuries because its functional niche is covered elsewhere. Speakers who need singulative reference use \term{officer}, not \ungram{\term{a police}} or \ungram{\term{one police}}. Offloading the singulative function relieves pressure on \term{police} to gain tight-linkage properties. This is weak homeostasis: pressure toward coherence can be neutralized when the communicative ecology provides alternatives. This predicts that \term{folks}, lacking the entrenchment of \term{people} or the functional anchoring of \term{cattle}, should show the variability observed in \S\ref{sec:folks}. The stability of quasi-count nouns follows from that interaction.
+
+This is exactly the paradigm-leveling pressure \textcite{bybee2010} describes: items whose behaviour only partially matches an entrenched schema tend to regularize toward the dominant pattern unless countervailing pressures hold them in place. High-frequency clusters become entrenched; marginal items remain variable. \term{Folks} is marginal and unanchored; \term{police} is frequent and anchored by \term{officer}.
+
+Properties cohere not because any one directly causes the others, but because all point to the same construal. Forms license inferences, inferences shape expectations, expectations constrain usage, and usage reinforces the clustering in acquisition. This inference-mediated coupling makes the cluster homeostatic.
+
+\subsection{What happens when the mechanism weakens}\label{sec:weakening}
+
+The homeostatic mechanism predicts stability when individuation is accessible, but what happens when a noun's semantics resists or only partially supports atomic construal?
+
+Consider aggregate nouns like \term{cattle} or \term{police}. Their referents aren't construed as collections of discrete, independently countable units in the way \term{dogs} or \term{books} are. The animals or officers exist as individuals, but the nouns package them as collective groups. Individuation is semantically degraded (not absent, but weakened).
+
+When individuation weakens, the bidirectional inference mechanism can't maintain the full count cluster. Not all count properties can be felicitously licensed. Importantly, the properties don't fail uniformly. They dissociate in a predicted order based on their evidential thresholds (how much individuation precision they require).
+
+Properties that demand high-precision individuation fail first. Singular form and \term{a}(\term{n}) require identifying exactly one discrete, bounded entity. Low cardinals like \term{three} require enumerating precise atomic units. These tight-linkage properties are incompatible with aggregate construals: \ungram{\term{a cattle}} and \ungram{\term{three police}} are degraded or unacceptable \citep[p.~345]{huddleston2002}; \citep{corbett2019}.
+
+Properties that tolerate low-precision individuation persist. \term{Many} requires only assessing relative magnitude across vaguely individuated units. Plural agreement requires only construing the referent as non-singular. High round numerals function as approximate measures (\term{a hundred cattle} $\approx$ \textit{roughly a hundred}). These loose-linkage properties remain felicitous even when tight individuation fails.
+The robustness of loose-linkage properties is partly semantic (their content doesn't encode sharp atomic boundaries) and partly inferential (the system imposes a lower precision threshold on them).
+
+What we get, therefore, is an implicational hierarchy over the diagnostics: any noun that loses a loose property will already have lost all the tighter ones. The next section makes this hierarchy explicit and tests it against the quasi-count pattern.
+
+%--------------------------------------------------
+\section{The dissociation hierarchy}\label{sec:hierarchy}
+%--------------------------------------------------
+
+The homeostatic mechanism generates a specific prediction: count properties should dissociate in order of their evidential thresholds when individuation weakens. Properties requiring high-precision individuation (tight linkage) fail before those tolerating low-precision individuation (loose linkage). The hierarchy is as follows, with the diagnostics considered here: singular morphology, argumental determiner requirement, \term{a}(\term{n}) selection, low cardinals, \term{several}, distributive quantifiers, demonstratives, \term{many/few}, high round numerals, and plural agreement. The matrix in \S\ref{tab:matrix} displays the subset most clearly attested in grammars and corpora; demonstratives and distributives are discussed in text rather than added to the table, which would crowd its layout without adding new contrasts.%
+\footnote{Demonstratives pattern with the tight group: quasi-count and pluralia tantum nouns strongly prefer \term{these}/\term{those} over \term{this}/\term{that} (\term{these police}, \ungram{\term{this police}}; \term{these scissors}, \ungram{\term{this scissors}}) \citep[p.~356]{huddleston2002}. Distributive quantifiers (\term{each}, \term{every}) likewise require discrete units and fail with quasi-count nouns (\ungram{\term{every cattle}}, \ungram{\term{each police}}). Other diagnostics (partitives like \term{piece of N}, measure/classifier uses, bare-plural generics, NPI \term{any}) track the same tight/loose split and add redundancy rather than new contrasts, so they are omitted here for brevity.}
+
+Tight linkage (lost first):
+\begin{itemize}
+\item Singular--plural contrast: a dedicated singular member of a number pair (bare mass singulars don't count)
+\item Determiner requirement for argumental singular count nouns: needs an article or genitive determiner
+\item \term{a}(\term{n}) selection: requires identifying a single atomic unit
+\item Low cardinals (\term{three}, \term{five}): require enumerating precise atomic units
+\end{itemize}
+
+Moderate linkage:
+\begin{itemize}
+\item \term{several} N: requires multiple discrete units but tolerates approximate quantity
+\item Distributive quantifiers (\term{each}, \term{every}): require discrete units for distribution
+\end{itemize}
+
+Loose linkage (retained longest):
+\begin{itemize}
+\item \term{many/few} N: requires only relative magnitude assessment, not precise enumeration
+\item High round numerals (\term{a hundred} N, \term{thousands of} N): function as approximate measures
+\item Plural agreement: requires only non-singular construal
+\end{itemize}
+
+The determiner requirement behaves like the other tight properties: argumental singular count nouns normally take an article or genitive (\term{a dog}, \ungram{\term{dog}}), but the requirement weakens when individuation is bleached in institutional or activity readings (\term{in bed}, \term{at school}, \term{have lunch} vs.\ \term{have a lunch}) \citep[pp.~409--410]{huddleston2002}.%
+\footnote{Bare singulars in these idiomatic contexts do not show full mass behaviour; they pattern with weakened individuation, so a tight-linkage property drops out while looser properties (plural agreement, \term{many}) remain available. This matches the hierarchy’s prediction.}
+
+Related diagnostics align with the same ordering. Demonstratives are tight: pluralia tantum nouns pattern with \term{these/those} but reject \term{this/that} (\term{these police}, \ungram{\term{this police}}), while mass nouns reject both unless coerced. Pronominal anaphora and subject--verb agreement are loose: \term{the police ... they/*it} is grammatical even when tighter properties fail.
+
+This ordering isn't stipulated but follows from what each property semantically requires. \term{Three} demands precision (exactly three atomic units); \term{many} doesn't (just \enquote{a contextually large quantity}). The uniform bidirectional inference mechanism encounters these different semantic requirements and produces ordered dissociation \citep{allan1980,grimm2018}.
+
+The homeostatic account makes a clear implicational prediction: for any noun $N$ and properties $P_i$ (tighter) and $P_j$ (looser), if $N$ accepts $P_i$, it accepts $P_j$; if $N$ rejects $P_j$, it rejects $P_i$. The matrix should show a triangular pattern: no noun stably exhibits tighter properties while rejecting looser ones.
+
+Falsifiable predictions:
+\begin{itemize}
+\item No reverse implication: No noun should accept \term{three} N while rejecting \term{many} N
+\item No \term{a}--\term{many} split: No noun should accept \term{a}(\term{n}) N but require \term{much} N (not \term{many} N)
+\item Contiguous acceptability: Acceptable properties should form a contiguous band from some point downward; no noun should accept \term{a}(\term{n}) and \term{many} while rejecting \term{several}
+\item Predicted intermediate positions: Quasi-count nouns like \term{cattle} and \term{police} should accept loose properties while rejecting tight ones
+\end{itemize}
+
+This hierarchy explains the quasi-count pattern documented in descriptive grammars and predicts where new or shifting nouns should fall based on their individuation profile.
+
+%--------------------------------------------------
+\section{Evidence: The quasi-count pattern}
+%--------------------------------------------------
+
+\subsection{The noun $\times$ property matrix}
+
+% Table goes here
+
+\begin{table}[H]
+\centering
+\caption{Morphosyntactic count properties across noun types}
+\label{tab:matrix}
+\begin{tabular}{@{}l c c c c c c c c@{}}
+\toprule
+Noun & SG form & \term{a}(\term{n}) & Low card. & \term{several} & High round & \term{many} & \term{much} & Pl.\ agr. \\
+\midrule
+\term{book}      & \cmark & \cmark & \cmark & \cmark & \cmark & \cmark & \xmark & \cmark \\
+\term{people}    & \cmark\textsuperscript{a} & \cmark & \cmark & \cmark & \cmark & \cmark & \xmark & \cmark \\
+\term{folk} (BrE) & \xmark\textsuperscript{b} & \xmark & \cmark & \cmark & \cmark & \cmark & \xmark & \cmark \\
+\term{folks} (AmE) & \xmark & \xmark & \qmark & \cmark & \cmark & \cmark & \xmark & \cmark \\
+\term{cattle}    & \xmark & \xmark & \xmark & \qmark & \cmark & \cmark & \xmark & \cmark \\
+\term{police}    & \xmark & \xmark & \xmark & \qmark & \cmark & \cmark & \xmark & \cmark \\
+\term{furniture} & \xmark & \xmark & \xmark & \xmark & \xmark & \xmark & \cmark & \xmark \\
+\bottomrule
+\end{tabular}
+
+\smallskip
+\footnotesize{\textsuperscript{a}Suppletive singular \term{person}.\\
+\textsuperscript{b}Archaic/literary \term{a folk} survives; \term{a folk} meaning ``a people/nation'' is a different sense.}
+\end{table}
+
+Lexicalized food terms like \term{mashed potatoes}, \term{scrambled eggs}, and \term{grits} show plural morphology with mass-like semantics~-- plural agreement but resistance to count quantifiers (\ungram{\term{three mashed potatoes}} in the dish sense). These are frozen collocations reflecting an original count construal; they don't participate productively in the count system examined here. Note that BrE often rationalizes to singular mass (\term{mashed potato}), while AmE tolerates the mismatch.
+
+\subsection{\textit{CGEL}'s quasi-count nouns}\label{sec:cgel}
+
+\textit{CGEL} identifies a class of \textbf{quasi-count nouns}: plural-only nouns that take plural agreement and accept \term{many} but resist singular forms, \term{a}(\term{n}), and low cardinals \citep[p.~345]{huddleston2002}. The core cases~-- \term{cattle}, \term{police}, \term{poultry}, \term{vermin}, \term{livestock}, \term{clergy}~-- show a consistent profile: they occupy the intermediate zone predicted by the hierarchy, accepting loose-linkage properties while rejecting tight ones.
+
+The pattern is implicational. All these nouns accept \term{many N} and plural agreement (\term{many cattle}, \term{the police were}). Virtually all reject \term{a}(\term{n}) N and singular forms (\ungram{\term{a cattle}}, \ungram{\term{one police}}); \term{clergy} shows marginal \term{a clergy} in elevated registers, but this is exceptional. Low cardinals\footnote{I refer here only to cardinal numerals; the status of any “low” cardinals among the clergy I leave to ecclesiologists.} are degraded or impossible (\ungram{\term{three cattle}}, \ungram{\term{five police}}). But high round numerals and approximate quantifiers are acceptable (\term{hundreds of cattle}, \term{thousands of police}). This isn't a random scatter~-- they peel off in the predicted order.
+
+\textit{CGEL} contrasts these with exceptional plural-only nouns like \term{people} and \term{folk}, which accept low numerals despite lacking a simple morphological singular of the same lexeme: \term{three people}, \term{several folk}, but \ungram{\term{a people}}, \ungram{\term{a folk}} in their ordinary senses \citep[p.~345]{huddleston2002}.\footnote{\term{Person} functions as a suppletive singular for \term{people}; \term{a folk} survives in archaic or literary registers; \term{a people} meaning “nation” is a different sense. These complications don't affect the main point: the basic collective senses lack a productive singular.} The grammar notes the distinction but offers no explanation for why some plural-only nouns permit low cardinals while others don't.
+
+The dissociation hierarchy provides the explanation. The difference between \term{people}/\term{folk} and \term{cattle}/\term{police} isn't morphological~-- both types lack singulars~-- but semantic: how accessible is individuation? \term{People} provides full access to discrete, enumerable individuals; \term{cattle} provides only partial access, enough for \term{many} (magnitude assessment) but not for \term{three} (exact enumeration). When individuation is weakened~-- when referents are construed as aggregates rather than discrete units~-- tight properties fail first. Loose properties remain because they tolerate low-precision magnitude assessment without requiring precise atomic boundaries.
+
+Consider \term{cattle}. It takes plural agreement (\term{the cattle are grazing}), accepts \term{many cattle} and, for many speakers, \term{several cattle}, but blocks \ungram{\term{a cattle}} and \ungram{\term{three cattle}}~-- except in specialized agricultural registers where head counts are routine and exact enumeration is communicatively necessary. The countability profile matches the prediction: weakened individuation, tight properties lost, loose properties retained.
+
+\term{Police} shows the same pattern. Plural agreement (\term{the police are investigating}), \term{many police}, and for some speakers \term{several police}, are acceptable. But \ungram{\term{a police}} and \ungram{\term{three police}} are ungrammatical in standard English. High round numerals work (\term{hundreds of police}) because they function as approximate measures rather than exact counts. The stability of \term{police} in this intermediate state~-- attested for as long as we have good descriptive records~-- follows from functional anchoring: speakers who need singulative reference use \term{officer}, so there's no pressure to develop tight-linkage properties.
+
+Other quasi-count nouns show slight variations but respect the hierarchy. \term{Poultry} and \term{livestock} largely pattern like \term{cattle}. \term{Clergy} accepts \term{many clergy} and \term{several clergy} but resists \ungram{\term{a clergy}}, with \term{cleric} serving the singulative function. \term{Vermin} is quasi-count in collective uses (for some speakers \term{many vermin}) but can shift toward mass in some registers (\term{much vermin})~-- a loosening consistent with the hierarchy's predictions. None of these nouns reverses the implicational pattern: none accepts tight properties while rejecting loose ones.
+
+The quasi-count class thus fits the falsifiability conditions from \S\ref{sec:hierarchy}. No noun in this class shows the reverse pattern (accepting \term{three N} while rejecting \term{many N}), which is exactly what the implicational hierarchy rules out. The triangular pattern holds:
+
+\begin{itemize}
+\item Singular form: \xmark
+\item \term{a}(\term{n}): \xmark
+\item Low cardinals: \xmark
+\item \term{several}: marginal (\cmark\ for some speakers)
+\item High round numerals: \cmark
+\item \term{many}: \cmark
+\item Plural agreement: \cmark
+\end{itemize}
+
+Quasi-count nouns occupy a stable intermediate position, retaining loose-linkage properties (which tolerate low-precision individuation) while losing tight-linkage properties (which demand exact atomic units). \textit{CGEL}'s descriptive category falls out as a natural class on the homeostatic account~-- nouns whose individuation profile licenses loose but not tight count morphosyntax.
+
+\subsection{The \textit{folks} case}\label{sec:folks}
+
+The quasi-count nouns examined in \S\ref{sec:cgel} occupy stable positions at the extremes: \term{cattle} and \term{police} clearly reject low cardinals; \term{people} (and, for speakers who still use it, \term{folk} without -s) clearly accept them. To test the hierarchy's predictions more sharply, we need a noun at the boundary~-- one where judgments are variable and construction-sensitive. American English \term{folks} is such a case.
+
+Synchronically, \term{folks} sits between \term{people} and the quasi-count class. For many speakers, \term{many folks} and \term{several folks} are fully acceptable, and high round numerals such as \term{a hundred folks} are entirely natural. At the same time, \term{three folks} is often judged marked, informal, or slightly odd, especially outside colloquial contexts. Some speakers reject \term{three folks} altogether; others accept it readily; still others accept it but hear it as more slangy than \term{three people}. In Table~\ref{tab:matrix}, this shows up as a question mark in the \enquote{low cardinals} column for \term{folks}. That mark isn't noise; it reflects genuine instability in the countability profile.
+
+On the present account, this is exactly what we should expect for a noun whose individuation profile is weakening but hasn't fully collapsed. Morphologically, \term{folks} is simply a plural; it lacks a productive singular (\ungram{\term{a folks}}) just as the basic collective sense of \term{folk} lacks one (\ungram{\term{a folk}} in the ordinary 'people' sense). The difference from \term{cattle} and \term{police} is semantic and pragmatic. Uses like \term{you folks}, \term{folks around here}, and \term{our folks back home} package the referents as in-group collectives with a strong solidarity flavour. The individual atoms are still there ontically, but the noun's dominant sense foregrounds the group, backgrounding precise, enumerable units.
+
+If the dissociation hierarchy is really tied to individuation precision, then \term{folks} is where we should see construction-sensitive effects. Constructions that foreground exact cardinality should make the tight property (\term{three N}) particularly uncomfortable; constructions that permit aggregate construal should be more forgiving.
+
+Existential constructions foreground the question \enquote{How many discrete entities of this kind exist here?}:
+
+\begin{quote}
+\term{There are three people waiting in the lobby.}\\
+\term{There are three folks waiting in the lobby.}
+\end{quote}
+
+They put the burden of individuation squarely on the noun. Agentive constructions allow cardinality to be somewhat backgrounded~-- what matters is that a group performed an action:
+
+\begin{quote}
+\term{Three people signed the complaint.}\\
+\term{Three folks signed the complaint.}
+\end{quote}
+
+The individuals can be construed more loosely as members of a collective.
+
+The hierarchy therefore yields a specific prediction. In a 2$\times$2$\times$2 design crossing noun (\term{people} vs.\ \term{folks}), determinative (\term{three} vs.\ \term{several}), and construction type (existential vs.\ agentive), we expect:
+
+\begin{itemize}
+\item \term{Three people}: acceptable in both constructions (full individuation, no interaction).
+\item \term{Several people}: acceptable in both constructions (moderate property, fully individuated noun).
+\item \term{Several folks}: patterns similarly (moderate property, low-precision demand).
+\item \term{Three folks}: worst in existential constructions (high precision demand), relatively better in agentive constructions (aggregate construal tolerated).
+\end{itemize}
+
+Including \term{cattle} with \term{three} in both constructions (\term{There are three cattle in the field}, \term{Three cattle escaped through the gate}) would provide a floor: its rejection of low cardinals should be categorical, independent of construction. \term{People} provides the ceiling; \term{folks} is predicted to occupy the gradient middle ground, with a construction effect emerging only for the tight property.
+
+This probe hasn't been run; I present it as a way of testing the mechanism, not as reported results. A well-designed study would need to control for register and frequency, and to collect dialect information, since there's clear inter-speaker variation in the acceptability of \term{three folks}.%
+\footnote{For many speakers, colloquial \term{there's three folks} is more acceptable than \term{there are three folks}, likely reflecting both register congruence (informal existential plus informal noun) and the lower precision demands of the invariant existential. I use the standard agreeing form \term{there are} to maintain the high-precision condition; the \term{there's} variant is excluded because it neutralizes agreement and may function as a loose-linkage frame. Crucially, \term{there are three guys} (equally informal but fully count) is acceptable, suggesting the \term{folks} degradation isn't purely register mismatch. A further refinement would compare \term{there are three N} with \term{there's three N} for \term{people}, \term{folks}, and \term{cattle} to tease apart register congruence from precision demands.}
+Still, the core prediction is clear: if the precision-based account is correct, \term{three folks} should show a stronger existential--agentive asymmetry than \term{three people}, and \term{several folks} should show little or none.
+
+If the probe confirms these predictions, it would provide strong support for the hierarchy's claim that tight properties are sensitive to individuation precision in a way loose properties aren't. The \enquote{tightness} of a count property would be shown to be not an arbitrary lexical feature but a dynamic sensitivity to how much precision the construction demands. If \term{three folks} shows no construction effect~-- if it patterns like \term{three people} (equally acceptable everywhere) or like \term{three cattle} (equally bad everywhere)~-- then the precision-based mechanism loses support, because the boundary behaviour it predicts isn't observed.
+
+The \term{folks} case thus functions as a boundary test. Quasi-count nouns like \term{cattle} are too categorical to reveal fine-grained construction effects; fully count nouns like \term{people} are too robust. A noun like \term{folks}, whose low-cardinal behaviour is genuinely unstable, offers the sharpest probe of whether the hierarchy reflects precision-sensitive bidirectional inference rather than static lexical features.
+
+\subsection{Summary}
+
+The empirical picture converges on the hierarchy's predictions. \textit{CGEL}'s quasi-count nouns (\S\ref{sec:cgel}) occupy a stable intermediate position: they retain loose-linkage properties (\term{many}, plural agreement, high round numerals) while categorically rejecting tight-linkage ones (\term{a}(\term{n}), singular form, low cardinals) \citep[p.~345]{huddleston2002}. This is the triangular pattern the hierarchy predicts, and no noun in the class reverses the implicational order; if such a case were found, it would directly challenge the hierarchy.
+
+The \term{folks} case (\S\ref{sec:folks}) probes the boundary zone. Unlike \term{cattle}, which categorically rejects low cardinals, \term{folks} shows genuine variability~-- some speakers accept \term{three folks}, others find it marginal. The hierarchy predicts that this instability should be construction-sensitive: tight properties should degrade more sharply in constructions that demand precise individuation (existentials) than in those that tolerate aggregate construal (agentives). A 2$\times$2$\times$2 probe would test this prediction directly, though I leave that as future work.
+
+Together, the two cases provide complementary evidence. Quasi-count nouns show that the hierarchy captures categorical dissociation; \term{folks} shows that it also captures gradient, context-sensitive effects at the boundary. If both patterns hold, the hierarchy isn't merely a descriptive taxonomy but reflects a precision-sensitive mechanism linking morphosyntax to individuation.
+
+%--------------------------------------------------
+\section{Alternative accounts}
+%--------------------------------------------------
+
+The previous sections developed a positive account: morphosyntactic countability is an HPC maintained by bidirectional inference between form and semantic individuation. This section considers how alternative approaches fare against the same data. The key desiderata are: (a) predicting the ordered dissociation (tight properties lost before loose ones), and (b) predicting construction-sensitivity at the boundary (\term{folks}). No existing account delivers both without substantial additional stipulation.
+
+\subsection{Feature-bundle approaches}
+
+Traditional accounts treat countability as a lexical feature or small feature bundle: [±count], [±plural], [±bounded]. On this view, \term{cattle} might be specified as [+count, +plural-only] or [+plural, −singular]. The approach can label the classes, but it can't derive the implicational order.
+
+Why should [+plural-only] nouns reject \term{a}(\term{n}) and low cardinals while retaining \term{many} and plural agreement? The feature system offers no principled answer~-- it must stipulate which properties each feature value licenses. Quasi-count nouns become a listed exception class rather than a predictable intermediate position. And the construction-sensitivity of \term{folks} has no straightforward expression in a system where features are either present or absent. If \term{folks} is [+count] or [−count], it should behave uniformly across constructions. The existential--agentive asymmetry requires additional apparatus.
+
+Feature-bundle approaches can describe the data, but description isn't explanation. The ordered dissociation and the boundary effects require additional machinery that the feature system itself doesn't provide.
+
+\subsection{Purely semantic accounts}
+
+Accounts in the tradition of \textcite{chierchia1998} and \textcite{rothstein2010} derive the mass/count distinction from semantic properties: atomicity, closure under sum, accessibility of minimal parts. On these approaches, \term{cattle} might be characterized as denoting atoms that aren't \enquote{accessible} to the grammar in the way \term{cow} atoms are, or as having a \enquote{vague} atomic structure.
+
+This captures something real. The semantic difference between \term{cattle} and \term{cows} isn't merely morphological. But the purely semantic story doesn't explain why weakened atomicity yields the specific dissociation pattern observed. If \term{cattle} has degraded atomic accessibility, why does it retain \term{many} but lose \term{three}? Both require reference to atoms in some sense. The ordered peeling~-- tight properties first, loose properties last~-- requires distinguishing among count properties by their precision demands, but purely semantic accounts typically treat \enquote{count syntax} as a unified licensing condition, or at best distinguish types of counting (e.g., measure vs.\ cardinal) without tying them to an ordered hierarchy of morphosyntactic properties.
+
+The present account doesn't reject semantic distinctions; it incorporates them. Semantic individuation is the underlying variable to which morphosyntax is inferentially coupled. But the clustering and ordered dissociation are morphosyntactic phenomena that require a morphosyntax-facing story, not just a semantic one.
+
+\subsection{Syntacticist approaches}
+
+\textcite{borer2005} and related work locate countability entirely in functional structure. Nouns are born \enquote{inert}~-- neither mass nor count~-- and acquire countability by merging with functional heads (Div, Cl, \#). On this view, nothing in the noun itself prevents \term{cattle} from appearing under any of the relevant functional structures; the observed gaps (\ungram{\term{a cattle}}, \ungram{\term{three cattle}}) end up being enforced by fine-grained selectional restrictions on those heads.
+
+This inversion has virtues for explaining coercion and cross-linguistic variation. But it struggles with the English quasi-count pattern. Why would Div or Cl heads selectively reject \term{cattle} with low cardinals but accept it with \term{many}? The syntacticist must posit fine-grained selectional features distinguishing \term{three} from \term{many}~-- features that recapitulate the precision hierarchy without explaining it. The construction-sensitivity of \term{folks} is equally problematic: if the noun is inert, the existential--agentive asymmetry must be located in the functional heads, but there's no independent evidence that existential \term{there} selects for tighter individuation than agentive subjects.
+
+The syntacticist approach can accommodate the data by multiplying functional distinctions, but the distinctions do the work that the present account derives from a single mechanism (bidirectional inference) plus the independently motivated semantic content of each count property.
+
+\subsection{Prototype and gradience approaches}
+
+Gradience-based accounts \citep{taylor2003} comfortably acknowledge that \term{folks} is \enquote{peripheral} and \term{cattle} is \enquote{a bad count noun}. They reject sharp boundaries in favour of prototype structure. This is the nearest neighbour to the present account: both expect intermediate cases and gradient judgments.
+
+The difference is explanatory depth. Prototype approaches treat the cluster as a description~-- some nouns are better exemplars, others worse~-- without specifying what makes a noun better or worse, or why the gradient has the shape it does. The present account adds:
+
+\begin{enumerate}
+\item \textbf{A principled hierarchy.} Tight, moderate, and loose properties are distinguished by precision demands, not by arbitrary similarity to a prototype.
+\item \textbf{A stability story.} Quasi-count nouns are stable because functional anchoring (\S\ref{sec:homeostasis}) relieves pressure to develop tight-linkage properties. \term{Folks} is unstable because it lacks such anchoring. Prototype accounts predict gradience but not which intermediate positions are attractors.
+\item \textbf{Disconfirmation conditions.} The implicational order and the construction-sensitivity of \term{folks} are specific predictions. A noun accepting \term{three N} while rejecting \term{many N} would falsify the hierarchy. Prototype accounts, being descriptive, have no comparable commitments.
+\end{enumerate}
+
+Gradience is real; the question is what generates it. The HPC account offers a mechanism; prototype approaches offer a geometry. Nothing in principle prevents a prototype account from adopting a mechanism like this; the point is that, as usually formulated, prototype structure is the end of the story, not the beginning.
+
+\subsection{Summary}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{@{}l p{3.2cm} p{3.2cm} p{3.2cm}@{}}
+\toprule
+Approach & Ordered dissociation & Construction-sensitivity & Stability of quasi-count \\
+\midrule
+Feature bundles & Stipulated & Not predicted & Stipulated \\
+Purely semantic & Partial & Not predicted & Not addressed \\
+Syntacticist & Stipulated via heads & Requires extra machinery & Stipulated \\
+Prototype & Described & Described & Not explained \\
+HPC (this paper) & Derived from precision & Predicted & Derived from functional anchoring \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The HPC account isn't the only approach that could, in principle, be extended to accommodate the data. But it is, as things stand, the only one that derives the ordered dissociation, predicts construction-sensitivity at the boundary, and explains why some intermediate positions are stable while others aren't~-- all from a single mechanism linking morphosyntax to semantic individuation through bidirectional inference.
+
+%--------------------------------------------------
+\section{Extensions}
+%--------------------------------------------------
+
+\subsection{Cross-linguistic predictions}\label{sec:crossling}
+
+The homeostatic account makes predictions beyond English. If bidirectional inference between morphosyntax and individuation is a general mechanism, languages with different morphological resources should show analogous clustering and dissociation patterns, adjusted for their particular count/mass encoding.
+
+Languages with singulative/collective systems provide a natural test case. Welsh and Arabic mark singulatives morphologically: the base form is collective (\textit{adar} `birds [collective]'), and a suffix derives the singulative (\textit{aderyn} `a bird'). \textcite{grimm2018} documents exactly the predicted pattern: bare collectives accept loose quantifiers but resist low numerals and distributives, while singulative-marked forms accept the full count cluster. The parallel to English quasi-count nouns is striking: Welsh collectives occupy the same position in the hierarchy that \term{cattle} and \term{police} occupy in English.
+
+Classifier languages offer a different configuration. In Mandarin and Japanese, nouns don't inflect for number; classifiers mediate between numerals and nouns. The count/mass distinction is located in classifier selection rather than noun morphology. The homeostatic account predicts that the clustering should shift to the classifier system: general classifiers (like Mandarin \term{gè}) should show the tight/loose asymmetries that English determinatives show, with some classifiers tolerating vague individuation and others requiring precise atomic reference.
+
+These predictions are programmatic. Testing them requires detailed work on singulative semantics and classifier hierarchies that lies outside this paper's scope. The point is that the mechanism~-- bidirectional inference linking form to individuation~-- should produce analogous clustering effects wherever languages encode individuation morphosyntactically, even if the specific properties differ.%
+\footnote{Some languages (e.g., Yudja) have been claimed to lack a grammatical mass/count distinction entirely. Recent work suggests these cases involve covert classifiers or restricted numeral semantics rather than true absence of the distinction \citep{lima2014}. If a language genuinely lacks morphosyntactic resources encoding individuation, the homeostatic mechanism would have nothing to operate on, and no clustering would be predicted.}
+
+\subsection{Diachronic predictions}
+
+Historical shifts provide evidence for the mechanism. English \term{pea} arose by back-formation from \term{pease}, which was historically non-count (cf.\ \term{pease porridge}). The final /z/ was reanalyzed as plural marking, and a singular \term{pea} was created to complete the count cluster. If the historical record shows that looser properties (plural agreement, \term{many peas}) were established before tighter ones (\term{a pea}, \term{three peas}), that would confirm the predicted acquisition order.
+
+The reverse trajectory is visible in \term{data}. Historically the count plural of \term{datum}, it's shifting toward mass status (\term{this data is}, \term{much data}) as the singulative \term{datum} becomes archaic. Without a functional singulative, the tight-linkage anchor is lost and the system drifts toward loose-linkage-only status~-- parallel to the quasi-count pattern but arrived at diachronically. This contrasts with \term{police}, which remains stable because \term{officer} serves the singulative function.
+
+Cultural-evolutionary models of grammar show that stable morphosyntactic regularities can arise as equilibria of learning and use \citep{kirby2008}. The persistence of quasi-count \term{cattle} and \term{police} over centuries plausibly reflects such an equilibrium.
+
+\subsection{Functional anchoring}\label{sec:anchoring}
+
+The homeostatic mechanism creates pressure toward coherence: nouns tend toward full count profiles or full mass profiles. Yet \term{cattle} and \term{police} have been quasi-count for centuries without drifting. The stability comes from the communicative ecology. Speakers who need singulative reference don't attempt \ungram{\term{a cattle}} or \ungram{\term{a police}}; they use \term{cow}, \term{bull}, \term{head of cattle}, or \term{officer}. These \textbf{functional singulatives} absorb the pressure that would otherwise push the quasi-count noun toward tight-linkage properties.
+
+Bidirectional inference generates expectations: if a noun accepts \term{many N}, hearers may expect it to accept \term{three N} and \term{a N}. When those expectations fail, pressure arises either to regularize (extend tight properties) or to avoid the construction. If an alternative lexeme satisfies the singulative function, speakers have no reason to force the quasi-count noun into tight frames; the pressure dissipates.
+
+This predicts an asymmetry. Quasi-count nouns \textit{with} available singulatives should be stable; those \textit{without} should be unstable, drifting either toward full count (if individuation strengthens) or toward mass (if individuation weakens further).
+
+\term{Police}/\term{officer} and \term{cattle}/\term{cow} fit the stable pattern. \term{Folks} fits the unstable pattern: there's no singulative \term{*a folk} in ordinary use, and \term{person} is semantically distinct (neutral rather than in-group). The variability of \term{three folks} in \S\ref{sec:folks} is exactly what the account predicts for an unanchored quasi-count noun.
+
+The diachronic \term{data}/\term{datum} case shows the same logic. As \term{datum} becomes archaic, the singulative anchor is lost and \term{data} drifts toward mass. \term{Police} remains stable because \term{officer} remains robust.
+
+%--------------------------------------------------
+\section{Outstanding issues}
+%--------------------------------------------------
+
+\subsection{Pluralia tantum}
+
+Pluralia tantum like \term{scissors}, \term{trousers}, \term{glasses} (spectacles), and \term{pants} require separate treatment. Unlike \term{police} and \term{cattle}, these nouns denote single objects that happen to have two salient parts. They take plural agreement (\term{these scissors are sharp}) and reject singular forms (\ungram{\term{a scissor}}, \ungram{\term{a trouser}}), but their resistance to singulars reflects morphological fossilisation rather than degraded individuation.
+
+The key difference: quasi-count nouns like \term{cattle} have weakened individuation at the semantic level~-- the noun packages referents as aggregates. Pluralia tantum have normal individuation~-- a pair of scissors is a single, discrete, enumerable object~-- but anomalous morphology. Speakers readily enumerate them (\term{three pairs of scissors}, \term{two pairs of trousers}), using the \term{pair of} construction to circumvent the morphological gap. This is unlike \term{cattle}, where \term{three head of cattle} is a specialised counting construction, not a routine singulative.
+
+The distinction matters for the HPC account. If pluralia tantum showed the same ordered dissociation as quasi-count nouns (loose properties retained, tight ones lost), that would suggest morphological form alone drives the pattern. But they don't: \term{scissors} accepts low cardinals via \term{pair of}, accepts \term{several} and \term{many} directly (\term{several scissors}), and triggers plural agreement. The profile is morphologically defective but semantically fully count. This supports the claim that the quasi-count pattern reflects weakened individuation, not mere morphological gaps.
+
+A full treatment would need to address why English developed these forms, whether the \term{pair of} construction is itself a loose- or tight-linkage property, and how pluralia tantum behave cross-linguistically. I set these questions aside here.
+
+\subsection{Processing evidence}
+
+The account predicts specific processing signatures that haven't been tested. If bidirectional inference is real, encountering one count property should prime expectations for others. Violations of cluster coherence should incur measurable costs.
+
+Concrete predictions:
+
+\begin{itemize}
+\item \textbf{Priming asymmetries.} After processing \term{many cattle}, readers should show elevated expectations for other count properties. A subsequent \ungram{\term{three cattle}} should incur a cost, but a smaller one than \term{three cattle} in isolation, because \term{many} has already activated partial individuation.
+\item \textbf{Graded violation costs.} Violations of tight properties (\ungram{\term{a cattle}}) should incur larger costs than violations of loose properties (\ungram{\term{much cattle}}) when both are embedded in otherwise count-compatible contexts, because tight properties have higher evidential thresholds.
+\item \textbf{Construction-sensitivity for \term{folks}.} Reading times or N400 amplitudes for \term{three folks} should differ between existential and agentive frames, with existentials showing greater processing difficulty.
+\end{itemize}
+
+These predictions are testable via self-paced reading, eye-tracking, or ERP methods. Null results wouldn't necessarily falsify the account~-- the effects might be too small to detect, or overshadowed by lexical frequency differences~-- but confirmatory results would provide evidence that the mechanism operates in real-time comprehension, not just in offline acceptability judgments.
+
+\subsection{Acquisition evidence}
+
+The account also makes acquisition predictions. If children learn count properties as a cluster tied to individuation, rather than property by property, specific patterns should emerge.
+
+\begin{itemize}
+\item \textbf{Overgeneralization.} Children exposed to loose count properties (\term{many police}) should overgeneralize to tight ones (\ungram{\term{three police}}), treating any count property as evidence that the noun supports full individuation.
+\item \textbf{Ordered acquisition.} For nouns shifting toward count status (novel or low-frequency items), children should acquire loose properties before tight ones, paralleling the diachronic pattern in \term{pease}~$\to$~\term{pea}.
+\item \textbf{Cluster effects.} Experimental training on one count property should generalize to others more readily than training on unrelated properties, because the cluster is learned as a unit.
+\end{itemize}
+
+Existing work on the acquisition of mass/count syntax \citep{barner2005} provides some relevant data, but the specific predictions about ordered acquisition and overgeneralisation for quasi-count nouns haven't been tested. Corpus studies of child-directed speech and longitudinal production data would be informative.
+
+\subsection{Formalising precision}
+
+The hierarchy rests on the notion that count properties differ in the \textit{precision} of individuation they require. I've characterised this informally: \term{three} demands exact enumeration; \term{many} tolerates approximate magnitude. But the account would benefit from a more explicit formalisation.
+
+One approach: define precision in terms of the determinacy of the cardinality function. Tight properties require a determinate cardinality (exactly $n$ atoms); loose properties require only comparative or vague cardinality (more than expected, a large quantity). This connects to degree semantics and vagueness theory, where predicates like \term{many} have been analysed as context-dependent degree modifiers \citep{hackl2000}.
+
+Another approach: define precision in terms of the granularity of the individuation required. Tight properties require fine-grained individuation (each atom distinctly bounded); loose properties tolerate coarse-grained individuation (atoms distinguished in aggregate but not individually tracked). This connects to work on granularity in mereology and event semantics.
+
+Either approach would need to derive the hierarchy, not just describe it. The ordering of tight, moderate, and loose properties should fall out from the formalisation, with properties ranked by their precision demands. I leave this formalisation for future work, noting only that the informal characterisation is sufficient for the empirical predictions developed here.
+
+\subsection{Scope and limitations}
+
+This paper has focused on English. The cross-linguistic predictions in \S\ref{sec:crossling} are programmatic; testing them requires detailed work on singulative systems, classifier languages, and languages claimed to lack a grammatical mass/count distinction.
+
+The \term{folks} probe is proposed but not run. Until acceptability data confirm the predicted construction-sensitivity, the boundary-case evidence remains suggestive rather than conclusive.
+
+Finally, the account is silent on why particular nouns have the individuation profiles they do. Why does \term{cattle} package referents as aggregates while \term{cows} individuates them? The answer presumably involves etymology, frequency, register, and the communicative functions the nouns serve~-- but these factors lie outside the scope of the homeostatic mechanism itself. The mechanism explains why individuation profiles produce the morphosyntactic patterns they do, not why nouns have the profiles they have.
+
+%--------------------------------------------------
+\section{Conclusion}
+%--------------------------------------------------
+
+Morphosyntactic countability in English is a homeostatic property cluster. The properties that define count nouns~-- singular--plural contrast, \term{a}(\term{n}) selection, numeral compatibility, \term{many/few} vs.\ \term{much/little}, distributive quantifiers, plural agreement~-- cluster tightly not because they share an underlying feature but because they're inferentially coupled to a common semantic variable: individuation.
+
+The mechanism is bidirectional inference. Comprehenders infer individuated construals from count morphosyntax; speakers who adopt those construals choose count frames. This coupling, operating across acquisition, processing, and production, keeps the cluster self-reinforcing. When individuation weakens, count properties dissociate in a predictable order: tight-linkage properties (singular, \term{a}(\term{n}), low cardinals) fail before loose-linkage ones (\term{many}, high round numerals, plural agreement). The ordering follows from what each property semantically requires, not from stipulation.
+
+The quasi-count pattern documented in \textit{CGEL}~-- \term{cattle}, \term{police}, \term{poultry}, \term{vermin}~-- falls out as a natural class: nouns whose semantics supports only partial individuation, licensing loose but not tight count properties. The stability of these intermediates follows from functional anchoring: when singulatives like \term{officer} handle precise reference, pressure to extend tight properties dissipates. Unstable intermediates like \term{folks}, lacking such anchoring, show the predicted variability.
+
+The account improves on alternatives. Feature-bundle approaches can label the classes but must stipulate the implicational order. Purely semantic accounts capture individuation but don't explain why \term{many} survives when \term{three} fails. Syntacticist approaches locate countability in functional heads but must multiply selectional restrictions that recapitulate the hierarchy without deriving it. Prototype accounts describe gradience but don't explain its shape or predict which intermediate positions are stable.
+
+Several extensions remain. Cross-linguistically, the mechanism predicts analogous clustering in singulative/collective systems and classifier languages, adjusted for their morphosyntactic resources. Diachronically, it predicts that nouns gaining count status should acquire loose properties before tight ones, and nouns losing count status should shed tight properties first~-- patterns visible in \term{pease}~$\to$~\term{pea} and \term{data}. Empirically, the \term{folks} probe proposed here offers a direct test of construction-sensitivity at the boundary; confirming the predicted existential--agentive asymmetry would strengthen the precision-based story.
+
+The broader implication is methodological. Grammatical categories need not be monolithic features or vague prototypes. They can be homeostatic property clusters~-- stable configurations maintained by causal mechanisms rather than definitional essences. Countability is one such cluster. Others~-- perhaps transitivity, finiteness, or the noun/verb distinction itself~-- may repay similar analysis.
+
+%--------------------------------------------------
+% References
+%--------------------------------------------------
+
+\printbibliography
+
+\end{document}
