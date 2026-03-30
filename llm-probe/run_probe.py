@@ -158,7 +158,9 @@ def parse_rating(text):
 
 # --- Main ---
 
-def load_stimuli(path="stimuli.csv"):
+def load_stimuli(path=None):
+    if path is None:
+        path = Path(__file__).parent / "stimuli.csv"
     items = []
     with open(path, "r") as f:
         reader = csv.DictReader(f)
@@ -167,8 +169,10 @@ def load_stimuli(path="stimuli.csv"):
     return items
 
 
-def run_surprisal(model_name="huggingface", output_dir="results"):
+def run_surprisal(model_name="huggingface", output_dir=None):
     """Run surprisal measurement (deterministic, one pass)."""
+    if output_dir is None:
+        output_dir = Path(__file__).parent / "results"
     output_dir = Path(output_dir)
     output_dir.mkdir(exist_ok=True)
     items = load_stimuli()
@@ -207,8 +211,10 @@ def run_surprisal(model_name="huggingface", output_dir="results"):
     return outfile
 
 
-def run_likert(model_name, n_reps=10, seed=42, output_dir="results"):
+def run_likert(model_name, n_reps=50, seed=42, output_dir=None):
     """Run Likert rating collection."""
+    if output_dir is None:
+        output_dir = Path(__file__).parent / "results"
     output_dir = Path(output_dir)
     output_dir.mkdir(exist_ok=True)
 
