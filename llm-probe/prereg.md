@@ -262,3 +262,4 @@ Before running any model:
 1. Commit this file and `stimuli.csv` to git
 2. Record the commit SHA: ____________ (v2)
 3. v1 SHA: dcd6ff4 (initial pre-registration, before methodological review)
+4. **Zenodo DOI: 10.5281/zenodo.19340604** (https://zenodo.org/record/19340604) — published 2026-03-30, before any model was queried
