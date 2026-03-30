@@ -238,3 +238,30 @@ Unanimous R&R. No reject, no accept.
 4. **Broaden the empirical base** — add *poultry*, *vermin*, *livestock*, *clergy*, *staff*, *youth* to matrix. Search for counterexamples.
 
 5. **Resolve the unrun probe** — run it or compress §5.3 to a paragraph.
+
+---
+---
+
+# Review Board R2 — 2026-03-30 (post all revisions)
+
+## Panel
+- **Gries** (corpus methodologist): R&R
+- **Shirai** (L2 acquisition): R&R
+- **Ereshefsky** (devil's advocate philosopher): R&R
+- **Projectibility Reviewer R2**: R&R
+- **Haspelmath** (typologist): R&R
+
+## Consensus Strengths
+1. Implicational hierarchy (every reviewer)
+2. Functional anchoring + Table 5 (every reviewer)
+3. Three-level distinction (every reviewer)
+
+## New Issues (not in R1)
+1. **Homeostasis vs parametric** (Ereshefsky): IRT objection — where's the feedback loop? → ADDRESSED in §3.2 (new paragraph on acquisition extension + processing costs)
+2. **Frequency vs precision** (Gries): could hierarchy be frequency artefact? → IN PROGRESS (COCA test designed)
+3. **Acquisition claims oversimplified** (Shirai): overgeneralization ≠ tracking individuation parameter → TODO
+4. **Abstract leads with mechanism** (Projectibility R2): surgical reframe → TODO
+5. **"Purpose" never named** (Projectibility R2) → TODO
+6. **Cross-linguistic case needed** (Haspelmath, Shirai): Welsh from Grimm 2018 → TODO (requires reading source)
+7. **Inferential statistics on key ratios** (Gries) → TODO
+8. **Broader noun sample / systematic search for counterexamples** (Gries, Haspelmath) → PARTIALLY DONE (expanded to 12)
