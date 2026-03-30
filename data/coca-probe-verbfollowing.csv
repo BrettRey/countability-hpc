@@ -1,0 +1,11 @@
+noun,det,frame,count,per_mil,notes
+people,three,verb_following,1356,1.37,"three people [v*] — needs modifier filtering? unlikely (people not a modifier)"
+folks,three,verb_following,1,0.00,"three folks [v*] — single token (SPOK 2000-04)"
+cattle,three,verb_following_raw,5,0.01,"three cattle [v*] — raw count"
+cattle,three,verb_following_filtered,3,0.00,"three cattle [v*] — max head uses after excluding cattle egrets (modifier) and cattle feeding operations (modifier); other 3 not yet inspected"
+people,several,verb_following,1155,1.16,"several people [v*]"
+folks,several,verb_following,24,0.02,"several folks [v*]"
+cattle,several,verb_following,0,0.00,"several cattle [v*]"
+people,many,verb_following,29449,29.66,"many people [v*]"
+folks,many,verb_following,433,0.44,"many folks [v*]"
+cattle,many,verb_following,11,0.01,"many cattle [v*] — all 11 genuine head uses (incl 3 'how many')"
