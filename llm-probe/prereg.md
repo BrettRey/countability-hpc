@@ -2,9 +2,9 @@
 
 ## Overview
 
-This probe tests whether the dissociation hierarchy's construction-sensitivity prediction is recoverable from LLM acceptability judgments. It supplements COCA corpus data where critical cells are too sparse for direct estimation.
+This probe tests whether the dissociation hierarchy's construction-sensitivity prediction is recoverable from LLM outputs. It supplements COCA corpus data where critical cells are too sparse for direct estimation.
 
-**Status:** Pre-registered. The signed commit hash of this file must be recorded before any model is queried. File this at OSF or AsPredicted if submitting to a journal; at minimum, the git commit SHA serves as an immutable timestamp.
+**Status:** Pre-registered. Commit SHA `dcd6ff4` recorded before any model was queried. This revision (v2) addresses methodological review; a new SHA will be recorded before data collection begins.
 
 ## Design
 
@@ -16,121 +16,104 @@ This probe tests whether the dissociation hierarchy's construction-sensitivity p
 | Determinative | *three* (tight), *several* (moderate) |
 | Construction | existential, agentive |
 
-Plus *cattle* as a quasi-count floor (tight rejection expected in both constructions).
+No separate floor condition. Floor calibration comes from the filler set (see below).
 
 ## Stimuli
 
 ### Critical items (8 cells × 8 lexicalizations = 64 items)
 
-Each cell has 8 lexically varied items. Verb phrases are matched across noun conditions (same VP appears with both *people* and *folks*) to control for plausibility differences.
+Each cell has 8 lexically varied items. Verb phrases are matched across noun conditions AND across construction conditions to control for plausibility and aspect confounds.
 
-#### VP set (shared across noun conditions)
+#### VP set (shared across all conditions)
 
-1. waiting in the lobby
-2. sitting on the bench
-3. standing by the door
-4. walking down the hall
-5. gathered near the entrance
-6. lined up outside
-7. crowding around the table
-8. chatting in the kitchen
+Each VP has an existential and agentive realization matched for aspect (all simple past or past progressive):
 
-#### Existential frame: There are [det] [noun] [VP].
-#### Agentive frame: [Det] [noun] [VP-agentive variant].
+| # | Existential | Agentive |
+|---|---|---|
+| 1 | There were three/several [noun] waiting in the lobby. | Three/Several [noun] waited in the lobby. |
+| 2 | There were three/several [noun] sitting on the bench. | Three/Several [noun] sat on the bench. |
+| 3 | There were three/several [noun] standing by the door. | Three/Several [noun] stood by the door. |
+| 4 | There were three/several [noun] walking down the hall. | Three/Several [noun] walked down the hall. |
+| 5 | There were three/several [noun] gathered near the entrance. | Three/Several [noun] gathered near the entrance. |
+| 6 | There were three/several [noun] lined up outside. | Three/Several [noun] lined up outside. |
+| 7 | There were three/several [noun] crowding around the table. | Three/Several [noun] crowded around the table. |
+| 8 | There were three/several [noun] chatting in the kitchen. | Three/Several [noun] chatted in the kitchen. |
 
-Agentive VP variants (matched for plausibility):
+### Fillers (48 items, four severity bands)
 
-1. signed the complaint
-2. crossed the street
-3. left the meeting early
-4. arrived before noon
-5. volunteered for the project
-6. called the office
-7. refused the offer
-8. missed the deadline
-
-### Cattle floor (8 items)
-
-4 existential + 4 agentive, using *three* and *several*:
-- There are three cattle in the field / near the barn.
-- Three cattle escaped through the gate / wandered onto the road.
-- There are several cattle in the field / near the barn.
-- Several cattle escaped through the gate / wandered onto the road.
-
-### Fillers (48 items, graduated severity)
-
-The filler set spans the full acceptability range to prevent endpoint compression. Four bands:
+The filler set spans the full acceptability range. No filler involves countability boundary phenomena.
 
 **Clearly acceptable (12):** Fully grammatical, semantically natural.
-- Many students attended the lecture.
-- Several books were missing from the shelf.
-- There are two birds in the tree.
-- Three cars were parked outside.
-- Many houses line the street.
-- Several teachers joined the meeting.
-- There are many options available.
-- Two children played in the yard.
-- Three windows were broken.
-- Many visitors came to the museum.
-- Several friends arrived together.
-- There are three chairs in the room.
+- The children played in the yard all afternoon.
+- She locked the door before leaving the house.
+- Two large dogs ran across the empty road.
+- The manager approved the budget on Friday.
+- Several old photographs were found in the attic.
+- He finished reading the report before dinner.
+- Three red cars were parked outside the building.
+- The teacher explained the problem very clearly.
+- Many tall trees line the edge of the park.
+- She remembered to bring the keys this time.
+- The train arrived exactly on schedule.
+- Several new shops opened on the high street.
 
-**Mildly degraded (12):** Grammatical but slightly odd (register mismatch, mild coercion, unusual collocation).
-- There are many waters to choose from.
-- Several evidences support the claim.
-- Three beers were ordered at the bar.
-- Many a folk has said the same.
-- There are a great many persons involved.
-- Several coffees sat cooling on the counter.
-- Numerous youth gathered in the square.
-- Various peoples have inhabited this region.
-- There are a dozen odd cattle nearby.
-- Many a people has risen and fallen.
-- Several data points were missing.
-- Numerous staff were let go.
+**Mildly degraded (12):** Grammatical but slightly odd (garden path, heavy NP, unusual word order, mild redundancy).
+- The horse raced past the barn fell.
+- The fact that the student who the professor liked failed surprised everyone.
+- More people than just John showed up unexpectedly.
+- What did you wonder whether she bought?
+- The report that the committee submitted it was incomplete.
+- Who do you think that saw the accident?
+- The more carefully you plan the fewer problems arise.
+- There seemed to appear to be a problem.
+- What she said to him wasn't very clear to me at first.
+- The old man the boats during the summer months.
+- It was believed by everyone that she had already gone.
+- Rarely does anyone ever remember to lock up properly.
 
-**Clearly degraded (12):** Violations of count/mass syntax with quasi-count or mass nouns.
-- There are three furnitures in the room.
-- Several equipments were delivered.
-- A cattle stood in the road.
-- Many a police chased the suspect.
-- There are three informations available.
-- One police arrived at the scene.
-- Several luggages were lost at the airport.
-- A vermin ran across the floor.
-- Three homeworks are due tomorrow.
-- One clergy spoke at the service.
-- Several knowledges were tested.
-- A livestock grazed in the meadow.
+**Clearly degraded (12):** Agreement violations, case errors, selection violations.
+- The committee have made their decision and it are final.
+- Him and me went to the store yesterday morning.
+- She suggested him to leave the room immediately.
+- The news were very surprising to all of us.
+- He denied to have seen the suspect that evening.
+- Them gave we the wrong directions to the hotel.
+- She explained him the rules of the game carefully.
+- The children was playing outside when it started raining.
+- He insisted her to come along to the meeting.
+- Us went to the park after the movie ended.
+- She mentioned him that the deadline had been moved.
+- The students has been working on the project all week.
 
-**Ungrammatical (12):** Clear syntactic violations unrelated to countability.
-- The walked dog the park in.
-- She have been already left.
-- Many is the people here.
-- Him gave she the book.
-- The children was playing outside.
-- She don't knows the answer.
-- There cats two are the on mat.
-- He were going to the store yesterday.
-- The very ran quickly dog.
-- Them saw we at the party.
-- Is been he sleeping since morning.
-- The books is on the shelves.
+**Ungrammatical (12):** Clear word-order violations.
+- The walked dog the park in yesterday afternoon.
+- She already been have left the building completely.
+- Into put the bag the groceries she all of.
+- The very ran quickly dog across the field today.
+- Been sleeping is he since early this morning still.
+- There cats two are the on mat sitting now.
+- Gave the to her book he the wrong one.
+- The from house the walked man slowly away then.
+- Not she does understand the at question all here.
+- Yesterday the were playing children outside in rain.
+- To she tried the open but door was locked.
+- Books the are on shelves the in wrong the order.
 
-## Agent specification
+## Measurement
 
-### Models
+### Primary measure: surprisal
 
-Run on 3 frontier models for robustness:
-1. Claude Sonnet 4.6
-2. GPT-4o (latest)
-3. Gemini 2.5 Pro
+For each stimulus, compute the mean per-token surprisal (negative log-probability) of the full sentence under each model. Lower surprisal = more expected/acceptable. This avoids metalinguistic task demands and is the most reliable LLM-based proxy for acceptability (Hu & Levy 2023).
 
-### Elicitation method
+Implementation: use each model's log-probability API (or token-level log-probs from completion endpoints). Compute:
 
-No personas. The probe targets the model's representations, not simulated demographic variation. Each item is presented N = 30 times per model with temperature = 0.7 to capture response variability from the model itself.
+```
+surprisal(sentence) = -1/N * sum(log P(token_i | token_1...token_{i-1}))
+```
 
-Sprouse-style, 1-7 scale, no explanation requested:
+### Secondary measure: prompted Likert rating
+
+As a convergent measure, also collect prompted 1-7 ratings using the elicitation below. These are reported alongside surprisal but are not the primary basis for the interaction test.
 
 ```
 System: You're participating in a linguistics study on sentence
@@ -150,102 +133,117 @@ User: Please rate this sentence:
 Rating (1-7):
 ```
 
-### Trial structure
+For Likert ratings: 10 repetitions per item per model at temperature = 0.7 (reduced from 30; surprisal is the primary measure and needs no repetition).
 
-Each of the 120 items (64 critical + 8 cattle + 48 filler) is presented 30 times per model, in individually randomized orders. Total: 120 × 30 × 3 = 10,800 ratings.
+### Models
+
+1. Claude Sonnet 4.6
+2. GPT-4o (latest)
+3. Gemini 2.5 Pro
+
+### Trial counts
+
+- Surprisal: 112 items × 3 models = 336 measurements (deterministic, no repetition needed)
+- Likert: 112 items × 10 reps × 3 models = 3,360 ratings
+- Total API calls: ~3,696
 
 ## Predictions
 
-### Primary prediction (construction × noun × determinative interaction)
+### Primary prediction (surprisal)
 
-| Cell | Prediction |
-|---|---|
-| three people, existential | high (6-7) |
-| three people, agentive | high (6-7) |
-| three folks, existential | **lower than agentive** (the key prediction) |
-| three folks, agentive | moderate-high (4-6) |
-| several people, existential | high (6-7) |
-| several people, agentive | high (6-7) |
-| several folks, existential | moderate-high (no asymmetry predicted) |
-| several folks, agentive | moderate-high (no asymmetry predicted) |
-| cattle (all) | low (1-3) |
+*Three folks* should show higher surprisal in the existential frame than the agentive frame. *Three people* should show no such asymmetry. *Several folks* should show no asymmetry. Formally:
 
-### Operationalized
+```
+[surprisal(three folks, exist) - surprisal(three folks, agent)]
+  >
+[surprisal(three people, exist) - surprisal(three people, agent)]
+```
 
-The prediction is confirmed if:
+and:
 
-1. The existential-agentive difference for *three folks* is **larger** than for *three people* (interaction)
-2. The existential-agentive difference for *several folks* is **not larger** than for *several people* (no interaction for moderate property)
-3. *Cattle* items are rated low regardless of construction (floor)
-4. Fillers discriminate across the four severity bands
+```
+[surprisal(several folks, exist) - surprisal(several folks, agent)]
+  ≈
+[surprisal(several people, exist) - surprisal(several people, agent)]
+```
+
+### Secondary prediction (Likert, convergent)
+
+Same direction as surprisal but inverted scale (lower rating = more degraded):
+
+- *Three folks* existential rated lower than agentive
+- No such asymmetry for *three people* or *several folks*
+
+### Filler calibration criterion
+
+Mean surprisal must order: ungrammatical > clearly degraded > mildly degraded > acceptable. If this ordering fails for a model, that model's data are uninterpretable and are excluded from the interaction test (reported in supplementary materials).
 
 ### Disconfirmation
 
 The prediction fails if:
 
-- *Three folks* shows no existential-agentive difference (or the difference goes the wrong way)
+- *Three folks* shows no existential-agentive surprisal difference (or the difference goes the wrong way)
 - *Several folks* shows the same asymmetry as *three folks* (the effect isn't precision-specific)
-- *Cattle* items are rated > 4 (floor not established)
-- Fillers fail to span the range (all compressed to endpoints)
+- Fillers fail to calibrate for 2+ models (probe is uninformative)
 
 ## Analysis plan
 
-### Diagnostics (run first, before confirmatory analysis)
+### Step 1: Diagnostics (before any confirmatory analysis)
 
-1. **Response distribution shape per item type.** If the model produces bimodal or degenerate distributions (all 7s or all 1s), flag this and report the distribution. Do not proceed to regression without verifying that the scale is used informatively.
-2. **Filler calibration.** Compute mean and SD for each filler band. If the four bands don't separate (good > mildly degraded > clearly degraded > ungrammatical), the scale isn't functioning and results are uninterpretable.
-3. **Within-model consistency.** Compute ICC across the 30 repetitions per item. If ICC < 0.3, the model is essentially random for that item.
+1. **Filler calibration.** Compute mean surprisal per filler band per model. If the four bands don't separate monotonically, exclude that model.
+2. **Item-level surprisal distribution.** Plot surprisal for all 64 critical items. Flag any items where surprisal is invariant across conditions (the model isn't sensitive to the manipulation for that item).
+3. **Likert response distribution.** If models produce degenerate Likert distributions (>90% at one value), report this and rely on surprisal only.
 
-### Confirmatory model
+### Step 2: Confirmatory test (surprisal)
 
-Ordinal regression (cumulative link model via R `ordinal` package):
+Linear mixed-effects model:
 
 ```r
-rating ~ noun * det * construction + (1 | item_lexicalization)
+surprisal ~ noun * det * construction + (1 | vp_lexicalization) + (1 | model)
 ```
 
-No random agent intercept (there are no agents; variance comes from temperature sampling). Random intercept for item lexicalization accounts for item-specific difficulty.
+Random intercepts for VP lexicalization (8 levels) and model (3 levels). The key test is the three-way interaction `noun:det:construction`.
 
-### Key contrast
+### Step 3: Convergent test (Likert)
 
-The three-way interaction term `noun:det:construction` tests whether the existential-agentive asymmetry is larger for *folks* than *people* specifically with the tight determinative.
+Ordinal regression on item-level mean ratings (aggregated across 10 reps to avoid pseudo-replication):
 
-### Reporting
+```r
+mean_rating ~ noun * det * construction + (1 | vp_lexicalization) + (1 | model)
+```
 
-- Report all cell means with 95% CIs
-- Report the three-way interaction coefficient with CI
-- Plot the full distribution of ratings per cell (histograms or violin plots, not just means)
-- Compare across the 3 models for robustness
-- Report all diagnostics transparently, including any failures
+### Step 4: Reporting
 
-### Sensitivity analysis
+- Report all cell means (surprisal and Likert) with 95% CIs
+- Report the three-way interaction coefficient with CI from both models
+- Plot the full distribution of surprisal values per cell
+- Compare across the 3 LLM models; if they disagree, report each separately
+- Report all diagnostics transparently, including failures
 
-If models differ:
-- Report each model separately
-- Flag any model where filler calibration fails
-- Do not aggregate across models unless all three pass diagnostics
+### Decision rules for failures
 
-## Interpretive constraints
-
-Per the paper's framing:
-- LLM outputs are detector-level responses, not direct evidence of grammatical status
-- Results are interpreted against the COCA corpus record, not in place of it
-- The probe tests whether the hierarchy's predicted extrapolation to sparse cells is recoverable, not whether LLMs have grammatical competence
-- If models disagree, this is informative (sensitivity to architecture) rather than a failure
+| Diagnostic | Threshold | Consequence |
+|---|---|---|
+| Filler bands don't separate | Non-monotonic mean surprisal | Exclude that model |
+| Likert degenerate | >90% at one value | Report surprisal only for that model |
+| Item invariant | Surprisal range < 0.1 across conditions | Flag item; run sensitivity analysis with and without |
+| Models disagree on interaction direction | Opposite signs | Report each separately; do not aggregate; note as limitation |
 
 ## Known limitations
 
-1. **Acceptability vs. grammaticality.** The probe elicits acceptability ("how natural it sounds"), not grammaticality judgments. Acceptability reflects processing difficulty, frequency, pragmatic oddity, and prescriptive norms in addition to grammatical well-formedness (Schutze 1996). This is appropriate here: the hierarchy predicts gradient degradation at the boundary, not a categorical grammaticality distinction.
+1. **Acceptability vs. grammaticality.** Surprisal measures expectedness, not grammaticality. Likert ratings measure acceptability. Neither directly measures grammatical well-formedness (Schutze 1996). This is appropriate here: the hierarchy predicts gradient degradation at the boundary, not a categorical distinction.
 
-2. **No discourse context.** Stimuli are presented in isolation. Register context matters for *folks* especially (*three folks* in a folksy narrative may rate higher than in a formal frame). A future version could add discourse preambles, but the current design tests the baseline prediction without confounding context.
+2. **No discourse context.** Stimuli are presented in isolation. Register context matters for *folks* especially. A future version could add discourse preambles.
 
-3. **Bounded scale compression.** The 1-7 Likert scale compresses extreme judgments. The graduated filler design (four severity bands) mitigates this by training the model to use the full range, but magnitude estimation would be an alternative worth exploring if the scale diagnostics show endpoint compression.
+3. **LLM ≠ speaker.** The probe targets model representations, not human grammatical competence. Convergence with the corpus record increases confidence; divergence is informative but not decisive.
 
-4. **LLM ≠ speaker.** The probe targets model representations, not human grammatical competence. Convergence with the corpus record increases confidence; divergence is informative but not decisive.
+4. **Pseudo-replication in Likert.** Temperature-based repetitions are draws from a single system, not independent participants. Likert analysis uses item-level aggregation to avoid inflating N. Surprisal, being deterministic, has no replication issue.
+
+5. **Aspect matching is approximate.** Existential frames use progressive (*were waiting*); agentive frames use simple past (*waited*). This is inherent in the construction contrast. Both use past tense to minimize additional confounds.
 
 ## Registration
 
 Before running any model:
 1. Commit this file and `stimuli.csv` to git
-2. Record the commit SHA: 5115d3c
-3. If submitting to a journal, file at OSF (osf.io) or AsPredicted (aspredicted.org) with the SHA as supplementary proof of timing
+2. Record the commit SHA: ____________ (v2)
+3. v1 SHA: dcd6ff4 (initial pre-registration, before methodological review)
