@@ -171,7 +171,7 @@ The homeostatic mechanism generates a specific prediction: count properties shou
 \begin{tikzpicture}[
     axis/.style={thick},
     grid/.style={gray!20},
-    bar/.style={fill=houseprimary!60, draw=houseprimary!80, line width=4pt, rounded corners=1pt},
+    bar/.style={fill=houseprimary, draw=houseprimary, line width=4pt, rounded corners=1pt},
     barpartial/.style={fill=green!60, draw=gray!50, line width=4pt, rounded corners=1pt, dash pattern=on 5pt off 3pt},
     label/.style={font=\small},
     prop/.style={font=\small}
@@ -317,67 +317,67 @@ This hierarchy explains the quasi-count pattern documented in descriptive gramma
 \node[label, anchor=east] at (-0.1, -4.55) {\term{furniture}};
 
 % Row 1: book (all accept)
-\node[accept]   at (0.55, -0.35) {\cmark};
-\node[accept]   at (1.65, -0.35) {\cmark};
-\node[accept]   at (2.75, -0.35) {\cmark};
-\node[accept]   at (3.85, -0.35) {\cmark};
-\node[accept]   at (4.95, -0.35) {\cmark};
-\node[accept]   at (6.05, -0.35) {\cmark};
-\node[accept]   at (7.15, -0.35) {\cmark};
+\node[accept]   at (0.55, -0.35) {};
+\node[accept]   at (1.65, -0.35) {};
+\node[accept]   at (2.75, -0.35) {};
+\node[accept]   at (3.85, -0.35) {};
+\node[accept]   at (4.95, -0.35) {};
+\node[accept]   at (6.05, -0.35) {};
+\node[accept]   at (7.15, -0.35) {};
 
 % Row 2: people (suppletive sg, otherwise full count)
 \node[marginal] at (0.55, -1.05) {\qmark};
-\node[accept]   at (1.65, -1.05) {\cmark};
-\node[accept]   at (2.75, -1.05) {\cmark};
-\node[accept]   at (3.85, -1.05) {\cmark};
-\node[accept]   at (4.95, -1.05) {\cmark};
-\node[accept]   at (6.05, -1.05) {\cmark};
-\node[accept]   at (7.15, -1.05) {\cmark};
+\node[accept]   at (1.65, -1.05) {};
+\node[accept]   at (2.75, -1.05) {};
+\node[accept]   at (3.85, -1.05) {};
+\node[accept]   at (4.95, -1.05) {};
+\node[accept]   at (6.05, -1.05) {};
+\node[accept]   at (7.15, -1.05) {};
 
 % Row 3: folk BrE (no sg, no a(n), but low cardinals ok)
-\node[reject]   at (0.55, -1.75) {\xmark};
-\node[reject]   at (1.65, -1.75) {\xmark};
-\node[accept]   at (2.75, -1.75) {\cmark};
-\node[accept]   at (3.85, -1.75) {\cmark};
-\node[accept]   at (4.95, -1.75) {\cmark};
-\node[accept]   at (6.05, -1.75) {\cmark};
-\node[accept]   at (7.15, -1.75) {\cmark};
+\node[reject]   at (0.55, -1.75) {};
+\node[reject]   at (1.65, -1.75) {};
+\node[accept]   at (2.75, -1.75) {};
+\node[accept]   at (3.85, -1.75) {};
+\node[accept]   at (4.95, -1.75) {};
+\node[accept]   at (6.05, -1.75) {};
+\node[accept]   at (7.15, -1.75) {};
 
 % Row 4: folks AmE (no sg, no a(n), marginal low cardinals)
-\node[reject]   at (0.55, -2.45) {\xmark};
-\node[reject]   at (1.65, -2.45) {\xmark};
+\node[reject]   at (0.55, -2.45) {};
+\node[reject]   at (1.65, -2.45) {};
 \node[marginal] at (2.75, -2.45) {\qmark};
-\node[accept]   at (3.85, -2.45) {\cmark};
-\node[accept]   at (4.95, -2.45) {\cmark};
-\node[accept]   at (6.05, -2.45) {\cmark};
-\node[accept]   at (7.15, -2.45) {\cmark};
+\node[accept]   at (3.85, -2.45) {};
+\node[accept]   at (4.95, -2.45) {};
+\node[accept]   at (6.05, -2.45) {};
+\node[accept]   at (7.15, -2.45) {};
 
 % Row 5: cattle (quasi-count)
-\node[reject]   at (0.55, -3.15) {\xmark};
-\node[reject]   at (1.65, -3.15) {\xmark};
-\node[reject]   at (2.75, -3.15) {\xmark};
+\node[reject]   at (0.55, -3.15) {};
+\node[reject]   at (1.65, -3.15) {};
+\node[reject]   at (2.75, -3.15) {};
 \node[marginal] at (3.85, -3.15) {\qmark};
-\node[accept]   at (4.95, -3.15) {\cmark};
-\node[accept]   at (6.05, -3.15) {\cmark};
-\node[accept]   at (7.15, -3.15) {\cmark};
+\node[accept]   at (4.95, -3.15) {};
+\node[accept]   at (6.05, -3.15) {};
+\node[accept]   at (7.15, -3.15) {};
 
 % Row 6: police (quasi-count)
-\node[reject]   at (0.55, -3.85) {\xmark};
-\node[reject]   at (1.65, -3.85) {\xmark};
-\node[reject]   at (2.75, -3.85) {\xmark};
+\node[reject]   at (0.55, -3.85) {};
+\node[reject]   at (1.65, -3.85) {};
+\node[reject]   at (2.75, -3.85) {};
 \node[marginal] at (3.85, -3.85) {\qmark};
-\node[accept]   at (4.95, -3.85) {\cmark};
-\node[accept]   at (6.05, -3.85) {\cmark};
-\node[accept]   at (7.15, -3.85) {\cmark};
+\node[accept]   at (4.95, -3.85) {};
+\node[accept]   at (6.05, -3.85) {};
+\node[accept]   at (7.15, -3.85) {};
 
 % Row 7: furniture (mass)
-\node[reject]   at (0.55, -4.55) {\xmark};
-\node[reject]   at (1.65, -4.55) {\xmark};
-\node[reject]   at (2.75, -4.55) {\xmark};
-\node[reject]   at (3.85, -4.55) {\xmark};
-\node[reject]   at (4.95, -4.55) {\xmark};
-\node[reject]   at (6.05, -4.55) {\xmark};
-\node[reject]   at (7.15, -4.55) {\xmark};
+\node[reject]   at (0.55, -4.55) {};
+\node[reject]   at (1.65, -4.55) {};
+\node[reject]   at (2.75, -4.55) {};
+\node[reject]   at (3.85, -4.55) {};
+\node[reject]   at (4.95, -4.55) {};
+\node[reject]   at (6.05, -4.55) {};
+\node[reject]   at (7.15, -4.55) {};
 
 % Grid lines
 \draw[gray!50] (0, 0) -- (7.7, 0);
@@ -463,65 +463,6 @@ The \term{police} and \term{cattle} figures differ. Once modifier uses are remov
 The corpus evidence thus converges with the matrix in Figure~\ref{fig:matrix}. \term{People} shows full count behaviour: tight and loose quantifiers are both well attested. \term{Folks} shows the boundary pattern: loose quantifiers remain strong while tight quantifiers are selectively suppressed. \term{Police} and \term{cattle} show the quasi-count floor: they largely avoid quantified-head position, and what few tokens occur are register-specific. The triangular pattern (no noun accepting tight properties while rejecting loose ones) holds across all four.
 
 
-% =============================================================
-% REVISED FIGURE: Bar chart of three N per million tokens of N
-% =============================================================
-
-\begin{figure}[t]
-\centering
-\begin{tikzpicture}[
-    bar/.style={fill=houseprimary!60, draw=houseprimary!80},
-    label/.style={font=\small}
-]
-
-% Axes
-\draw[thick, ->] (0, 0) -- (9.5, 0);
-\draw[thick, ->] (0, 0) -- (0, 5.5);
-
-% Y-axis label
-\node[rotate=90, anchor=south, font=\small] at (-1.2, 2.75) {\term{three} N per million tokens of N};
-
-% Y-axis tick marks and labels (scale: 500 per cm)
-\foreach \y/\lab in {0/0, 1/500, 2/1000, 3/1500, 4/2000, 5/2500} {
-    \draw (0, \y) -- (-0.15, \y) node[left, font=\footnotesize] {\lab};
-}
-\draw[gray!30] (0, 1) -- (9, 1);
-\draw[gray!30] (0, 2) -- (9, 2);
-\draw[gray!30] (0, 3) -- (9, 3);
-\draw[gray!30] (0, 4) -- (9, 4);
-
-% Bars (scale: value/500 = height)
-% people: 2226 -> 4.45
-\draw[bar] (0.8, 0) rectangle (2.0, 4.45);
-\node[font=\footnotesize, above] at (1.4, 4.45) {2{,}226};
-\node[label, below] at (1.4, -0.2) {\term{people}};
-
-% folks: 258 -> 0.52
-\draw[bar] (2.8, 0) rectangle (4.0, 0.52);
-\node[font=\footnotesize, above] at (3.4, 0.52) {258};
-\node[label, below] at (3.4, -0.2) {\term{folks}};
-
-% police: 91 -> 0.18
-\draw[bar] (4.8, 0) rectangle (6.0, 0.18);
-\node[font=\footnotesize, above] at (5.4, 0.25) {91};
-\node[label, below] at (5.4, -0.2) {\term{police}};
-
-% cattle: 487 -> 0.97
-\draw[bar] (6.8, 0) rectangle (8.0, 0.97);
-\node[font=\footnotesize, above] at (7.4, 0.97) {487};
-\node[label, below] at (7.4, -0.2) {\term{cattle}};
-
-% Annotations
-\draw[thick, <->] (1.4, -0.9) -- (3.4, -0.9);
-\node[font=\footnotesize, below] at (2.4, -0.9) {8.6$\times$};
-
-\draw[thick, decorate, decoration={brace, amplitude=4pt, mirror}] (4.8, -0.7) -- (8.0, -0.7);
-\node[font=\footnotesize, below] at (6.4, -1.0) {quasi-count};
-
-\end{tikzpicture}
-\caption{Frequency of \term{three} N per million tokens of each noun in COCA. \term{People} robustly accepts the tight quantifier. \term{Folks} shows 8.6-fold suppression. \term{Police} and \term{cattle} (head uses only, excluding modifier uses) approach the quasi-count floor.}
-\label{fig:coca-three}
-\end{figure}
 
 
 % =============================================================
