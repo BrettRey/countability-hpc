@@ -22,7 +22,7 @@ No separate floor condition. Floor calibration comes from the filler set (see be
 
 ### Critical items (8 cells × 8 lexicalizations = 64 items)
 
-Each cell has 8 lexically varied items. Verb phrases are matched across noun conditions AND across construction conditions to control for plausibility and aspect confounds.
+Each cell has 16 lexically varied items. Verb phrases are matched across noun conditions AND across construction conditions to control for plausibility confounds.
 
 #### VP set (shared across all conditions)
 
@@ -38,6 +38,14 @@ Each VP has an existential and agentive realization matched for aspect (all simp
 | 6 | There were three/several [noun] lined up outside. | Three/Several [noun] lined up outside. |
 | 7 | There were three/several [noun] crowding around the table. | Three/Several [noun] crowded around the table. |
 | 8 | There were three/several [noun] chatting in the kitchen. | Three/Several [noun] chatted in the kitchen. |
+| 9 | There were three/several [noun] huddled by the fire. | Three/Several [noun] huddled by the fire. |
+| 10 | There were three/several [noun] milling about in the corridor. | Three/Several [noun] milled about in the corridor. |
+| 11 | There were three/several [noun] loitering near the gate. | Three/Several [noun] loitered near the gate. |
+| 12 | There were three/several [noun] sheltering under the awning. | Three/Several [noun] sheltered under the awning. |
+| 13 | There were three/several [noun] arguing in the hallway. | Three/Several [noun] argued in the hallway. |
+| 14 | There were three/several [noun] sleeping on the floor. | Three/Several [noun] slept on the floor. |
+| 15 | There were three/several [noun] eating lunch in the break room. | Three/Several [noun] ate lunch in the break room. |
+| 16 | There were three/several [noun] reading in the waiting area. | Three/Several [noun] read in the waiting area. |
 
 ### Fillers (48 items, four severity bands)
 
@@ -133,7 +141,7 @@ User: Please rate this sentence:
 Rating (1-7):
 ```
 
-For Likert ratings: 10 repetitions per item per model at temperature = 0.7 (reduced from 30; surprisal is the primary measure and needs no repetition).
+For Likert ratings: 50 repetitions per item per model at temperature = 0.7. LLM inference is free and unlimited in this setup, so there is no cost reason to economize on repetitions.
 
 ### Models
 
@@ -143,9 +151,9 @@ For Likert ratings: 10 repetitions per item per model at temperature = 0.7 (redu
 
 ### Trial counts
 
-- Surprisal: 112 items × 3 models = 336 measurements (deterministic, no repetition needed)
-- Likert: 112 items × 10 reps × 3 models = 3,360 ratings
-- Total API calls: ~3,696
+- Surprisal: 176 items × 3 models = 528 measurements (deterministic, no repetition needed)
+- Likert: 176 items × 50 reps × 3 models = 26,400 ratings
+- Total API calls: ~26,928 (cost is zero; inference is free and unlimited)
 
 ## Predictions
 
@@ -202,15 +210,22 @@ Linear mixed-effects model:
 surprisal ~ noun * det * construction + (1 | vp_lexicalization) + (1 | model)
 ```
 
-Random intercepts for VP lexicalization (8 levels) and model (3 levels). The key test is the three-way interaction `noun:det:construction`.
+Random intercepts for VP lexicalization (16 levels) and model (3 levels). The key test is the three-way interaction `noun:det:construction`.
+
+### Power
+
+With 16 items per cell × 3 models = 48 observations per cell for surprisal, the design has approximately 80% power to detect a 0.8-bit interaction effect at residual SD = 1.0 (conservative). For Likert, 16 items × 50 reps × 3 models = 2,400 observations per cell; power is not a concern. If the true effect is smaller than 0.8 bits in surprisal, the Likert data (with far more observations) provide the fallback. The design is deliberately overpowered on the Likert side because LLM inference is free.
 
 ### Step 3: Convergent test (Likert)
 
-Ordinal regression on item-level mean ratings (aggregated across 10 reps to avoid pseudo-replication):
+Bayesian multilevel model on item-level mean ratings (aggregated across 50 reps to avoid pseudo-replication):
 
 ```r
-mean_rating ~ noun * det * construction + (1 | vp_lexicalization) + (1 | model)
+brm(mean_rating ~ noun * det * construction + (1 | vp_set) + (1 | model),
+    data = item_means, family = gaussian())
 ```
+
+No ordinal regression: with 50 reps per item, item-level means are approximately continuous. The three-way interaction is the target. Additionally, plot all cell means with 95% CIs — if the interaction is real, it will be visible.
 
 ### Step 4: Reporting
 
@@ -239,7 +254,7 @@ mean_rating ~ noun * det * construction + (1 | vp_lexicalization) + (1 | model)
 
 4. **Pseudo-replication in Likert.** Temperature-based repetitions are draws from a single system, not independent participants. Likert analysis uses item-level aggregation to avoid inflating N. Surprisal, being deterministic, has no replication issue.
 
-5. **Aspect matching is approximate.** Existential frames use progressive (*were waiting*); agentive frames use simple past (*waited*). This is inherent in the construction contrast. Both use past tense to minimize additional confounds.
+5. **Post-head modifier vs. VP.** Existential frames use a participial post-head modifier (*three folks waiting in the lobby*); agentive frames use a finite VP (*three folks waited in the lobby*). Both clauses are simple past; there is no aspect confound. The structural difference (NP-internal modifier vs. clausal predicate) is inherent in the construction contrast and is part of what the probe tests.
 
 ## Registration
 

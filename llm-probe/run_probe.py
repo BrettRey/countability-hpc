@@ -269,7 +269,7 @@ if __name__ == "__main__":
                         default="claude")
     parser.add_argument("--measure", choices=["surprisal", "likert", "both"],
                         default="both")
-    parser.add_argument("--reps", type=int, default=10,
+    parser.add_argument("--reps", type=int, default=50,
                         help="Likert repetitions per item (ignored for surprisal)")
     parser.add_argument("--seed", type=int, default=42)
     args = parser.parse_args()
