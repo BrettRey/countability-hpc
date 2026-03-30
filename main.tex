@@ -406,7 +406,7 @@ This hierarchy explains the quasi-count pattern documented in descriptive gramma
 \node[font=\small] at (7.2, -5.7) {loose};
 
 \end{tikzpicture}
-\caption{Triangular structure of the noun $\times$ property matrix. Properties are ordered from tight (left) to loose (right); nouns from fully count (top) to mass (bottom). The implicational boundary (dashed line) separates acceptable from unacceptable cells: no noun accepts tight properties while rejecting looser ones. Yellow cells indicate marginal or variable judgments. The \term{folks} row shows the boundary case: loose properties accepted, tight properties degraded. Note: \term{people} has suppletive singular \term{person}; archaic/literary \term{a folk} survives as a different sense.}
+\caption{Triangular structure of the noun $\times$ property matrix. Properties are ordered from tight (left) to loose (right); nouns from fully count (top) to mass (bottom). The implicational boundary (dashed line) separates acceptable from unacceptable cells: no noun accepts tight properties while rejecting looser ones. Yellow cells indicate marginal or variable judgments. The \term{folks} row shows the boundary case: loose properties accepted, tight properties degraded. Note: \term{people} has suppletive singular \term{person}; archaic/literary \term{a folk} survives as a different sense. The \term{people} row tracks the `persons' sense only; \term{a people} (= an ethnic group) is a distinct sense with full count syntax (\term{three peoples}, \term{many peoples}).}
 \label{fig:matrix}
 \end{figure}
 
@@ -444,7 +444,7 @@ For \term{people} and \term{folks}, raw string counts are reliable proxies for h
 
 For \term{police} and \term{cattle}, the situation is different. Both nouns appear productively in modifier function: \term{police officer}, \term{police car}, \term{police station}; \term{cattle prod}, \term{cattle guard}, \term{cattle rancher}. Raw counts for \term{three police} (179) and \term{three cattle} (10) are dominated by these modifier uses, where the quantifier modifies the head noun (\term{officer}, \term{prod}) and \term{police}/\term{cattle} functions as a nominal modifier within the larger NP. Collocate searches show that of the 179 tokens of \term{three police} + noun, 159 involve modifier uses (\term{three police officers} alone accounts for 92); the remaining 20 are genuine head uses. For \term{cattle}, 3 of 10 \term{three cattle} tokens are modifier uses, leaving 7 head uses. Table~\ref{tab:coca} reports only head uses for these nouns.
 
-This asymmetry (\term{people} and \term{folks} don't function as modifiers; \term{police} and \term{cattle} do) is itself diagnostic. English nominal modifiers are characteristically singular (\term{dog catcher}, not \ungram{\term{dogs catcher}}). The fact that \term{police} and \term{cattle} appear freely in modifier position despite plural morphology indicates that their number specification is uncommitted, vague enough to satisfy a structural slot that ordinarily requires singular form. COCA collocate searches confirm this quantitatively: 23.5\% of all \term{cattle} tokens are followed immediately by another noun (\term{cattle} + [n*]), compared to 1.0\% for \term{people}, 0.9\% for \term{cows}, and 0.6\% for \term{folks}. The \term{cattle}/\term{cows} comparison is the cleanest: same referents, same semantic domain, but \term{cows} (fully count, committed number) barely modifies, while \term{cattle} (quasi-count, uncommitted number) does so at 25 times the rate. \term{Folks}, despite its weakened individuation, has overt plural \term{-s} and patterns with the number-committed nouns for modifier rate. The modifier diagnostic thus tracks number morphology specifically, not countability in general, confirming its position among the tightest properties in the hierarchy.
+This asymmetry (\term{people} and \term{folks} don't function as modifiers; \term{police} and \term{cattle} do) is itself diagnostic. English nominal modifiers are characteristically singular (\term{dog catcher}, not \ungram{\term{dogs catcher}}). The fact that \term{police} and \term{cattle} appear freely in modifier position despite plural morphology indicates that their number specification is uncommitted, vague enough to satisfy a structural slot that ordinarily requires singular form. COCA collocate searches confirm this quantitatively: 23.5\% of all \term{cattle} tokens are followed immediately by another noun (\term{cattle} + [n*]), compared to 1.0\% for \term{people}, 0.9\% for \term{cows}, and 0.6\% for \term{folks}. The pattern extends to the other quasi-count nouns: \term{poultry} 41.3\%, \term{youth} 32.4\%, \term{livestock} 26.7\%, \term{clergy} 9.1\%, \term{vermin} 6.2\%. Every noun without overt plural marking modifies at 6\% or higher; every noun with plural \term{-s} or a suppletive plural is under 1\%. The \term{cattle}/\term{cows} comparison is the cleanest: same referents, same semantic domain, but \term{cows} (fully count, committed number) barely modifies, while \term{cattle} (quasi-count, uncommitted number) does so at 25 times the rate. \term{Folks}, despite its weakened individuation, has overt plural \term{-s} and patterns with the number-committed nouns for modifier rate. The modifier diagnostic thus tracks number morphology specifically, not countability in general, confirming its position among the tightest properties in the hierarchy.
 
 The \term{folks}/\term{people} comparison provides the cleanest test of the hierarchy. Both are plural-only in their ordinary senses, but \term{people} is fully count while \term{folks} occupies the boundary zone. The ratio of \term{three} to \term{many} drops from 8.3\% for \term{people} to 2.2\% for \term{folks}, a 3.8-fold reduction. Normalizing by noun frequency (to control for the fact that \term{people} is 27 times more frequent than \term{folks}), \term{three people} occurs at 2{,}226 per million tokens of \term{people}, while \term{three folks} occurs at only 258 per million tokens of \term{folks}, an 8.6-fold suppression. By contrast, \term{many folks} (11{,}884 per million, excluding \term{how many}) is suppressed only about 2.3-fold relative to \term{many people} (26{,}984 per million). The tight property is suppressed roughly three times more than the loose property, exactly as the hierarchy predicts. The tighter diagnostic \term{how many} N shows the same pattern with better coverage: 85 tokens of \term{how many folks} (1{,}290 per million) versus 7{,}919 of \term{how many people} (4{,}438 per million), a 3.4-fold suppression of the tight frame.
 
@@ -515,68 +515,134 @@ The corpus evidence thus converges with the matrix in Figure~\ref{fig:matrix}. \
 
 
 % =============================================================
-% REVISED FIGURE: Paired bars showing three and many
+% Dot plot: three/M and many/M with 95% Poisson CIs
 % =============================================================
 
 \begin{figure}[t]
 \centering
 \begin{tikzpicture}[
-    barthree/.style={fill=red!40, draw=gray!50},
-    barmany/.style={fill=green!60, draw=gray!50},
-    label/.style={font=\small}
+    label/.style={font=\small},
+    dot three/.style={fill=red!70, draw=red!70, circle, inner sep=1.5pt},
+    dot many/.style={fill=blue!60, draw=blue!60, circle, inner sep=1.5pt},
+    ci three/.style={red!70, thick},
+    ci many/.style={blue!60, thick}
 ]
 
-% Axes (log10 scale)
-\draw[thick, ->] (0, 0) -- (11.5, 0);
-\draw[thick, ->] (0, 0) -- (0, 5.1);
+% X axis (log scale)
+\draw[thick,->] (0,0) -- (10.5,0);
+\node[below, font=\small] at (5.25,-0.4) {per million tokens of noun ($\log_{10}$ scale)};
+\draw (0.00,-0.1) -- (0.00,0.1);
+\node[below, font=\footnotesize] at (0.00,-0.15) {1};
+\draw[gray!20] (0.00,0) -- (0.00,7.45);
+\draw (2.17,-0.1) -- (2.17,0.1);
+\node[below, font=\footnotesize] at (2.17,-0.15) {10};
+\draw[gray!20] (2.17,0) -- (2.17,7.45);
+\draw (4.35,-0.1) -- (4.35,0.1);
+\node[below, font=\footnotesize] at (4.35,-0.15) {100};
+\draw[gray!20] (4.35,0) -- (4.35,7.45);
+\draw (6.52,-0.1) -- (6.52,0.1);
+\node[below, font=\footnotesize] at (6.52,-0.15) {1{,}000};
+\draw[gray!20] (6.52,0) -- (6.52,7.45);
+\draw (8.70,-0.1) -- (8.70,0.1);
+\node[below, font=\footnotesize] at (8.70,-0.15) {10{,}000};
+\draw[gray!20] (8.70,0) -- (8.70,7.45);
 
-% Y-axis label
-\node[rotate=90, anchor=south, font=\small] at (-1.2, 2.55) {$\log_{10}$ frequency per million tokens of N};
+% officers (sing.)
+\node[label, anchor=east] at (-0.15,6.83) {\term{officers} \scriptsize{(sing.)}};
+\draw[gray!10] (0,6.83) -- (10,6.83);
+\draw[ci three] (7.69,6.83) -- (7.93,6.83);
+\node[dot three] at (7.82,6.83) {};
+\draw[ci many] (7.75,6.67) -- (7.98,6.67);
+\node[dot many] at (7.87,6.67) {};
 
-% Y-axis ticks at decades
-\foreach \y/\lab in {1/$10$,2/$10^{2}$,3/$10^{3}$,4/$10^{4}$,5/$10^{5}$} {
-    \draw (0, \y) -- (-0.15, \y) node[left, font=\footnotesize] {\lab};
-    \draw[gray!20] (0, \y) -- (11, \y);
-}
+% chickens (sing.)
+\node[label, anchor=east] at (-0.15,6.17) {\term{chickens} \scriptsize{(sing.)}};
+\draw[gray!10] (0,6.17) -- (10,6.17);
+\draw[ci three] (7.27,6.17) -- (7.97,6.17);
+\node[dot three] at (7.69,6.17) {};
+\draw[ci many] (7.34,6.02) -- (8.03,6.02);
+\node[dot many] at (7.75,6.02) {};
 
-% Bar heights are log10 of the per-million frequencies
-% people: three=2226 (3.348); many=26984 (4.431)
-\draw[barthree] (0.7, 0) rectangle (1.3, 3.35);
-\node[font=\tiny, above] at (1.0, 3.35) {2{,}226};
-\draw[barmany] (1.4, 0) rectangle (2.0, 4.43);
-\node[font=\tiny, above] at (1.7, 4.43) {26{,}984};
-\node[label, below] at (1.35, -0.25) {\term{people}};
+% priests (sing.)
+\node[label, anchor=east] at (-0.15,5.53) {\term{priests} \scriptsize{(sing.)}};
+\draw[gray!10] (0,5.53) -- (10,5.53);
+\draw[ci three] (7.14,5.53) -- (7.79,5.53);
+\node[dot three] at (7.52,5.53) {};
+\draw[ci many] (8.70,5.38) -- (9.01,5.38);
+\node[dot many] at (8.87,5.38) {};
 
-% folks: three=258 (2.412); many=11883 (4.075)
-\draw[barthree] (3.2, 0) rectangle (3.8, 2.41);
-\node[font=\tiny, above] at (3.5, 2.41) {258};
-\draw[barmany] (3.9, 0) rectangle (4.5, 4.08);
-\node[font=\tiny, above] at (4.2, 4.08) {11{,}883};
-\node[label, below] at (3.85, -0.25) {\term{folks}};
+% people
+\node[label, anchor=east] at (-0.15,4.88) {\term{people}};
+\draw[gray!10] (0,4.88) -- (10,4.88);
+\draw[ci three] (7.25,4.88) -- (7.31,4.88);
+\node[dot three] at (7.28,4.88) {};
+\draw[ci many] (9.63,4.72) -- (9.64,4.72);
+\node[dot many] at (9.63,4.72) {};
 
-% police: three=91 (1.959); many=335 (2.525)
-\draw[barthree] (5.7, 0) rectangle (6.3, 1.96);
-\node[font=\tiny, above] at (6.0, 1.96) {91};
-\draw[barmany] (6.4, 0) rectangle (7.0, 2.53);
-\node[font=\tiny, above] at (6.7, 2.53) {335};
-\node[label, below] at (6.35, -0.25) {\term{police}};
+% folks (boundary)
+\node[label, anchor=east] at (-0.15,4.23) {\term{folks} \scriptsize{(boundary)}};
+\draw[gray!10] (0,4.23) -- (10,4.23);
+\draw[ci three] (4.63,4.23) -- (5.61,4.23);
+\node[dot three] at (5.24,4.23) {};
+\draw[ci many] (8.79,4.08) -- (8.92,4.08);
+\node[dot many] at (8.86,4.08) {};
 
-% cattle: three=487 (2.688); many=2991 (3.476)
-\draw[barthree] (8.2, 0) rectangle (8.8, 2.69);
-\node[font=\tiny, above] at (8.5, 2.69) {487};
-\draw[barmany] (8.9, 0) rectangle (9.5, 3.48);
-\node[font=\tiny, above] at (9.2, 3.48) {2{,}991};
-\node[label, below] at (8.85, -0.25) {\term{cattle}};
+% clergy
+\node[label, anchor=east] at (-0.15,3.58) {\term{clergy}};
+\draw[gray!10] (0,3.58) -- (10,3.58);
+\draw[ci three] (4.40,3.58) -- (6.90,3.58);
+\node[dot three] at (5.89,3.58) {};
+\draw[ci many] (7.47,3.43) -- (8.23,3.43);
+\node[dot many] at (7.93,3.43) {};
+
+% cattle
+\node[label, anchor=east] at (-0.15,2.93) {\term{cattle}};
+\draw[gray!10] (0,2.93) -- (10,2.93);
+\draw[ci three] (4.57,2.93) -- (6.37,2.93);
+\node[dot three] at (5.84,2.93) {};
+\draw[ci many] (7.22,2.78) -- (7.80,2.78);
+\node[dot many] at (7.56,2.78) {};
+
+% youth
+\node[label, anchor=east] at (-0.15,2.27) {\term{youth}};
+\draw[gray!10] (0,2.27) -- (10,2.27);
+\draw[ci three] (4.09,2.27) -- (5.46,2.27);
+\node[dot three] at (5.01,2.27) {};
+\draw[ci many] (6.81,2.12) -- (7.22,2.12);
+\node[dot many] at (7.04,2.12) {};
+
+% poultry
+\node[label, anchor=east] at (-0.15,1.62) {\term{poultry}};
+\draw[gray!10] (0,1.62) -- (10,1.62);
+\draw[ci three] (1.78,1.62) -- (6.71,1.62);
+\node[dot three] at (5.09,1.62) {};
+\draw[ci many] (4.64,1.48) -- (7.14,1.48);
+\node[dot many] at (6.13,1.48) {};
+
+% livestock
+\node[label, anchor=east] at (-0.15,0.98) {\term{livestock}};
+\draw[gray!10] (0,0.98) -- (10,0.98);
+\draw[ci three] (1.38,0.98) -- (6.31,0.98);
+\node[dot three] at (4.69,0.98) {};
+\draw[ci many] (6.37,0.83) -- (7.52,0.83);
+\node[dot many] at (7.11,0.83) {};
+
+% vermin
+\node[label, anchor=east] at (-0.15,0.33) {\term{vermin}};
+\draw[gray!10] (0,0.33) -- (10,0.33);
+\node[font=\scriptsize, red!70] at (-0.15,0.47) {0};
+\draw[ci many] (5.14,0.18) -- (8.35,0.18);
+\node[dot many] at (7.14,0.18) {};
 
 % Legend
-\draw[barthree] (10.0, 4.8) rectangle (10.4, 5.1);
-\node[font=\footnotesize, right] at (10.5, 4.95) {\term{three}};
-\draw[barmany] (10.0, 4.2) rectangle (10.4, 4.5);
-\node[font=\footnotesize, right] at (10.5, 4.35) {\term{many}};
+\node[dot three] at (3,7.75) {};
+\node[label, anchor=west] at (3.2,7.75) {\term{three} N};
+\node[dot many] at (5,7.75) {};
+\node[label, anchor=west] at (5.2,7.75) {\term{many} N};
 
 \end{tikzpicture}
-\caption{Frequency of \term{three} N and \term{many} N per million tokens of each noun in COCA (head uses only for \term{police} and \term{cattle}; \term{many} excludes \term{how many}). Bars are plotted on a $\log_{10}$ scale (ticks at $10$, $10^{2}$, $10^{3}$, $10^{4}$, $10^{5}$); numeric labels give the raw per-million values. For \term{people}, both quantifiers are well attested. For \term{folks}, \term{many} remains strong while \term{three} is suppressed. For \term{police} and \term{cattle}, both quantifiers are rare in quantified-head NPs (e.g., \term{three police} meaning `three police officers'); the nouns more often surface as nominal modifiers.}
-\label{fig:coca-paired}
+\caption{Per-million frequency of \term{three} N (red) and \term{many} N (blue) with 95\% Poisson confidence intervals, plotted on a $\log_{10}$ scale. Singulatives cluster at top right (both quantifiers well attested). Quasi-count nouns show the dissociation: \term{many} rates overlap with singulatives, but \term{three} rates plummet. Wide intervals for small counts (\term{three clergy}, \term{many poultry}, \term{many vermin}) indicate that the point estimates are unreliable; the directional pattern is not. Head uses only for \term{police} and \term{cattle}; \term{many} excludes \term{how many}.}
+\label{fig:dotplot}
 \end{figure}
 
 \subsection{Existential construction probe}\label{sec:existential}
@@ -633,7 +699,27 @@ Consider \term{cattle}. It takes plural agreement (\term{the cattle are grazing}
 
 \term{Police} shows the same pattern. Plural agreement (\term{the police are investigating}), \term{many police}, and for some speakers \term{several police}, are acceptable. But \ungram{\term{a police}} and \ungram{\term{three police}} are ungrammatical in standard English. High round numerals work (\term{hundreds of police}) because they function as approximate measures rather than exact counts. The stability of \term{police} in this intermediate state (attested for as long as we have good descriptive records) follows from functional anchoring: speakers who need singulative reference use \term{officer}, so there's no pressure to develop tight-linkage properties.
 
-Other quasi-count nouns show slight variations but respect the hierarchy. \term{Poultry} and \term{livestock} largely pattern like \term{cattle}. \term{Clergy} accepts \term{many clergy} and \term{several clergy} but resists \ungram{\term{a clergy}}, with \term{cleric} serving the singulative function. \term{Vermin} is quasi-count in collective uses (for some speakers \term{many vermin}) but can shift toward mass in some registers (\term{much vermin}), a loosening consistent with the hierarchy's predictions. None of these nouns reverses the implicational pattern: none accepts tight properties while rejecting loose ones.
+Other quasi-count nouns show slight variations but respect the hierarchy. Table~\ref{tab:expansion} reports COCA frequencies for five additional quasi-count nouns. \term{Poultry} and \term{livestock} largely pattern like \term{cattle}: near-zero tokens with \term{three} and \term{several}, modest acceptance of \term{many}. \term{Vermin} is the most extreme case: zero tokens with \term{three} or \term{several}, and only 2 with \term{many}. \term{Clergy} is more permissive, accepting \term{many clergy} (26) and marginal \term{several clergy} (4), with \term{cleric} serving the singulative function. \term{Youth} patterns nearest to \term{folks}, accepting \term{many youth} (86), \term{several youth} (22), and even \term{three youth} (10), though some of the latter may reflect the fully count sense (\term{a youth} = a young person). None of these nouns reverses the implicational pattern: none accepts tight properties while rejecting loose ones.
+
+\begin{table}[H]
+\centering
+\caption{COCA frequencies for expanded quasi-count nouns}
+\label{tab:expansion}
+\begin{tabular}{@{}l r r r r r@{}}
+\toprule
+Noun & COCA freq. & \term{three} & \term{several} & \term{many} & \term{how many} \\
+\midrule
+\term{youth}     & 49{,}846 & 10 & 22 & 86 & 3 \\
+\term{clergy}    & 5{,}879  & 3  & 4  & 26 & 1 \\
+\term{livestock} & 6{,}982  & 1  & 1  & 13 & 0 \\
+\term{poultry}   & 4{,}544  & 1  & 1  & 3  & 0 \\
+\term{vermin}    & 1{,}041  & 0  & 0  & 2  & 0 \\
+\bottomrule
+\end{tabular}
+
+\smallskip
+\footnotesize{Note: Raw counts; no modifier filtering applied (\term{poultry} and \term{livestock} function freely as modifiers, so head-use counts may be lower). Nouns ordered by acceptance of tight properties. Compare Table~\ref{tab:coca} for core nouns.}
+\end{table}
 
 The quasi-count class thus fits the falsifiability conditions from \S\ref{sec:hierarchy}. No noun in this class shows the reverse pattern (accepting \term{three} N while rejecting \term{many} N), which is exactly what the implicational hierarchy rules out. The triangular pattern holds:
 
@@ -759,6 +845,28 @@ This predicts an asymmetry. Quasi-count nouns \textit{with} available singulativ
 
 \term{Police}/\term{officer} and \term{cattle}/\term{cow} fit the stable pattern. \term{Folks} fits the unstable pattern: there's no singulative \term{*a folk} in ordinary use, and \term{person} is semantically distinct (neutral rather than in-group). The variability of \term{three folks} in \S\ref{sec:folks} is exactly what the account predicts for an unanchored quasi-count noun.
 
+COCA frequencies confirm the offloading. For three quasi-count/singulative pairs, the singulative absorbs the tight property at dramatically higher per-million rates:
+
+\begin{table}[H]
+\centering
+\caption{Functional anchoring: \term{three} per million tokens of each noun}
+\label{tab:anchoring}
+\begin{tabular}{@{}l r r l r r r@{}}
+\toprule
+Quasi-count & Freq. & \term{three}/M & Singulative & Freq. & \term{three}/M & Ratio \\
+\midrule
+\term{police}  & 220{,}858 & 91  & \term{officers}  & 60{,}161 & 3{,}956 & 44$\times$ \\
+\term{poultry} & 4{,}544   & 220 & \term{chickens}  & 8{,}745  & 3{,}431 & 16$\times$ \\
+\term{clergy}  & 5{,}879   & 510 & \term{priests}   & 12{,}168 & 2{,}876 & 6$\times$ \\
+\bottomrule
+\end{tabular}
+
+\smallskip
+\footnotesize{Note: \term{Police} count excludes modifier uses. Per-million rates are computed relative to total COCA frequency of each noun form.}
+\end{table}
+
+The tighter the suppression in the quasi-count noun, the larger the offset: \term{police}, which most categorically rejects \term{three}, shows the largest ratio (44$\times$). The singulatives don't just exist as alternatives; they do the individuating work that the quasi-count nouns can't.
+
 The diachronic \term{data}/\term{datum} case shows the same logic. As \term{datum} becomes archaic, the singulative anchor is lost and \term{data} drifts toward mass. \term{Police} remains stable because \term{officer} remains in active use.
 
 %~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- --
@@ -807,6 +915,8 @@ The hierarchy rests on the notion that count properties differ in the \textit{pr
 
 The hierarchy is a \textit{morphosyntactic} generalization. It says: for English nouns, acceptance of tight count properties implies acceptance of loose ones, not the reverse. This is grounded in distributional evidence (the noun $\times$ property matrix, the COCA frequency data, the existential probe) and is falsifiable by any noun that reverses the implication. It doesn't depend on any particular semantic formalization of \enquote{precision}; it's a morphosyntactic fact about English, projectible for morphosyntactic purposes.
 
+Pointwise mutual information (PMI) scores from COCA provide independent confirmation. For quasi-count nouns, \term{three} shows negative PMI (the combination is rarer than chance would predict given the individual frequencies of determinative and noun): \term{three cattle} $-0.24$, \term{three police} $-2.67$, \term{three livestock} $-2.01$, \term{three vermin} $-\infty$. But \term{many} shows \textit{positive} PMI for the same nouns: \term{many cattle} $+1.72$, \term{many clergy} $+2.28$, \term{many vermin} $+1.08$. The tight property repels quasi-count nouns; the loose property attracts them. Opposite MI signs for the same nouns confirm that the ordering isn't a frequency artefact: it reflects a genuine distributional asymmetry between what tight and loose properties select for.
+
 Semantic accounts offer candidate explanations for \textit{why} the ordering has the shape it does. \textcite{grimm2018} analyzes collectives and aggregates in terms of atomic accessibility: atoms exist in the denotation but aren't accessible to certain quantificational operations. \textcite{rothstein2010} distinguishes counting (requires context-relative atomicity, where atoms must be stable under context shift) from measuring (requires only a monotone scale). On this analysis, \term{three cattle} fails because \term{three} counts and \term{cattle}'s atoms aren't accessible; \term{many cattle} succeeds because \term{many} measures. \textcite{chierchia1998}'s mass/count parameter turns on whether atoms are encoded in lexical semantics; quasi-count nouns would have atoms semantically present but with degraded accessibility. \textcite{hackl2000} treats \term{many} as a context-dependent degree modifier, which connects it to vagueness theory rather than counting.
 
 These are analyses from formal semantics, projecting relative to truth conditions and compositionality. A semanticist might conclude that \term{many} and \term{much} are the same operation (degree modification over a scale) and that \term{many cattle} tells us nothing about \term{cattle}'s individuation. But morphosyntactically, \term{many} and \term{much} are in complementary distribution: \term{many cattle} yes, \term{much cattle} no, \term{many furniture} no, \term{much furniture} yes. Whatever \term{many} does semantically, it selects for something that mass nouns lack and quasi-count nouns retain. The morphosyntactic hierarchy captures this distributional fact; the semantic frameworks explain why the fact obtains. Both levels are real; they answer different questions. This is field-relative projectibility (\S\ref{sec:levels}): the same data yield different right-sized categories for different inferential purposes.
@@ -847,7 +957,7 @@ If this is right, then the borders of grammar aren't walls but gradients~-- main
 \section*{Acknowledgments}
 %~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- --
 
-I used Claude Sonnet 4.5, Claude Opus 4.5, and ChatGPT 5.1 as drafting aids; I take responsibility for all remaining claims, errors, and interpretations.
+I used Claude Opus 4.6, Claude Sonnet 4.5, and ChatGPT 5.1 as drafting aids; I take responsibility for all remaining claims, errors, and interpretations.
 
 %~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- --
 % References
