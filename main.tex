@@ -16,6 +16,13 @@
 \usepackage{pifont} % For checkmarks
 \usepackage{orcidlink}
 
+% House colour palette
+\definecolor{houseprimary}{RGB}{46,80,119}
+\definecolor{housesecondary}{RGB}{232,93,76}
+\definecolor{housetertiary}{RGB}{77,163,117}
+\definecolor{housequinary}{RGB}{212,160,62}
+\definecolor{houselight}{RGB}{232,232,232}
+
 % Custom commands for this paper
 \newcommand{\cmark}{\ding{51}} % Checkmark
 \newcommand{\xmark}{\ding{55}} % X mark
@@ -164,7 +171,7 @@ The homeostatic mechanism generates a specific prediction: count properties shou
 \begin{tikzpicture}[
     axis/.style={thick},
     grid/.style={gray!20},
-    bar/.style={fill=green!60, draw=gray!50, line width=4pt, rounded corners=1pt},
+    bar/.style={fill=houseprimary!60, draw=houseprimary!80, line width=4pt, rounded corners=1pt},
     barpartial/.style={fill=green!60, draw=gray!50, line width=4pt, rounded corners=1pt, dash pattern=on 5pt off 3pt},
     label/.style={font=\small},
     prop/.style={font=\small}
@@ -284,9 +291,9 @@ This hierarchy explains the quasi-count pattern documented in descriptive gramma
 \centering
 \begin{tikzpicture}[
     cell/.style={minimum width=1.1cm, minimum height=0.7cm, anchor=center, draw=gray!50, line width=0.5pt},
-    accept/.style={cell, fill=green!60},
-    marginal/.style={cell, fill=yellow!70},
-    reject/.style={cell, fill=red!40},
+    accept/.style={cell, fill=houseprimary, text=white},
+    marginal/.style={cell, fill=housesecondary, text=white},
+    reject/.style={cell, fill=houselight},
     na/.style={cell, fill=gray!20},
     label/.style={font=\small}
 ]
@@ -310,67 +317,67 @@ This hierarchy explains the quasi-count pattern documented in descriptive gramma
 \node[label, anchor=east] at (-0.1, -4.55) {\term{furniture}};
 
 % Row 1: book (all accept)
-\node[accept]   at (0.55, -0.35) {};
-\node[accept]   at (1.65, -0.35) {};
-\node[accept]   at (2.75, -0.35) {};
-\node[accept]   at (3.85, -0.35) {};
-\node[accept]   at (4.95, -0.35) {};
-\node[accept]   at (6.05, -0.35) {};
-\node[accept]   at (7.15, -0.35) {};
+\node[accept]   at (0.55, -0.35) {\cmark};
+\node[accept]   at (1.65, -0.35) {\cmark};
+\node[accept]   at (2.75, -0.35) {\cmark};
+\node[accept]   at (3.85, -0.35) {\cmark};
+\node[accept]   at (4.95, -0.35) {\cmark};
+\node[accept]   at (6.05, -0.35) {\cmark};
+\node[accept]   at (7.15, -0.35) {\cmark};
 
 % Row 2: people (suppletive sg, otherwise full count)
-\node[marginal] at (0.55, -1.05) {};  % suppletive
-\node[accept]   at (1.65, -1.05) {};
-\node[accept]   at (2.75, -1.05) {};
-\node[accept]   at (3.85, -1.05) {};
-\node[accept]   at (4.95, -1.05) {};
-\node[accept]   at (6.05, -1.05) {};
-\node[accept]   at (7.15, -1.05) {};
+\node[marginal] at (0.55, -1.05) {\qmark};
+\node[accept]   at (1.65, -1.05) {\cmark};
+\node[accept]   at (2.75, -1.05) {\cmark};
+\node[accept]   at (3.85, -1.05) {\cmark};
+\node[accept]   at (4.95, -1.05) {\cmark};
+\node[accept]   at (6.05, -1.05) {\cmark};
+\node[accept]   at (7.15, -1.05) {\cmark};
 
 % Row 3: folk BrE (no sg, no a(n), but low cardinals ok)
-\node[reject]   at (0.55, -1.75) {};
-\node[reject]   at (1.65, -1.75) {};
-\node[accept]   at (2.75, -1.75) {};
-\node[accept]   at (3.85, -1.75) {};
-\node[accept]   at (4.95, -1.75) {};
-\node[accept]   at (6.05, -1.75) {};
-\node[accept]   at (7.15, -1.75) {};
+\node[reject]   at (0.55, -1.75) {\xmark};
+\node[reject]   at (1.65, -1.75) {\xmark};
+\node[accept]   at (2.75, -1.75) {\cmark};
+\node[accept]   at (3.85, -1.75) {\cmark};
+\node[accept]   at (4.95, -1.75) {\cmark};
+\node[accept]   at (6.05, -1.75) {\cmark};
+\node[accept]   at (7.15, -1.75) {\cmark};
 
 % Row 4: folks AmE (no sg, no a(n), marginal low cardinals)
-\node[reject]   at (0.55, -2.45) {};
-\node[reject]   at (1.65, -2.45) {};
-\node[marginal] at (2.75, -2.45) {};  % the key "?" cell
-\node[accept]   at (3.85, -2.45) {};
-\node[accept]   at (4.95, -2.45) {};
-\node[accept]   at (6.05, -2.45) {};
-\node[accept]   at (7.15, -2.45) {};
+\node[reject]   at (0.55, -2.45) {\xmark};
+\node[reject]   at (1.65, -2.45) {\xmark};
+\node[marginal] at (2.75, -2.45) {\qmark};
+\node[accept]   at (3.85, -2.45) {\cmark};
+\node[accept]   at (4.95, -2.45) {\cmark};
+\node[accept]   at (6.05, -2.45) {\cmark};
+\node[accept]   at (7.15, -2.45) {\cmark};
 
 % Row 5: cattle (quasi-count)
-\node[reject]   at (0.55, -3.15) {};
-\node[reject]   at (1.65, -3.15) {};
-\node[reject]   at (2.75, -3.15) {};
-\node[marginal] at (3.85, -3.15) {};  % several marginal
-\node[accept]   at (4.95, -3.15) {};
-\node[accept]   at (6.05, -3.15) {};
-\node[accept]   at (7.15, -3.15) {};
+\node[reject]   at (0.55, -3.15) {\xmark};
+\node[reject]   at (1.65, -3.15) {\xmark};
+\node[reject]   at (2.75, -3.15) {\xmark};
+\node[marginal] at (3.85, -3.15) {\qmark};
+\node[accept]   at (4.95, -3.15) {\cmark};
+\node[accept]   at (6.05, -3.15) {\cmark};
+\node[accept]   at (7.15, -3.15) {\cmark};
 
 % Row 6: police (quasi-count)
-\node[reject]   at (0.55, -3.85) {};
-\node[reject]   at (1.65, -3.85) {};
-\node[reject]   at (2.75, -3.85) {};
-\node[marginal] at (3.85, -3.85) {};  % several marginal
-\node[accept]   at (4.95, -3.85) {};
-\node[accept]   at (6.05, -3.85) {};
-\node[accept]   at (7.15, -3.85) {};
+\node[reject]   at (0.55, -3.85) {\xmark};
+\node[reject]   at (1.65, -3.85) {\xmark};
+\node[reject]   at (2.75, -3.85) {\xmark};
+\node[marginal] at (3.85, -3.85) {\qmark};
+\node[accept]   at (4.95, -3.85) {\cmark};
+\node[accept]   at (6.05, -3.85) {\cmark};
+\node[accept]   at (7.15, -3.85) {\cmark};
 
 % Row 7: furniture (mass)
-\node[reject]   at (0.55, -4.55) {};
-\node[reject]   at (1.65, -4.55) {};
-\node[reject]   at (2.75, -4.55) {};
-\node[reject]   at (3.85, -4.55) {};
-\node[reject]   at (4.95, -4.55) {};
-\node[reject]   at (6.05, -4.55) {};
-\node[reject]   at (7.15, -4.55) {};
+\node[reject]   at (0.55, -4.55) {\xmark};
+\node[reject]   at (1.65, -4.55) {\xmark};
+\node[reject]   at (2.75, -4.55) {\xmark};
+\node[reject]   at (3.85, -4.55) {\xmark};
+\node[reject]   at (4.95, -4.55) {\xmark};
+\node[reject]   at (6.05, -4.55) {\xmark};
+\node[reject]   at (7.15, -4.55) {\xmark};
 
 % Grid lines
 \draw[gray!50] (0, 0) -- (7.7, 0);
@@ -392,9 +399,12 @@ This hierarchy explains the quasi-count pattern documented in descriptive gramma
 \draw[gray!50] (7.7, 0) -- (7.7, -4.9);
 
 % Legend
-\node[accept,   label=right:{\small acceptable}] at (9.5, -1.0) {};
-\node[marginal, label=right:{\small marginal}]   at (9.5, -2.0) {};
-\node[reject,   label=right:{\small unacceptable}] at (9.5, -3.0) {};
+\node[accept]   at (9.5, -1.0) {};
+\node[font=\small, anchor=west] at (10.1, -1.0) {acceptable};
+\node[marginal] at (9.5, -2.0) {};
+\node[font=\small, anchor=west] at (10.1, -2.0) {marginal};
+\node[reject]   at (9.5, -3.0) {};
+\node[font=\small, anchor=west] at (10.1, -3.0) {unacceptable};
 
 % Annotations
 \draw[thick, densely dashed] (0, 0) -- (3.3, -2.8) -- (4.4, -4.2) -- (7.7, -4.2);
@@ -460,7 +470,7 @@ The corpus evidence thus converges with the matrix in Figure~\ref{fig:matrix}. \
 \begin{figure}[t]
 \centering
 \begin{tikzpicture}[
-    bar/.style={fill=green!60, draw=gray!50},
+    bar/.style={fill=houseprimary!60, draw=houseprimary!80},
     label/.style={font=\small}
 ]
 
@@ -522,10 +532,10 @@ The corpus evidence thus converges with the matrix in Figure~\ref{fig:matrix}. \
 \centering
 \begin{tikzpicture}[
     label/.style={font=\small},
-    dot three/.style={fill=red!70, draw=red!70, circle, inner sep=1.5pt},
-    dot many/.style={fill=blue!60, draw=blue!60, circle, inner sep=1.5pt},
-    ci three/.style={red!70, thick},
-    ci many/.style={blue!60, thick}
+    dot three/.style={fill=housesecondary, draw=housesecondary, circle, inner sep=1.5pt},
+    dot many/.style={fill=houseprimary, draw=houseprimary, circle, inner sep=1.5pt},
+    ci three/.style={housesecondary, thick},
+    ci many/.style={houseprimary, thick}
 ]
 
 % X axis (log scale)
@@ -630,7 +640,7 @@ The corpus evidence thus converges with the matrix in Figure~\ref{fig:matrix}. \
 % vermin
 \node[label, anchor=east] at (-0.15,0.33) {\term{vermin}};
 \draw[gray!10] (0,0.33) -- (10,0.33);
-\node[font=\scriptsize, red!70] at (-0.15,0.47) {0};
+\node[font=\scriptsize, housesecondary] at (-0.15,0.47) {0};
 \draw[ci many] (5.14,0.18) -- (8.35,0.18);
 \node[dot many] at (7.14,0.18) {};
 
@@ -641,7 +651,7 @@ The corpus evidence thus converges with the matrix in Figure~\ref{fig:matrix}. \
 \node[label, anchor=west] at (5.2,7.75) {\term{many} N};
 
 \end{tikzpicture}
-\caption{Per-million frequency of \term{three} N (red) and \term{many} N (blue) with 95\% Poisson confidence intervals, plotted on a $\log_{10}$ scale. Singulatives cluster at top right (both quantifiers well attested). Quasi-count nouns show the dissociation: \term{many} rates overlap with singulatives, but \term{three} rates plummet. Wide intervals for small counts (\term{three clergy}, \term{many poultry}, \term{many vermin}) indicate that the point estimates are unreliable; the directional pattern is not. Head uses only for \term{police} and \term{cattle}; \term{many} excludes \term{how many}.}
+\caption{Per-million frequency of \term{three} N (coral) and \term{many} N (blue) with 95\% Poisson confidence intervals, plotted on a $\log_{10}$ scale. Singulatives cluster at top right (both quantifiers well attested). Quasi-count nouns show the dissociation: \term{many} rates overlap with singulatives, but \term{three} rates plummet. Intervals for high-count nouns (\term{people}, \term{officers}) are too narrow to see at this scale; intervals for small counts (\term{three clergy}, \term{many poultry}, \term{many vermin}) are wide. The contrast is the point: some estimates are precise, others are not. Head uses only for \term{police} and \term{cattle}; \term{many} excludes \term{how many}.}
 \label{fig:dotplot}
 \end{figure}
 
