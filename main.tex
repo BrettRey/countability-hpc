@@ -830,11 +830,7 @@ Because the critical \term{three folks} cell is too sparse to support a direct c
 The hierarchy predicts that if construction-sensitivity exists, it should be specific to tight properties. Existential constructions foreground exact cardinality (\term{There are three folks waiting in the lobby}); agentive constructions allow it to be backgrounded (\term{Three folks signed the complaint}). \term{Three folks} should show a stronger existential--agentive asymmetry than \term{three people}, and \term{several folks} should show little or none. A 2$\times$2$\times$2 design crossing noun (\term{people} vs.\ \term{folks}), determinative (\term{three} vs.\ \term{several}), and construction type (existential vs.\ agentive), with \term{cattle} as a floor, would test this directly.%
 \footnote{For many speakers, colloquial \term{there's three folks} is more acceptable than \term{there are three folks}, likely reflecting register congruence and the lower precision demands of the invariant existential. The standard agreeing form \term{there are} maintains the high-precision condition. \term{There are three guys} (equally informal but fully count) is acceptable, so the \term{folks} degradation isn't purely register mismatch.}
 
-The preregistered probe (DOI: 10.5281/zenodo.19340604) tested this prediction using two frontier LLMs (Claude Sonnet 4.6 and GPT-5.4) rating 128 critical items (16 VP lexicalizations $\times$ 2 nouns $\times$ 2 determinatives $\times$ 2 constructions) plus 48 graduated fillers on a 1--7 Likert scale. Five independent runs per model yielded 1{,}760 ratings. Filler calibration confirmed that both models used the scale informatively (good fillers $\approx$ 7, degraded $\approx$ 2, ungrammatical $=$ 1).
-
-The hierarchy was confirmed by both models. Claude rated \term{three folks} at 4.95 vs.\ \term{three people} at 7.00 (a 2.05-point suppression of the tight property); GPT-5.4 showed a smaller but consistent gap (5.93 vs.\ 6.92). Claude additionally distinguished tight from moderate: \term{several folks} (6.00) was rated higher than \term{three folks} (4.95), matching the hierarchy's prediction that the moderate property is more acceptable. GPT-5.4 did not make this distinction (\term{three folks} $\approx$ \term{several folks} $\approx$ 5.93), suggesting it represents the \term{folks} degradation as uniform rather than precision-graded.
-
-The construction-sensitivity prediction was not confirmed. Neither model showed an existential--agentive asymmetry for \term{three folks} or any other cell (interaction $\approx$ 0 for both models). Within-model variance was near zero: both models gave effectively deterministic ratings within conditions. This null result is interpretable in three ways: (a) the construction-sensitivity prediction is wrong (existentials don't foreground individuation more than agentives); (b) prompted Likert ratings are too coarse to capture the effect (surprisal-based measurement might be more sensitive); or (c) LLMs don't represent construction-level individuation demands the way human processors do. The probe cannot distinguish these possibilities. What it does show is that the noun $\times$ determinative hierarchy is recoverable from LLM representations even though the construction $\times$ noun interaction is not.
+A preregistered probe (DOI: 10.5281/zenodo.19340604) tested this prediction using two frontier LLMs (Claude Sonnet 4.6 and GPT-5.4). Both models confirmed the noun $\times$ determinative hierarchy: \term{three folks} was rated substantially lower than \term{three people}, matching the tight-property suppression observed in COCA. The construction-sensitivity prediction was not confirmed: neither model showed an existential--agentive asymmetry. Full design, cell means, model comparison, and interpretation are in Appendix~\ref{app:probe}; stimuli, data, and analysis code are at \url{https://github.com/BrettRey/countability-hpc/tree/master/llm-probe}.
 
 \subsection{Summary}
 
@@ -1049,5 +1045,64 @@ I used Claude Opus 4.6, Claude Sonnet 4.5, and ChatGPT 5.1 as drafting aids; I t
 \newpage
 
 \printbibliography
+
+\appendix
+
+\section{LLM judgment probe: design and results}\label{app:probe}
+
+\subsection*{Design}
+
+The probe used a 2$\times$2$\times$2 factorial design crossing noun (\term{people} vs.\ \term{folks}), determinative (\term{three} vs.\ \term{several}), and construction (existential vs.\ agentive), with 16 VP lexicalizations per cell (128 critical items) plus 48 graduated fillers spanning four severity bands (good, mildly degraded, clearly degraded, ungrammatical). Two frontier LLMs (Claude Sonnet 4.6 and GPT-5.4) rated each item on a 1--7 Likert scale; five independent runs per model yielded 1{,}760 ratings. The probe was preregistered at Zenodo (DOI: 10.5281/zenodo.19340604) before any model was queried. Stimuli, data, pre-registration, and analysis code are available at \url{https://github.com/BrettRey/countability-hpc/tree/master/llm-probe}.
+
+\subsection*{Filler calibration}
+
+Both models used the scale informatively. Mean ratings by filler band:
+
+\begin{table}[H]
+\centering
+\begin{tabular}{@{}l r r@{}}
+\toprule
+Filler band & Mean & SD \\
+\midrule
+Good          & 7.00 & 0.00 \\
+Mildly degraded & 5.00 & 1.75 \\
+Clearly degraded & 2.37 & 0.86 \\
+Ungrammatical   & 1.00 & 0.00 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\noindent The four bands separate monotonically, confirming that the scale functions as intended.
+
+\subsection*{Critical cell means}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{@{}l l l r r r r@{}}
+\toprule
+ & & & \multicolumn{2}{c}{Claude Sonnet 4.6} & \multicolumn{2}{c}{GPT-5.4} \\
+\cmidrule(lr){4-5} \cmidrule(lr){6-7}
+Noun & Det & Construction & Mean & SD & Mean & SD \\
+\midrule
+\term{people} & \term{three}   & existential & 7.00 & 0.00 & 6.91 & 0.28 \\
+              &                & agentive    & 7.00 & 0.00 & 6.94 & 0.24 \\
+              & \term{several} & existential & 7.00 & 0.00 & 6.91 & 0.28 \\
+              &                & agentive    & 7.00 & 0.00 & 6.94 & 0.24 \\
+\midrule
+\term{folks}  & \term{three}   & existential & 4.95 & 0.22 & 5.92 & 0.27 \\
+              &                & agentive    & 4.95 & 0.22 & 5.94 & 0.24 \\
+              & \term{several} & existential & 6.00 & 0.00 & 5.92 & 0.27 \\
+              &                & agentive    & 6.00 & 0.00 & 5.94 & 0.24 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection*{Findings}
+
+\textbf{Hierarchy confirmed.} Both models rated \term{three folks} lower than \term{three people} (Claude: 4.95 vs.\ 7.00; GPT-5.4: 5.93 vs.\ 6.92). The tight property is suppressed for the boundary noun, matching the COCA corpus pattern. Claude additionally distinguished tight from moderate: \term{several folks} (6.00) was rated higher than \term{three folks} (4.95). GPT-5.4 did not make this distinction (\term{three folks} $\approx$ \term{several folks} $\approx$ 5.93), suggesting it represents the \term{folks} degradation as uniform rather than precision-graded.
+
+\textbf{Construction-sensitivity null.} Neither model showed an existential--agentive asymmetry for any cell (interaction $\approx$ 0). Within-model variance was near zero: both models gave effectively deterministic ratings within conditions. This null result admits three interpretations: (a) the prediction is wrong; (b) prompted Likert ratings are too coarse to detect the effect; or (c) LLMs don't represent construction-level individuation demands. The probe cannot distinguish these possibilities.
+
+\textbf{Interpretation.} The noun $\times$ determinative hierarchy is recoverable from LLM representations; the construction $\times$ noun interaction is not. This supports the hierarchy as a distributional fact accessible even to models trained on text alone, while leaving the construction-sensitivity prediction open for human acceptability testing.
 
 \end{document}
