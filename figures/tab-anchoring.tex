@@ -1,0 +1,23 @@
+\begin{table}[H]
+\centering
+\caption{Functional anchoring: \mention{three} per million tokens of each noun}
+\label{tab:anchoring}
+\begin{tabular}{@{}l r r l r r r@{}}
+\toprule
+Quasi-count & Freq. & \mention{three}/M & Singulative & Freq. & \mention{three}/M & Ratio \\
+\midrule
+\mention{youth}   & 49{,}846  & 201 & \mention{teenagers} & 13{,}180 & 11{,}912 & 59$\times$ \\
+\mention{police}  & 220{,}858 & 91  & \mention{officers}  & 60{,}161 & 3{,}956 & 44$\times$ \\
+\mention{cattle}  & 14{,}376  & 487 & \mention{cows}      & 9{,}574  & 3{,}865 & 8$\times$ \\
+\mention{clergy}  & 5{,}879   & 510 & \mention{priests}   & 12{,}168 & 2{,}876 & 6$\times$ \\
+\mention{gentry}  & 2{,}126   & 0   & \mention{gentlemen} & 27{,}309 & 1{,}758 & ---         \\
+\mention{vermin}  & 1{,}041   & 0   & \mention{rats}      & 10{,}649 & 657     & ---         \\
+\mention{poultry} & 4{,}544   & 0   & \mention{chickens}  & 8{,}745  & 3{,}431 & ---         \\
+\midrule
+\mention{folks}   & 65{,}895  & 258 & \multicolumn{3}{l}{\textit{no singulative}} & ---         \\
+\bottomrule
+\end{tabular}
+
+\smallskip
+\footnotesize{Note: \mention{Police} and \mention{cattle} counts exclude modifier uses. \mention{Poultry}: the one raw token of \mention{three poultry} is a modifier use (\mention{three poultry houses}). Per-million rates computed relative to total COCA frequency of each noun form. Pairs ordered by ratio; dashes indicate zero denominator. \mention{Folks} (bottom row) is the unanchored control: no functional singulative is available, and the noun shows the predicted variability (\S\ref{sec:folks}).}
+\end{table}

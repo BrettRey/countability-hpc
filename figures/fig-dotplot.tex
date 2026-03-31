@@ -1,0 +1,126 @@
+\begin{figure}[t]
+\centering
+\begin{tikzpicture}[
+    label/.style={font=\small},
+    dot three/.style={fill=housesecondary, draw=housesecondary, circle, inner sep=1.5pt},
+    dot many/.style={fill=houseprimary, draw=houseprimary, circle, inner sep=1.5pt},
+    ci three/.style={housesecondary, thick},
+    ci many/.style={houseprimary, thick}
+]
+
+% X axis (log scale)
+\draw[thick,->] (0,0) -- (10.5,0);
+\node[below, font=\small] at (5.25,-0.4) {per million tokens of noun ($\log_{10}$ scale)};
+\draw (0.00,-0.1) -- (0.00,0.1);
+\node[below, font=\footnotesize] at (0.00,-0.15) {1};
+\draw[gray!20] (0.00,0) -- (0.00,7.45);
+\draw (2.17,-0.1) -- (2.17,0.1);
+\node[below, font=\footnotesize] at (2.17,-0.15) {10};
+\draw[gray!20] (2.17,0) -- (2.17,7.45);
+\draw (4.35,-0.1) -- (4.35,0.1);
+\node[below, font=\footnotesize] at (4.35,-0.15) {100};
+\draw[gray!20] (4.35,0) -- (4.35,7.45);
+\draw (6.52,-0.1) -- (6.52,0.1);
+\node[below, font=\footnotesize] at (6.52,-0.15) {1{,}000};
+\draw[gray!20] (6.52,0) -- (6.52,7.45);
+\draw (8.70,-0.1) -- (8.70,0.1);
+\node[below, font=\footnotesize] at (8.70,-0.15) {10{,}000};
+\draw[gray!20] (8.70,0) -- (8.70,7.45);
+
+% officers (sing.)
+\node[label, anchor=east] at (-0.15,6.83) {\mention{officers} \scriptsize{(sing.)}};
+\draw[gray!10] (0,6.83) -- (10,6.83);
+\draw[ci three] (7.69,6.83) -- (7.93,6.83);
+\node[dot three] at (7.82,6.83) {};
+\draw[ci many] (7.75,6.67) -- (7.98,6.67);
+\node[dot many] at (7.87,6.67) {};
+
+% chickens (sing.)
+\node[label, anchor=east] at (-0.15,6.17) {\mention{chickens} \scriptsize{(sing.)}};
+\draw[gray!10] (0,6.17) -- (10,6.17);
+\draw[ci three] (7.27,6.17) -- (7.97,6.17);
+\node[dot three] at (7.69,6.17) {};
+\draw[ci many] (7.34,6.02) -- (8.03,6.02);
+\node[dot many] at (7.75,6.02) {};
+
+% priests (sing.)
+\node[label, anchor=east] at (-0.15,5.53) {\mention{priests} \scriptsize{(sing.)}};
+\draw[gray!10] (0,5.53) -- (10,5.53);
+\draw[ci three] (7.14,5.53) -- (7.79,5.53);
+\node[dot three] at (7.52,5.53) {};
+\draw[ci many] (8.70,5.38) -- (9.01,5.38);
+\node[dot many] at (8.87,5.38) {};
+
+% people
+\node[label, anchor=east] at (-0.15,4.88) {\mention{people}};
+\draw[gray!10] (0,4.88) -- (10,4.88);
+\draw[ci three] (7.25,4.88) -- (7.31,4.88);
+\node[dot three] at (7.28,4.88) {};
+\draw[ci many] (9.63,4.72) -- (9.64,4.72);
+\node[dot many] at (9.63,4.72) {};
+
+% folks (boundary)
+\node[label, anchor=east] at (-0.15,4.23) {\mention{folks} \scriptsize{(boundary)}};
+\draw[gray!10] (0,4.23) -- (10,4.23);
+\draw[ci three] (4.63,4.23) -- (5.61,4.23);
+\node[dot three] at (5.24,4.23) {};
+\draw[ci many] (8.79,4.08) -- (8.92,4.08);
+\node[dot many] at (8.86,4.08) {};
+
+% clergy
+\node[label, anchor=east] at (-0.15,3.58) {\mention{clergy}};
+\draw[gray!10] (0,3.58) -- (10,3.58);
+\draw[ci three] (4.40,3.58) -- (6.90,3.58);
+\node[dot three] at (5.89,3.58) {};
+\draw[ci many] (7.47,3.43) -- (8.23,3.43);
+\node[dot many] at (7.93,3.43) {};
+
+% cattle
+\node[label, anchor=east] at (-0.15,2.93) {\mention{cattle}};
+\draw[gray!10] (0,2.93) -- (10,2.93);
+\draw[ci three] (4.57,2.93) -- (6.37,2.93);
+\node[dot three] at (5.84,2.93) {};
+\draw[ci many] (7.22,2.78) -- (7.80,2.78);
+\node[dot many] at (7.56,2.78) {};
+
+% youth
+\node[label, anchor=east] at (-0.15,2.27) {\mention{youth}};
+\draw[gray!10] (0,2.27) -- (10,2.27);
+\draw[ci three] (4.09,2.27) -- (5.46,2.27);
+\node[dot three] at (5.01,2.27) {};
+\draw[ci many] (6.81,2.12) -- (7.22,2.12);
+\node[dot many] at (7.04,2.12) {};
+
+% poultry
+\node[label, anchor=east] at (-0.15,1.62) {\mention{poultry}};
+\draw[gray!10] (0,1.62) -- (10,1.62);
+\draw[ci three] (1.78,1.62) -- (6.71,1.62);
+\node[dot three] at (5.09,1.62) {};
+\draw[ci many] (4.64,1.48) -- (7.14,1.48);
+\node[dot many] at (6.13,1.48) {};
+
+% livestock
+\node[label, anchor=east] at (-0.15,0.98) {\mention{livestock}};
+\draw[gray!10] (0,0.98) -- (10,0.98);
+\draw[ci three] (1.38,0.98) -- (6.31,0.98);
+\node[dot three] at (4.69,0.98) {};
+\draw[ci many] (6.37,0.83) -- (7.52,0.83);
+\node[dot many] at (7.11,0.83) {};
+
+% vermin
+\node[label, anchor=east] at (-0.15,0.33) {\mention{vermin}};
+\draw[gray!10] (0,0.33) -- (10,0.33);
+\node[font=\scriptsize, housesecondary] at (-0.15,0.47) {0};
+\draw[ci many] (5.14,0.18) -- (8.35,0.18);
+\node[dot many] at (7.14,0.18) {};
+
+% Legend
+\node[dot three] at (3,7.75) {};
+\node[label, anchor=west] at (3.2,7.75) {\mention{three} N};
+\node[dot many] at (5,7.75) {};
+\node[label, anchor=west] at (5.2,7.75) {\mention{many} N};
+
+\end{tikzpicture}
+\caption{Per-million frequency of \mention{three} N (coral) and \mention{many} N (blue) with 95\% Poisson confidence intervals, plotted on a $\log_{10}$ scale. Singulatives cluster at top right (both quantifiers well attested). Quasi-count nouns show the dissociation: \mention{many} rates overlap with singulatives, but \mention{three} rates plummet. Intervals for high-count nouns (\mention{people}, \mention{officers}) are too narrow to see at this scale; intervals for small counts (\mention{three clergy}, \mention{many poultry}, \mention{many vermin}) are wide. The contrast is the point: some estimates are precise, others are not. Head uses only for \mention{police} and \mention{cattle}; \mention{many} excludes \mention{how many}.}
+\label{fig:dotplot}
+\end{figure}

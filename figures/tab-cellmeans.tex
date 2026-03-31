@@ -1,0 +1,20 @@
+\begin{table}[H]
+\centering
+\begin{tabular}{@{}l l l r r r r@{}}
+\toprule
+ & & & \multicolumn{2}{c}{Claude Sonnet 4.6} & \multicolumn{2}{c}{GPT-5.4} \\
+\cmidrule(lr){4-5} \cmidrule(lr){6-7}
+Noun & Det & Construction & Mean & SD & Mean & SD \\
+\midrule
+\mention{people} & \mention{three}   & existential & 7.00 & 0.00 & 6.91 & 0.28 \\
+              &                & agentive    & 7.00 & 0.00 & 6.94 & 0.24 \\
+              & \mention{several} & existential & 7.00 & 0.00 & 6.91 & 0.28 \\
+              &                & agentive    & 7.00 & 0.00 & 6.94 & 0.24 \\
+\midrule
+\mention{folks}  & \mention{three}   & existential & 4.95 & 0.22 & 5.92 & 0.27 \\
+              &                & agentive    & 4.95 & 0.22 & 5.94 & 0.24 \\
+              & \mention{several} & existential & 6.00 & 0.00 & 5.92 & 0.27 \\
+              &                & agentive    & 6.00 & 0.00 & 5.94 & 0.24 \\
+\bottomrule
+\end{tabular}
+\end{table}

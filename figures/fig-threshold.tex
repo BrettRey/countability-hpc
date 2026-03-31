@@ -1,0 +1,69 @@
+\begin{figure}[t]
+\centering
+\begin{tikzpicture}[
+    axis/.style={thick},
+    grid/.style={gray!20},
+    bar/.style={fill=houseprimary, draw=houseprimary, line width=4pt, rounded corners=1pt},
+    barpartial/.style={fill=green!60, draw=gray!50, line width=4pt, rounded corners=1pt, dash pattern=on 5pt off 3pt},
+    label/.style={font=\small},
+    prop/.style={font=\small}
+]
+
+% Precision axis
+\draw[axis, ->] (0,0.4) -- (0,6.1) node[above, font=\small]{higher precision};
+
+% Thresholds (top to bottom)
+\draw[grid] (-0.2,5.4) -- (9.6,5.4);
+\node[prop, anchor=east] at (-0.25,5.4) {\mention{a}(\mention{n}), \mention{one}};
+
+\draw[grid] (-0.2,4.8) -- (9.6,4.8);
+\node[prop, anchor=east] at (-0.25,4.8) {\mention{how many}};
+
+\draw[grid] (-0.2,4.2) -- (9.6,4.2);
+\node[prop, anchor=east] at (-0.25,4.2) {low cardinals (\mention{three}, \mention{five})};
+
+\draw[grid] (-0.2,3.6) -- (9.6,3.6);
+\node[prop, anchor=east] at (-0.25,3.6) {\mention{several}};
+
+\draw[grid] (-0.2,3.0) -- (9.6,3.0);
+\node[prop, anchor=east] at (-0.25,3.0) {\mention{many}/\mention{few}};
+
+\draw[grid] (-0.2,2.4) -- (9.6,2.4);
+\node[prop, anchor=east] at (-0.25,2.4) {high round numerals};
+
+\draw[grid] (-0.2,1.8) -- (9.6,1.8);
+\node[prop, anchor=east] at (-0.25,1.8) {plural agreement};
+
+\draw[grid] (-0.2,1.0) -- (9.6,1.0);
+\node[prop, anchor=east] at (-0.25,1.0) {bare nominal (baseline)};
+
+% Noun bars (extent = highest threshold typically cleared)
+\draw[bar] (0.7,1.0) -- (0.7,5.4);
+\node[label, anchor=north] at (0.7,0.85) {\mention{book}};
+
+\draw[bar] (2.4,1.0) -- (2.4,4.8);
+\node[label, anchor=north] at (2.4,0.85) {\mention{people}};
+
+\draw[bar] (4.1,1.0) -- (4.1,3.6);
+\draw[barpartial] (4.1,3.6) -- (4.1,4.2); % marginal low cardinals
+\node[label, anchor=north] at (4.1,0.85) {\mention{folks}};
+
+\draw[bar] (5.8,1.0) -- (5.8,3.0);
+\draw[barpartial] (5.8,3.0) -- (5.8,3.6); % occasional \mention{several}
+\node[label, anchor=north] at (5.8,0.85) {\mention{cattle}};
+
+\draw[bar] (7.5,1.0) -- (7.5,1.2);
+\node[label, anchor=north] at (7.5,0.85) {\mention{furniture}};
+
+% Legend (bottom, spaced below x labels)
+\begin{scope}[yshift=-0.8cm]
+  \draw[bar] (2.5,0.3) -- (2.5,0.7);
+  \node[prop, anchor=west] at (2.65,0.5) {licensed};
+  \draw[barpartial] (4.5,0.3) -- (4.5,0.7);
+  \node[prop, anchor=west] at (4.65,0.5) {marginal/variable};
+\end{scope}
+
+\end{tikzpicture}
+\caption{Precision thresholds linking determiners and quantifiers to individuation. Higher positions require tighter individuation. Each noun's bar rises to the highest property it reliably licenses; dashed extensions mark marginal acceptability. \mention{How many} patterns with low cardinals because it presupposes exact enumeration. Nouns project upward until they hit their individuation ceiling: \mention{book} clears all thresholds; \mention{people} stops short of \mention{a}(\mention{n}); \mention{folks} reaches \mention{several} and is marginal with low cardinals; \mention{cattle} reaches \mention{many}; \mention{furniture} stays near the baseline.}
+\label{fig:threshold}
+\end{figure}

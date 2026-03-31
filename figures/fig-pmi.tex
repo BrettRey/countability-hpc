@@ -1,0 +1,104 @@
+\begin{figure}[t]
+\centering
+\begin{tikzpicture}[
+    label/.style={font=\small}
+]
+
+% --- Panel: cattle ---
+\begin{scope}[xshift=0cm]
+\draw[thick,->] (0,-3.5) -- (0,3.5);
+\draw[thick,->] (-0.3,0) -- (6.5,0);
+\node[font=\small, rotate=90, anchor=south] at (-0.6,0) {PMI};
+\node[font=\small, below] at (3.25,-3.8) {determinative frequency ($\log_{10}$)};
+\node[font=\small\bfseries, above] at (3.25,3.5) {\mention{cattle}};
+\draw[gray!40, dashed] (0,0) -- (6.3,0);
+\draw (-0.1,-3) -- (0.1,-3); \node[font=\tiny, left] at (-0.15,-3) {$-3$};
+\draw (-0.1,-2) -- (0.1,-2); \node[font=\tiny, left] at (-0.15,-2) {$-2$};
+\draw (-0.1,-1) -- (0.1,-1); \node[font=\tiny, left] at (-0.15,-1) {$-1$};
+\draw (-0.1,1) -- (0.1,1); \node[font=\tiny, left] at (-0.15,1) {$+1$};
+\draw (-0.1,2) -- (0.1,2); \node[font=\tiny, left] at (-0.15,2) {$+2$};
+\draw (-0.1,3) -- (0.1,3); \node[font=\tiny, left] at (-0.15,3) {$+3$};
+\draw (0.0,-0.1) -- (0.0,0.1); \node[font=\tiny, below] at (0.0,-0.2) {10k};
+\draw (3.0,-0.1) -- (3.0,0.1); \node[font=\tiny, below] at (3.0,-0.2) {100k};
+\draw (6.0,-0.1) -- (6.0,0.1); \node[font=\tiny, below] at (6.0,-0.2) {1M};
+% two (tight)
+\draw[housesecondary!60] (6.17,-3.30) -- (6.17,-1.37);
+\node[housesecondary, font=\tiny] at (6.17,-2.46) {$\blacktriangle$};
+\node[font=\tiny, anchor=north] at (6.17,-2.66) {\mention{two}};
+% three (tight)
+\draw[housesecondary!60] (5.27,-2.19) -- (5.27,0.56);
+\node[housesecondary, font=\tiny] at (5.27,-0.24) {$\blacktriangle$};
+\node[font=\tiny, anchor=north] at (5.27,-0.44) {\mention{three}};
+% each (tight)
+\draw[housesecondary!60] (5.21,-3.30) -- (5.21,-0.73);
+\node[housesecondary, font=\tiny] at (5.21,-1.98) {$\blacktriangle$};
+\node[font=\tiny, anchor=north] at (5.21,-2.18) {\mention{each}};
+% various (moderate)
+\draw[housequinary!60] (3.00,-1.53) -- (3.00,1.72);
+\node[fill=housequinary, minimum size=4pt, inner sep=0pt] at (3.00,0.47) {};
+\node[font=\tiny, anchor=south] at (3.00,0.67) {\mention{various}};
+% many (loose)
+\draw[houseprimary!60] (5.87,1.20) -- (5.87,2.09);
+\node[fill=houseprimary, circle, minimum size=4pt, inner sep=0pt] at (5.87,1.72) {};
+\node[font=\tiny, anchor=south] at (5.87,1.92) {\mention{many}};
+% numerous (loose)
+\node[fill=houseprimary, circle, minimum size=4pt, inner sep=0pt] at (1.64,0.97) {};
+\node[font=\tiny, anchor=south] at (1.64,1.17) {\mention{numerous}};
+\end{scope}
+
+% --- Panel: folks ---
+\begin{scope}[xshift=7cm]
+\draw[thick,->] (0,-3.5) -- (0,3.5);
+\draw[thick,->] (-0.3,0) -- (6.5,0);
+\node[font=\small, below] at (3.25,-3.8) {determinative frequency ($\log_{10}$)};
+\node[font=\small\bfseries, above] at (3.25,3.5) {\mention{folks}};
+\draw[gray!40, dashed] (0,0) -- (6.3,0);
+\draw (-0.1,-3) -- (0.1,-3); \node[font=\tiny, left] at (-0.15,-3) {$-3$};
+\draw (-0.1,-2) -- (0.1,-2); \node[font=\tiny, left] at (-0.15,-2) {$-2$};
+\draw (-0.1,-1) -- (0.1,-1); \node[font=\tiny, left] at (-0.15,-1) {$-1$};
+\draw (-0.1,1) -- (0.1,1); \node[font=\tiny, left] at (-0.15,1) {$+1$};
+\draw (-0.1,2) -- (0.1,2); \node[font=\tiny, left] at (-0.15,2) {$+2$};
+\draw (-0.1,3) -- (0.1,3); \node[font=\tiny, left] at (-0.15,3) {$+3$};
+\draw (0.0,-0.1) -- (0.0,0.1); \node[font=\tiny, below] at (0.0,-0.2) {10k};
+\draw (3.0,-0.1) -- (3.0,0.1); \node[font=\tiny, below] at (3.0,-0.2) {100k};
+\draw (6.0,-0.1) -- (6.0,0.1); \node[font=\tiny, below] at (6.0,-0.2) {1M};
+% two (tight)
+\draw[housesecondary!60] (6.17,-0.97) -- (6.17,-0.17);
+\node[housesecondary, font=\tiny] at (6.17,-0.51) {$\blacktriangle$};
+\node[font=\tiny, anchor=north] at (6.17,-0.71) {\mention{two}};
+% three (tight)
+\draw[housesecondary!60] (5.27,-2.09) -- (5.27,-0.60);
+\node[housesecondary, font=\tiny] at (5.27,-1.16) {$\blacktriangle$};
+\node[font=\tiny, anchor=north] at (5.27,-1.36) {\mention{three}};
+% each (tight)
+\node[housesecondary, font=\tiny] at (5.21,-3.30) {$\blacktriangle$};
+\node[font=\tiny, anchor=north] at (5.21,-3.50) {\mention{each}};
+% several (moderate)
+\draw[housequinary!60] (4.20,-0.21) -- (4.20,1.01);
+\node[fill=housequinary, minimum size=4pt, inner sep=0pt] at (4.20,0.52) {};
+\node[font=\tiny, anchor=south] at (4.20,0.72) {\mention{several}};
+% various (moderate)
+\draw[housequinary!60] (3.00,0.66) -- (3.00,2.06);
+\node[fill=housequinary, minimum size=4pt, inner sep=0pt] at (3.00,1.52) {};
+\node[font=\tiny, anchor=south] at (3.00,1.72) {\mention{various}};
+% many (loose)
+\node[fill=houseprimary, circle, minimum size=4pt, inner sep=0pt] at (5.87,3.30) {};
+\node[font=\tiny, anchor=south] at (5.87,3.50) {\mention{many}};
+% numerous (loose)
+\draw[houseprimary!60] (1.64,-0.36) -- (1.64,2.39);
+\node[fill=houseprimary, circle, minimum size=4pt, inner sep=0pt] at (1.64,1.59) {};
+\node[font=\tiny, anchor=south] at (1.64,1.79) {\mention{numerous}};
+\end{scope}
+
+% Legend (horizontal, centered above both panels — titles are at y=3.5)
+\node[housesecondary, font=\small] at (3.5,4.5) {$\blacktriangle$};
+\node[font=\small, anchor=west] at (3.7,4.5) {tight};
+\node[fill=housequinary, minimum size=5pt, inner sep=0pt] at (5.8,4.5) {};
+\node[font=\small, anchor=west] at (6.0,4.5) {moderate};
+\node[fill=houseprimary, circle, minimum size=5pt, inner sep=0pt] at (8.5,4.5) {};
+\node[font=\small, anchor=west] at (8.7,4.5) {loose};
+
+\end{tikzpicture}
+\caption{PMI (pointwise mutual information) for determinative--noun combinations in COCA, plotted against determinative frequency on a $\log_{10}$ scale. Triangles (coral) = tight determinatives; squares (gold) = moderate; circles (blue) = loose. Whiskers show approximate 95\% Poisson CIs where counts exceed 1. If frequency drove the pattern, PMI should increase with determinative frequency (positive slope). Instead, the vertical separation tracks precision class: tight determinatives (triangles) cluster below zero regardless of frequency; loose determinatives (circles) cluster above. \mention{Two} (1.1M tokens) and \mention{numerous} (35k tokens) differ 32-fold in frequency but fall on opposite sides of zero.}
+\label{fig:pmi}
+\end{figure}
