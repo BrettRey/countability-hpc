@@ -1,0 +1,180 @@
+You're participating in a linguistics study on sentence acceptability. Rate each sentence on a 1-7 scale (1 = completely unacceptable, 7 = perfectly acceptable). Use the full range.
+
+Output ONLY a CSV: item_id,rating — one row per sentence, no header, no explanation.
+
+c001: There were three people waiting in the lobby.
+c002: Three people waited in the lobby.
+c003: There were three people sitting on the bench.
+c004: Three people sat on the bench.
+c005: There were three people standing by the door.
+c006: Three people stood by the door.
+c007: There were three people walking down the hall.
+c008: Three people walked down the hall.
+c009: There were three people gathered near the entrance.
+c010: Three people gathered near the entrance.
+c011: There were three people lined up outside.
+c012: Three people lined up outside.
+c013: There were three people crowding around the table.
+c014: Three people crowded around the table.
+c015: There were three people chatting in the kitchen.
+c016: Three people chatted in the kitchen.
+c017: There were three people huddled by the fire.
+c018: Three people huddled by the fire.
+c019: There were three people milling about in the corridor.
+c020: Three people milled about in the corridor.
+c021: There were three people loitering near the gate.
+c022: Three people loitered near the gate.
+c023: There were three people sheltering under the awning.
+c024: Three people sheltered under the awning.
+c025: There were three people arguing in the hallway.
+c026: Three people argued in the hallway.
+c027: There were three people sleeping on the floor.
+c028: Three people slept on the floor.
+c029: There were three people eating lunch in the break room.
+c030: Three people ate lunch in the break room.
+c031: There were three people reading in the waiting area.
+c032: Three people read in the waiting area.
+c033: There were several people waiting in the lobby.
+c034: Several people waited in the lobby.
+c035: There were several people sitting on the bench.
+c036: Several people sat on the bench.
+c037: There were several people standing by the door.
+c038: Several people stood by the door.
+c039: There were several people walking down the hall.
+c040: Several people walked down the hall.
+c041: There were several people gathered near the entrance.
+c042: Several people gathered near the entrance.
+c043: There were several people lined up outside.
+c044: Several people lined up outside.
+c045: There were several people crowding around the table.
+c046: Several people crowded around the table.
+c047: There were several people chatting in the kitchen.
+c048: Several people chatted in the kitchen.
+c049: There were several people huddled by the fire.
+c050: Several people huddled by the fire.
+c051: There were several people milling about in the corridor.
+c052: Several people milled about in the corridor.
+c053: There were several people loitering near the gate.
+c054: Several people loitered near the gate.
+c055: There were several people sheltering under the awning.
+c056: Several people sheltered under the awning.
+c057: There were several people arguing in the hallway.
+c058: Several people argued in the hallway.
+c059: There were several people sleeping on the floor.
+c060: Several people slept on the floor.
+c061: There were several people eating lunch in the break room.
+c062: Several people ate lunch in the break room.
+c063: There were several people reading in the waiting area.
+c064: Several people read in the waiting area.
+c065: There were three folks waiting in the lobby.
+c066: Three folks waited in the lobby.
+c067: There were three folks sitting on the bench.
+c068: Three folks sat on the bench.
+c069: There were three folks standing by the door.
+c070: Three folks stood by the door.
+c071: There were three folks walking down the hall.
+c072: Three folks walked down the hall.
+c073: There were three folks gathered near the entrance.
+c074: Three folks gathered near the entrance.
+c075: There were three folks lined up outside.
+c076: Three folks lined up outside.
+c077: There were three folks crowding around the table.
+c078: Three folks crowded around the table.
+c079: There were three folks chatting in the kitchen.
+c080: Three folks chatted in the kitchen.
+c081: There were three folks huddled by the fire.
+c082: Three folks huddled by the fire.
+c083: There were three folks milling about in the corridor.
+c084: Three folks milled about in the corridor.
+c085: There were three folks loitering near the gate.
+c086: Three folks loitered near the gate.
+c087: There were three folks sheltering under the awning.
+c088: Three folks sheltered under the awning.
+c089: There were three folks arguing in the hallway.
+c090: Three folks argued in the hallway.
+c091: There were three folks sleeping on the floor.
+c092: Three folks slept on the floor.
+c093: There were three folks eating lunch in the break room.
+c094: Three folks ate lunch in the break room.
+c095: There were three folks reading in the waiting area.
+c096: Three folks read in the waiting area.
+c097: There were several folks waiting in the lobby.
+c098: Several folks waited in the lobby.
+c099: There were several folks sitting on the bench.
+c100: Several folks sat on the bench.
+c101: There were several folks standing by the door.
+c102: Several folks stood by the door.
+c103: There were several folks walking down the hall.
+c104: Several folks walked down the hall.
+c105: There were several folks gathered near the entrance.
+c106: Several folks gathered near the entrance.
+c107: There were several folks lined up outside.
+c108: Several folks lined up outside.
+c109: There were several folks crowding around the table.
+c110: Several folks crowded around the table.
+c111: There were several folks chatting in the kitchen.
+c112: Several folks chatted in the kitchen.
+c113: There were several folks huddled by the fire.
+c114: Several folks huddled by the fire.
+c115: There were several folks milling about in the corridor.
+c116: Several folks milled about in the corridor.
+c117: There were several folks loitering near the gate.
+c118: Several folks loitered near the gate.
+c119: There were several folks sheltering under the awning.
+c120: Several folks sheltered under the awning.
+c121: There were several folks arguing in the hallway.
+c122: Several folks argued in the hallway.
+c123: There were several folks sleeping on the floor.
+c124: Several folks slept on the floor.
+c125: There were several folks eating lunch in the break room.
+c126: Several folks ate lunch in the break room.
+c127: There were several folks reading in the waiting area.
+c128: Several folks read in the waiting area.
+fg01: The children played in the yard all afternoon.
+fg02: She locked the door before leaving the house.
+fg03: Two large dogs ran across the empty road.
+fg04: The manager approved the budget on Friday.
+fg05: Several old photographs were found in the attic.
+fg06: He finished reading the report before dinner.
+fg07: Three red cars were parked outside the building.
+fg08: The teacher explained the problem very clearly.
+fg09: Many tall trees line the edge of the park.
+fg10: She remembered to bring the keys this time.
+fg11: The train arrived exactly on schedule.
+fg12: Several new shops opened on the high street.
+fm01: The horse raced past the barn fell.
+fm02: The old man the boats during the summer months.
+fm03: The fact that the student who the professor liked failed surprised everyone.
+fm04: What did you wonder whether she bought?
+fm05: Who do you think that saw the accident?
+fm06: There seemed to appear to be a problem.
+fm07: The report that the committee had finally submitted was longer than expected.
+fm08: More people than originally anticipated showed up for the event.
+fm09: The reason he gave for not attending sounded quite implausible to us.
+fm10: It was generally believed by most people that she had already resigned.
+fm11: What she actually said to him at the meeting was never entirely clear.
+fm12: Rarely if ever does anyone bother to check the figures twice.
+fd01: Him and me went to the store yesterday morning.
+fd02: She suggested him to leave the room immediately.
+fd03: He denied to have seen the suspect that evening.
+fd04: Them gave we the wrong directions to the hotel.
+fd05: She explained him the rules of the game carefully.
+fd06: The children was playing outside when it started raining.
+fd07: He insisted her to come along to the meeting.
+fd08: Us went to the park after the movie ended.
+fd09: She mentioned him that the deadline had been moved.
+fd10: The students has been working on the project all week.
+fd11: The committee have made their decision and it are final.
+fd12: He recommended her to apply for the position immediately.
+fu01: The walked dog the park in yesterday afternoon.
+fu02: She already been have left the building completely.
+fu03: Into put the bag the groceries she all of.
+fu04: The very ran quickly dog across the field today.
+fu05: Been sleeping is he since early this morning still.
+fu06: There cats two are the on mat sitting now.
+fu07: Gave the to her book he the wrong one.
+fu08: The from house the walked man slowly away then.
+fu09: Not she does understand the at question all here.
+fu10: Yesterday the were playing children outside in rain.
+fu11: To she tried the open but door was locked.
+fu12: Books the are on shelves the in wrong the order.
