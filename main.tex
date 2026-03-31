@@ -576,13 +576,13 @@ Figure~\ref{fig:pmi} displays this dissociation. If frequency determined the pat
 \node[font=\tiny, anchor=south] at (1.64,1.79) {\term{numerous}};
 \end{scope}
 
-% Legend
-\node[housesecondary, font=\small] at (10.5,3) {$\blacktriangle$};
-\node[font=\small, anchor=west] at (10.7,3) {tight};
-\node[fill=housequinary, minimum size=5pt, inner sep=0pt] at (10.5,2.4) {};
-\node[font=\small, anchor=west] at (10.7,2.4) {moderate};
-\node[fill=houseprimary, circle, minimum size=5pt, inner sep=0pt] at (10.5,1.8) {};
-\node[font=\small, anchor=west] at (10.7,1.8) {loose};
+% Legend (bottom-left of cattle panel, where data are sparse)
+\node[housesecondary, font=\small] at (0.8,-2.4) {$\blacktriangle$};
+\node[font=\small, anchor=west] at (1.0,-2.4) {tight};
+\node[fill=housequinary, minimum size=5pt, inner sep=0pt] at (0.8,-2.8) {};
+\node[font=\small, anchor=west] at (1.0,-2.8) {moderate};
+\node[fill=houseprimary, circle, minimum size=5pt, inner sep=0pt] at (0.8,-3.2) {};
+\node[font=\small, anchor=west] at (1.0,-3.2) {loose};
 
 \end{tikzpicture}
 \caption{PMI (pointwise mutual information) for determinative--noun combinations in COCA, plotted against determinative frequency on a $\log_{10}$ scale. Triangles (coral) = tight determinatives; squares (gold) = moderate; circles (blue) = loose. Whiskers show approximate 95\% Poisson CIs where counts exceed 1. If frequency drove the pattern, PMI should increase with determinative frequency (positive slope). Instead, the vertical separation tracks precision class: tight determinatives (triangles) cluster below zero regardless of frequency; loose determinatives (circles) cluster above. \term{Two} (1.1M tokens) and \term{numerous} (35k tokens) differ 32-fold in frequency but fall on opposite sides of zero.}
@@ -1046,6 +1046,7 @@ I used Claude Opus 4.6, Claude Sonnet 4.5, and ChatGPT 5.1 as drafting aids; I t
 
 \printbibliography
 
+\newpage
 \appendix
 
 \section{LLM judgment probe: design and results}\label{app:probe}
@@ -1098,6 +1099,105 @@ Noun & Det & Construction & Mean & SD & Mean & SD \\
 \end{table}
 
 \subsection*{Findings}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[
+    label/.style={font=\small}
+]
+
+% --- Panel: Claude ---
+\begin{scope}[xshift=0cm]
+\node[font=\small\bfseries, above] at (2.5,5.2) {Claude Sonnet 4.6};
+\draw[thick,->] (0,0) -- (0,5);
+\draw[thick,->] (0,0) -- (5.5,0);
+\node[font=\small, rotate=90, anchor=south] at (-0.6,2.5) {Mean rating};
+% Y ticks
+\foreach \y/\lab in {0/1, 0.67/2, 1.33/3, 2.0/4, 2.67/5, 3.33/6, 4.0/7} {
+    \draw (-0.1,\y) -- (0.1,\y);
+    \node[font=\tiny, left] at (-0.15,\y) {\lab};
+}
+% X labels
+\node[font=\small, below] at (1.5,-0.3) {\term{three}};
+\node[font=\small, below] at (4.0,-0.3) {\term{several}};
+
+% people (blue) — both at 7.0
+\draw[houseprimary, thick] (0.8,4.0) -- (1.5,4.0) -- (2.2,4.0);
+\draw[houseprimary, thick] (3.3,4.0) -- (4.0,4.0) -- (4.7,4.0);
+\node[fill=houseprimary, circle, inner sep=2pt] at (1.0,4.0) {};
+\node[fill=houseprimary, circle, inner sep=2pt] at (2.0,4.0) {};
+\node[fill=houseprimary, circle, inner sep=2pt] at (3.5,4.0) {};
+\node[fill=houseprimary, circle, inner sep=2pt] at (4.5,4.0) {};
+
+% folks (coral) — three=4.95, several=6.0
+\draw[housesecondary, thick] (0.8,2.63) -- (1.5,2.63) -- (2.2,2.63);
+\draw[housesecondary, thick] (3.3,3.33) -- (4.0,3.33) -- (4.7,3.33);
+\node[fill=housesecondary, circle, inner sep=2pt] at (1.0,2.63) {};
+\node[fill=housesecondary, circle, inner sep=2pt] at (2.0,2.63) {};
+\node[fill=housesecondary, circle, inner sep=2pt] at (3.5,3.33) {};
+\node[fill=housesecondary, circle, inner sep=2pt] at (4.5,3.33) {};
+
+% Labels within each det panel
+\node[font=\tiny, below] at (1.0,-0.05) {exist};
+\node[font=\tiny, below] at (2.0,-0.05) {agent};
+\node[font=\tiny, below] at (3.5,-0.05) {exist};
+\node[font=\tiny, below] at (4.5,-0.05) {agent};
+
+% Value labels
+\node[font=\tiny, houseprimary, above] at (1.5,4.0) {7.00};
+\node[font=\tiny, housesecondary, below] at (1.5,2.63) {4.95};
+\node[font=\tiny, housesecondary, below] at (4.0,3.33) {6.00};
+\end{scope}
+
+% --- Panel: GPT-5.4 ---
+\begin{scope}[xshift=7cm]
+\node[font=\small\bfseries, above] at (2.5,5.2) {GPT-5.4};
+\draw[thick,->] (0,0) -- (0,5);
+\draw[thick,->] (0,0) -- (5.5,0);
+\node[font=\small, rotate=90, anchor=south] at (-0.6,2.5) {Mean rating};
+\foreach \y/\lab in {0/1, 0.67/2, 1.33/3, 2.0/4, 2.67/5, 3.33/6, 4.0/7} {
+    \draw (-0.1,\y) -- (0.1,\y);
+    \node[font=\tiny, left] at (-0.15,\y) {\lab};
+}
+\node[font=\small, below] at (1.5,-0.3) {\term{three}};
+\node[font=\small, below] at (4.0,-0.3) {\term{several}};
+
+% people (blue) — exist=6.91, agent=6.94
+\draw[houseprimary, thick] (0.8,3.94) -- (2.2,3.96);
+\node[fill=houseprimary, circle, inner sep=2pt] at (1.0,3.94) {};
+\node[fill=houseprimary, circle, inner sep=2pt] at (2.0,3.96) {};
+\draw[houseprimary, thick] (3.3,3.94) -- (4.7,3.96);
+\node[fill=houseprimary, circle, inner sep=2pt] at (3.5,3.94) {};
+\node[fill=houseprimary, circle, inner sep=2pt] at (4.5,3.96) {};
+
+% folks (coral) — three: exist=5.92, agent=5.94; several: same
+\draw[housesecondary, thick] (0.8,3.28) -- (2.2,3.29);
+\node[fill=housesecondary, circle, inner sep=2pt] at (1.0,3.28) {};
+\node[fill=housesecondary, circle, inner sep=2pt] at (2.0,3.29) {};
+\draw[housesecondary, thick] (3.3,3.28) -- (4.7,3.29);
+\node[fill=housesecondary, circle, inner sep=2pt] at (3.5,3.28) {};
+\node[fill=housesecondary, circle, inner sep=2pt] at (4.5,3.29) {};
+
+\node[font=\tiny, below] at (1.0,-0.05) {exist};
+\node[font=\tiny, below] at (2.0,-0.05) {agent};
+\node[font=\tiny, below] at (3.5,-0.05) {exist};
+\node[font=\tiny, below] at (4.5,-0.05) {agent};
+
+\node[font=\tiny, houseprimary, above] at (1.5,3.95) {6.92};
+\node[font=\tiny, housesecondary, below] at (1.5,3.28) {5.93};
+\node[font=\tiny, housesecondary, below] at (4.0,3.28) {5.93};
+\end{scope}
+
+% Legend
+\node[fill=houseprimary, circle, inner sep=2pt] at (10,4.5) {};
+\node[font=\small, anchor=west] at (10.2,4.5) {\term{people}};
+\node[fill=housesecondary, circle, inner sep=2pt] at (10,4.0) {};
+\node[font=\small, anchor=west] at (10.2,4.0) {\term{folks}};
+
+\end{tikzpicture}
+\caption{LLM probe cell means. Parallel lines within each determinative panel confirm no existential--agentive interaction. Vertical separation between \term{people} (blue) and \term{folks} (coral) confirms the hierarchy. Claude distinguishes \term{three folks} (4.95) from \term{several folks} (6.00); GPT-5.4 does not.}
+\label{fig:probe}
+\end{figure}
 
 \textbf{Hierarchy confirmed.} Both models rated \term{three folks} lower than \term{three people} (Claude: 4.95 vs.\ 7.00; GPT-5.4: 5.93 vs.\ 6.92). The tight property is suppressed for the boundary noun, matching the COCA corpus pattern. Claude additionally distinguished tight from moderate: \term{several folks} (6.00) was rated higher than \term{three folks} (4.95). GPT-5.4 did not make this distinction (\term{three folks} $\approx$ \term{several folks} $\approx$ 5.93), suggesting it represents the \term{folks} degradation as uniform rather than precision-graded.
 
