@@ -38,3 +38,22 @@ Format: `## YYYY-MM-DD` then bullet points with **bold topic** and brief rationa
 - **Poisson CIs added to key corpus ratio.** three people 2,226/M (CI: 2,157–2,295) vs three folks 258/M (CI: 137–395); non-overlapping. Confirms 8.6× suppression is inferentially robust.
 - **Long paragraphs split.** Acquisition evidence (257→two), HPC intro (195→two), corpus comparison (204→two), multi-scale stabilizers (183→two), alternatives summary (165→two), formalizing precision (164→two).
 
+## 2026-03-31
+
+- **v2 rewrite (main_v2.tex).** Complete rewrite with pattern-first structure: hierarchy (§3) and evidence (§4) before mechanism (§5). Per Schimel's review-board recommendation. Prose written fresh; figures/tables extracted to figures/ directory. 23 pages, ~9,000 words (from v1's 34/15,400).
+- **Three-level discipline enforced in §2.** Ontology paragraph stays at world structure (farmer/librarian example). Individuation paragraph stays at construal (referents, not nouns). Morphosyntax paragraph introduces the cluster and labels. Syntax-101 analogy added.
+- **Level-slippage audit.** "Expression demands" → "construal requires"; "individuation is bleached" → "speakers construe referents as roles"; "its individuation profile" → "the construal associated with"; figure caption fixed; number-morphology paragraph rewritten to flag bidirectional crossing as the mechanism.
+- **"Kind" → "category".** Reserved "kind" for reporting Boyd's framework; "category" for the paper's own claims. "Natural class" → "predictable region on the hierarchy."
+- **Conclusion leads with projectibility.** Per projectibility reviewer. Mechanism supports, doesn't lead.
+- **Mechanism/stabilizer distinction clarified.** Bidirectional inference generates; anchoring, entrenchment, norms maintain.
+- **Rothstein counting/measuring engaged.** Tight = counting, loose = measuring, but moderate tier (*several*) is where the hierarchy adds something the binary can't capture. Field-relative projectibility argument.
+- **Circularity defence.** Implicational generalization (not definition), independent semantic motivation (Rothstein, Grimm), independent diagnostic (Barner & Snedeker quantity judgments).
+- **LLM probe reframed.** Consistency check, not confirmation. N=2 models, not N=1,760. Zero-variance cells can't detect interactions.
+- **G² robustness check added.** Log-likelihood confirms PMI pattern. p-values dropped; CIs only (Gelman).
+- **Functional anchoring table expanded.** 7 pairs + folks control (from COCA data Brett provided).
+- **Source grounding.** Bloom 1994a verified (Table 3.2 confirmed). Greenwood 1711 bib entry added. \enquote reserved for quotations; single quotes for glosses/senses.
+- **Prototype section expanded.** PMI evidence explicitly connected to frequency-vs-precision divergence.
+- **CxG positioning restored.** One paragraph in stabilizers section. "What CxG lacks isn't the ontology but the diagnostic toolkit."
+- **Goodman cited.** "Projectible" glossed in abstract; Goodman 1955 + Boyd 1991 cited in §2.
+- **Bold-label lists → prose.** Processing/acquisition predictions rewritten with ordinal markers. Appendix findings rewritten as prose.
+

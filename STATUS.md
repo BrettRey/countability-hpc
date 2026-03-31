@@ -1,7 +1,29 @@
 # Status
 
 ## Current state
-34 pages (+ appendix). All sections drafted. Three rounds of review boards completed. Preregistered LLM probe run and reported. GitHub repo live (BrettRey/countability-hpc, CC BY 4.0).
+**v2 (main_v2.tex):** 23 pages, ~9,000 words. Pattern-first structure (hierarchy → evidence → mechanism). All reviewer feedback addressed. Two content review boards run on v2. Figures/tables extracted to figures/. Brett doing a manual read-through; handed off to Codex for continuation.
+
+**v1 (main.tex):** 34 pages, preserved as reference. All 17 original reviewer items addressed.
+
+GitHub repo live (BrettRey/countability-hpc, CC BY 4.0).
+
+## 2026-03-31 Session Notes (afternoon, ~6 hours)
+
+### Major work
+- Complete v2 rewrite from scratch (pattern-first structure per Schimel)
+- Three editorial review boards: writing (Sword/Basbøll/Schimel), content v1 (5 reviewers), content v2 (5 reviewers)
+- §2 rewritten for level discipline (ontology/individuation/morphosyntax in their own lanes)
+- Level-slippage audit across entire paper
+- Rothstein counting/measuring engaged; moderate tier as wedge for field-relative projectibility
+- Circularity defence written
+- G² robustness check computed and added
+- Functional anchoring table expanded (7 pairs + control) from Brett's COCA data
+- Source grounding: Bloom 1994a verified, Greenwood 1711 bib entry, Barner & Snedeker verified
+- House style pass: bold labels → prose, \enquote discipline, contractions, paragraph splits, p-values dropped
+
+### Remaining work
+- Brett doing manual read-through for voice, humour, rhetorical figures
+- Handed to Codex for continuation of editorial pass
 
 ## 2026-03-30 Session Notes (morning → night, ~10 hours)
 
