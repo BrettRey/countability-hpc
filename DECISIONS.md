@@ -56,4 +56,14 @@ Format: `## YYYY-MM-DD` then bullet points with **bold topic** and brief rationa
 - **CxG positioning restored.** One paragraph in stabilizers section. "What CxG lacks isn't the ontology but the diagnostic toolkit."
 - **Goodman cited.** "Projectible" glossed in abstract; Goodman 1955 + Boyd 1991 cited in §2.
 - **Bold-label lists → prose.** Processing/acquisition predictions rewritten with ordinal markers. Appendix findings rewritten as prose.
+- **Linguistics chosen as submission target.** Broad fit for the paper's theory-plus-corpus profile, avoids piling more work into outlets already occupied in the current queue, and does not require an author fee.
+- **Linguistics submission package split from v2.** Prepared a separate blind-review manuscript, title page, and cover letter (`main_linguistics.*`, `linguistics_title_page.*`, `linguistics_cover_letter.md`) instead of altering `main_v2`, so the working draft stays intact while a venue-specific package is ready to upload.
 
+## 2026-05-02
+
+- **v3 theoretical rescue.** Rewrote the paper as `main_v3.tex` without touching submitted/current drafts. New architecture: SPC as empirical floor, Khalidian causal structure as interpretation, Boydian homeostasis as a stronger open maintenance hypothesis. This resolves the over-strong claim that `data/datum` and `pease/pea` prove homeostatic feedback.
+- **Shared-cause model absorbed, not dismissed.** Conventional individuation is treated as a central causal node inside the architecture. The one-variable threshold model remains a serious rival unless diachronic or experimental perturbation evidence shows propagation among diagnostics.
+- **Functional anchoring reframed as exact-count offloading.** `officer`, `cow`, `priest`, etc. are no longer claimed to be coextensive causal anchors. They show offloading capacity and motivate a testable stabilizer hypothesis.
+- **v4 empirical reinforcement.** Revised `main_v4.tex` in place to add noun-sense scope, coding/head-use checks, expanded quasi-count sample, and an auditable PMI/projectibility table. Projectibility claims are now framed as support in a focused domain, not as established proof.
+- **Precision tiering sharpened.** Tight = `a(n)`, singular count syntax, `one`, low cardinals, `how many`, `each/every`; moderate = `several/various` with explicit uncertainty; loose = `many/few`, high round numerals, plural agreement.
+- **v3 committed and pushed.** Commit `fda9c57` (`draft: add v3 countability paper`) pushed to `origin/master`, along with prior local submission-package commit `5ac11cb`. v4 remains uncommitted for review.

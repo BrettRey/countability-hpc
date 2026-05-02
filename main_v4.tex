@@ -1,0 +1,248 @@
+% !TEX TS-program = xelatex
+\documentclass[12pt,a4paper]{article}
+
+% House style preamble
+\input{.house-style/preamble.tex}
+
+% Additional packages for this paper
+\usepackage{setspace}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{tikz}
+\usetikzlibrary{patterns,decorations.pathreplacing}
+\usepackage{pifont}
+\usepackage{orcidlink}
+
+% House colour palette
+\definecolor{houseprimary}{RGB}{46,80,119}
+\definecolor{housesecondary}{RGB}{232,93,76}
+\definecolor{housetertiary}{RGB}{77,163,117}
+\definecolor{housequinary}{RGB}{212,160,62}
+\definecolor{houselight}{RGB}{232,232,232}
+
+% Custom commands for this paper
+\newcommand{\cmark}{\ding{51}}
+\newcommand{\xmark}{\ding{55}}
+\newcommand{\qmark}{?}
+\DeclareRobustCommand{\mentionhead}[1]{\ensuremath{\langle}\textup{#1}\ensuremath{\rangle}}
+
+% Local bibliography
+\addbibresource{references-local.bib}
+
+\title{Projectibility, Individuation, and the English Countability Cluster}
+\author{Brett Reynolds\,\orcidlink{0000-0003-0073-7195}\\Humber Polytechnic \& University of Toronto}
+\date{\today}
+\setlength{\headheight}{13.6pt}
+
+\begin{document}
+
+\maketitle
+
+\noindent\textbf{Keywords:} countability, quasi-count nouns, individuation, projectibility, causal structure, English grammar, COCA
+
+\begin{abstract}
+English countability is often treated as a lexical feature, a semantic ontology, or a loose prototype. I argue instead that English morphosyntactic \term{countability} is a projectible causal cluster: a diagnostic profile organized by mappings between morphosyntax and conventionalized individuation. The empirical floor is an implicational hierarchy.
+
+Tight diagnostics such as \mention{a}(\mention{n}), \mention{how many}, and low cardinals require exact atom access; \mention{several} requires weaker discreteness; \mention{many}, high round numerals, and plural agreement require only magnitude or non-singular construal. Corpus evidence from COCA supports ordered dissociation across a focused noun sample and provides a preliminary sign-based projectibility check. The evidence motivates, but doesn't prove, homeostatic feedback.
+\end{abstract}
+
+%~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- --
+\section{Introduction}
+%~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- --
+
+A student learning English writes \ungram{\mention{I bought three furnitures}}. A copy editor debates whether to keep \mention{this data} or change it to \mention{these data}. A speaker says \mention{many cattle} without hesitation but resists \mention{three cattle}. These are not just lexical accidents. They expose a structured boundary inside English countability.
+
+The boundary matters because English count diagnostics normally travel together. Nouns that take \mention{a}(\mention{n}) normally take low cardinals. Nouns that take low cardinals normally take \mention{many} rather than \mention{much}. Nouns that take \mention{many} normally trigger plural agreement. This clustering is projectible: partial evidence about a noun licenses expectations about diagnostics not yet observed.
+
+Quasi-count nouns show that the clustering isn't all-or-nothing. \mention{Cattle}, \mention{police}, \mention{clergy}, and \mention{poultry} accept loose count diagnostics such as \mention{many} and plural agreement, but they resist tight diagnostics such as \mention{a}(\mention{n}) and low cardinals. \mention{Folks} is less stable: \mention{many folks} and \mention{several folks} are ordinary, while \mention{three folks} varies by speaker, register, and construction.
+
+This paper argues that English morphosyntactic \term{countability} is best treated as a projectible causal cluster. The empirical claim is a structured property cluster (SPC): count diagnostics dissociate in a constrained order, not as a list of exceptions. The philosophical interpretation is Khalidian in spirit: the diagnostics are nodes in a causal structure involving conventionalized individuation, morphosyntax, acquisition, processing, lexical competition, and register \citep{khalidi2013}. The Boydian homeostatic-property-cluster claim is narrower: some parts of this causal network plausibly maintain the cluster over time, but the strongest feedback version needs evidence beyond what the present paper supplies \citep{boyd1991,boyd1999}.
+
+That division of labour is important. A one-variable model with noun-specific conventional individuation and thresholded diagnostics predicts much of the triangular pattern. The right response isn't to deny that model. It is to put it inside the causal architecture. Individuation is not an essence that replaces the cluster; it is a central node through which morphosyntax, construal, and lexical practice interact.
+
+The thesis is therefore modest but substantive. English countability is not reducible to referent ontology, and it is not adequately captured by a static feature bundle. It is a projectible morphosyntactic profile whose diagnostics are connected through conventionalized individuation and learned form--meaning mappings. The present evidence supports the profile and its projectibility in a focused domain. It makes homeostasis a live hypothesis, not a settled verdict.
+
+Existing accounts recognize either the semantic basis of individuation or the descriptive class of quasi-count nouns. The contribution here is to connect them through a diagnostic hierarchy that predicts which count properties survive when conventionalized individuation weakens. The empirical aim is focused: a diagnostic matrix, head-use and noun-sense coding checks, a broader quasi-count sample, and a preliminary test of whether independently assigned precision tiers predict association signs.
+
+The paper proceeds as follows. Section~\ref{sec:levels-v3} separates ontological discreteness, semantic individuation, and morphosyntactic countability. Section~\ref{sec:hierarchy-v3} defines the diagnostic hierarchy and the precision scale before applying it to quasi-count nouns. Section~\ref{sec:evidence-v3} gives corpus evidence, with explicit limits. Section~\ref{sec:causal-v3} lays out the causal-cluster account and the homeostasis/shared-cause issue. Section~\ref{sec:alternatives-v3} compares feature, semantic, prototype, and syntactic alternatives. Section~\ref{sec:tests-v3} states what evidence would decide the stronger causal question.
+
+%~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- --
+\section{Three levels and field-relative projectibility}\label{sec:levels-v3}
+%~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- --
+
+The word \term{countability} hides three different questions. The first is ontological: are there bounded individuals in the world? The second is semantic: does a noun sense conventionally make those individuals available as atoms? The third is morphosyntactic: which grammatical diagnostics does the noun support? The paper concerns the third question, but the answer depends on the second.
+
+\term{Ontological discreteness} concerns world structure. Cows, chairs, books, rice grains, police officers, stories, and observations can all be treated as bounded individuals for many purposes. A farmer can count animals; a librarian can count books; a statistician can count observations. None of that entails that English grammar will package the corresponding noun as fully count.
+
+\term{Semantic individuation} concerns construal. English \mention{cow} packages animals as countable individuals; \mention{cattle} packages them as an aggregate. \mention{chair} packages furniture items as countable individuals; \mention{furniture} packages the same domain as equipment or stuff. The world hasn't changed. The conventional construal has.
+
+\term{Morphosyntactic countability} is the grammatical profile. Key diagnostics include number contrast, articles, low cardinals, \mention{how many}, \mention{many} vs.\ \mention{much}, demonstratives, distributives, and agreement \citep[pp.~333--336]{huddleston2002,allan1980}. A noun sense shows a \term{countability profile}: its pattern across these diagnostics.
+
+\mention{Book} shows the full profile. \mention{Cattle} and \mention{police} show a partial profile. \mention{Furniture} shows a mass profile.
+
+Profiles belong to noun senses, not orthographic strings. A sense split is warranted when the noun supports different grammatical projections and different inferential tasks. \mention{People} in the persons sense differs from \mention{a people} in the ethnic-group sense. \mention{Youth} as a collective differs from \mention{a youth}. Mass \mention{fiction} differs from plural \mention{fictions}. Corpus tokens therefore count only when they instantiate the target sense and put the noun in head position.
+
+The distinction blocks a common slide. It isn't enough to say that the referents of \mention{cattle} are discrete. They are. The question is whether the noun sense gives grammar exact access to those individuals. Conversely, it isn't enough to say that \mention{fiction} is unindividuated. In its ordinary mass use, \mention{fiction} packages a mode, genre, or body of writing; in \mention{three fictions}, the sense shifts toward fabrications, constructs, or individuated works.
+
+The contrast between \mention{story} and \mention{fiction} is a useful miniature. A Borges short story can fall under both categories. But \mention{story} projects bounded narrative-unit properties: \mention{a story}, \mention{three stories}, \mention{this story}. \mention{fiction} projects mode, truth-status, genre, and institutional properties: \mention{much fiction}, \mention{fiction is}, \mention{works of fiction}. The same item in the world supports different inductions under different noun senses.
+
+This is the Boydian point about field-relative projectibility \citep{Goodman1955,boyd1991}. A category is useful when it supports reliable induction for a purpose. Morphosyntactic countability is projectible for grammatical purposes: from \mention{many N}, a learner can project plural agreement; from \mention{a N}, a parser can expect low cardinals; from failure with \mention{three N}, a grammarian can withhold tighter diagnostics while retaining looser ones.
+
+The field-relative point also keeps the theory honest. \mention{Story} may be the better category for narrative questions; \mention{fiction} may be better for literary sociology. Neither directly states what the world contains. Likewise, countability doesn't reveal an ontology of discrete things. It stabilizes grammar-facing inductions over English noun senses.
+
+%~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- --
+\section{The diagnostic hierarchy}\label{sec:hierarchy-v3}
+%~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- --
+
+The empirical target is an implicational hierarchy. Count diagnostics differ in how much individuation precision they require. If a noun clears a tight diagnostic, it should clear the looser diagnostics below it. If it fails a loose diagnostic, it should fail the tighter diagnostics above it. The predicted shape is triangular, not a scatter of unrelated cells.
+
+\term{Precision} needs an independent definition. I use the term for the amount of atom access a diagnostic requires, specified before looking at the quasi-count distribution. A diagnostic is tight when its ordinary interpretation requires selecting exactly one atom, contrasting singular with plural atoms, enumerating an exact small $n$-tuple, or distributing predication over individuated units. It is moderate when it requires discrete atoms but not exact enumeration. It is loose when it requires only magnitude assessment, plurality, or non-singular agreement.
+
+On this definition, \mention{a}(\mention{n}), singular count syntax, \mention{one}, \mention{how many}, low cardinals, and distributives such as \mention{each} and \mention{every} are tight. They require exact atom access or unit-by-unit distribution. \mention{Several} and \mention{various} are moderate: they require plural atoms but not exact enumeration. \mention{Many}, \mention{few}, high round numerals, and plural agreement are loose: they require a plural or magnitude construal without exact enumeration.
+
+The moderate tier is the least secure part of the scale. \mention{Several} expresses vague cardinality over plural atoms, while \mention{various} adds diversity among atoms. They share weaker atom access, but they may not form a single natural subtype. The present evidence treats them as a boundary tier rather than as a settled class.
+
+This scale is not derived from the behaviour of \mention{cattle} and \mention{police}. It follows from the semantic and processing demands of the diagnostics. Low cardinals count exact atoms. \mention{Many} compares quantity with a contextual standard. Agreement tracks number features and can be satisfied by non-singular construal. The quasi-count facts test whether that independently motivated ordering predicts English noun profiles.
+
+\input{figures/fig-threshold.tex}
+
+\input{figures/fig-matrix.tex}
+
+The hierarchy makes falsifiable predictions. No noun should accept \mention{three N} while rejecting \mention{many N} in the same sense. No noun should accept \mention{a N} while requiring \mention{much N} rather than \mention{many N}. A noun should not accept a tight diagnostic, reject a moderate one, and then accept a looser one without an independent sense shift or constructional explanation.
+
+The core quasi-count nouns occupy the middle of the hierarchy. \mention{Cattle}, \mention{police}, \mention{clergy}, \mention{poultry}, \mention{vermin}, and \mention{livestock} take plural agreement and accept \mention{many}; they resist \mention{a}(\mention{n}), singular count syntax, \mention{how many}, and low cardinals. This is the class \emph{CGEL} calls quasi-count nouns \citep[p.~345]{huddleston2002}. \textcite{corbett2019} discusses related cases as reduced number possibilities.
+
+\input{figures/tab-diagnostic-matrix-v4.tex}
+
+Table~\ref{tab:diagnostic-matrix-v4} makes the same claim less schematically. It also marks two sources of apparent counterexample. First, some strings are sense-shifted rather than profile-preserving: \mention{three fictions} is not ordinary mass \mention{fiction}. Second, some corpus hits are modifier uses rather than counted heads: \mention{three police officers} does not show that \mention{police} itself accepts \mention{three}.
+
+The distinction is semantic and conventional, not purely morphological. \mention{People} lacks the regular singular \mention{*a people} in the persons sense, but \mention{person} supplies a suppletive singular, and \mention{three people} is fully ordinary. \mention{Cattle} has no such ordinary singular counterpart and doesn't give grammar exact atom access in the same way. Both refer to discrete beings; only one noun sense conventionally packages them as exact count atoms.
+
+The same ordering handles boundary cases. American English \mention{folks} is plural-only in its relevant sense and conventionally carries warmth, solidarity, or in-group construal. Those meanings foreground the group without erasing individuals. The result is an unstable middle position: \mention{many folks} and \mention{several folks} are ordinary, while \mention{three folks} is possible for many speakers but marked compared with \mention{three people}.
+
+%~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- --
+\section{Corpus evidence and its limits}\label{sec:evidence-v3}
+%~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- --
+
+COCA data support the hierarchy, but the evidence should be read at the right strength \citep{davies2020coca}. The strongest result is not that every cell is well estimated. Several cells are sparse. The strongest result is that the attested dissociations are ordered: tight diagnostics are suppressed where loose diagnostics remain available.
+
+\input{figures/tab-coca-v3.tex}
+
+The main coding issue is modifier use. Raw strings such as \mention{three police} and \mention{three cattle} often do not have \mention{police} or \mention{cattle} as the head noun. \mention{Three police officers} contains \mention{police} as a modifier, not as the counted head. \mention{Three cattle breeds} and \mention{three cattle guards} work the same way. Filtering these uses is essential because English nominal modifiers are characteristically number-neutral.
+
+\input{figures/tab-coding-v4.tex}
+
+The filtered pattern is clear. \mention{People} is fully compatible with tight and loose diagnostics. \mention{Folks} is much less frequent with \mention{three} than \mention{people}, while remaining common with \mention{many}. \mention{Police} and \mention{cattle} have very low head-use rates with \mention{three}, but they occur with \mention{many} and plural agreement. The \mention{cattle} estimate is especially sensitive to coding criteria, so the exact per-million value shouldn't carry much theoretical weight.
+
+\input{figures/tab-expansion-v4.tex}
+
+The expanded sample is not large enough for fine-grained modelling, but it widens the empirical target. \mention{Clergy}, \mention{livestock}, \mention{poultry}, and \mention{vermin} preserve the same directional pattern: loose diagnostics are easier to find than tight ones. \mention{Youth} is deliberately retained as a contaminated case because it shows why noun-sense coding matters. The collective/quasi-count use and the count-singular use \mention{a youth} should not be collapsed in a final model.
+
+The modifier pattern itself is informative. \mention{Cattle}, \mention{police}, \mention{livestock}, and \mention{poultry} occur freely before another noun. Their number is morphologically uncommitted in modifier function. Fully count plurals such as \mention{cows} and \mention{people} rarely do. This diagnostic tracks number commitment rather than countability as a whole, and it explains why raw corpus counts overstate tight-diagnostic compatibility for quasi-count nouns.
+
+\input{figures/tab-frequency-v3.tex}
+
+Frequency alone doesn't explain the pattern. \mention{Two} is far more frequent than \mention{numerous}, but \mention{two cattle} is repelled while \mention{numerous cattle} is attracted, subject to the sparse-cell caution in Table~\ref{tab:frequency-v3}. Likewise, \mention{many folks} is strongly attracted while \mention{three folks} is repelled. This doesn't prove that precision is the only explanation. It does show that raw determinative frequency is not sufficient.
+
+\input{figures/tab-projectibility-v4.tex}
+
+Table~\ref{tab:projectibility-v4} gives a small projectibility check and displays the cells behind it. The precision tiers are assigned before the COCA association signs are inspected. The number-compatible \mention{people} cells are attracted across the displayed diagnostics. The quasi-count nouns repel the tight determinatives and attract the loose ones. The moderate tier is visibly less clean: \mention{folks} is attracted with both moderate determinatives, while \mention{cattle} splits between unattested \mention{several cattle} and attracted \mention{various cattle}. This is a preliminary sign check, not a held-out prediction model.
+
+The broader corpus tables add directional support but not a full statistical model. Very small cells occur for \mention{three clergy} and \mention{three livestock}. The loose cells for \mention{many poultry} and \mention{many vermin} are small too. \mention{Youth} mixes a collective/quasi-count use with the count-singular sense \mention{a youth}. \mention{Livestock} and \mention{poultry} are frequent modifiers. A final empirical version should publish token lists, coding rules, inter-coder checks, and a model with noun, diagnostic, register, sense, and modifier/head status.
+
+The present corpus evidence is therefore best stated as follows. It supports ordered dissociation for the clearest cases and makes a simple frequency account implausible. It doesn't yet estimate the full hierarchy across English with the precision needed for typological or diachronic generalization. The claim supported here is projectibility in a focused domain, not a completed corpus grammar of countability.
+
+The earlier LLM probe is not used as core evidence. At most, it is exploratory distributional triangulation for the sparse \mention{three folks} cell. Its effective sample size is two models, not the number of prompted ratings, and it doesn't confirm the predicted construction-sensitive asymmetry. Human acceptability data are needed before construction effects can bear theoretical weight.
+
+%~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- --
+\section{Causal architecture}\label{sec:causal-v3}
+%~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- --
+
+The hierarchy needs an explanation. The simplest one is a latent conventional-individuation variable with thresholds. Each noun sense has a conventional default: high atom access for \mention{book}, suppletive but high atom access for \mention{people}, partial atom access for \mention{cattle}, low atom access for \mention{furniture}. Each diagnostic sets a threshold on that variable. Tight diagnostics require high values; loose diagnostics require lower values.
+
+That model predicts much of the triangular pattern. It should therefore not be treated as the enemy of the paper. The better claim is that conventional individuation is a central causal node in a wider network. It is shaped by referent salience, lexical history, morphology, acquisition, processing, register, and competition from neighbouring expressions. It then shapes diagnostic compatibility. This is a causal-structure claim rather than an essence claim.
+
+In comprehension, count morphosyntax cues individuation. Hearing \mention{many cattle} licenses a non-singular magnitude construal. Hearing \mention{three cattle} asks for exact enumeration and therefore clashes with the noun's default profile. In production, speakers choosing exact enumeration tend to choose a count alternative such as \mention{cows}, \mention{officers}, or \mention{people}. Iterated over learners and speakers, those choices stabilize a profile.
+
+This is where a weak but substantive homeostatic reading enters. The properties are not definitionally linked. They are connected because speakers learn mappings between form and construal, and those mappings make some extensions easier than others. If a noun begins to occur with tight diagnostics often enough, learners receive evidence for stronger individuation. If tight diagnostics remain offloaded to a count alternative, the quasi-count noun can persist in an intermediate state.
+
+\input{figures/tab-anchoring-v3.tex}
+
+Functional anchoring should be stated as an offloading hypothesis, not as a demonstrated causal law. A count alternative counts as a plausible anchor only if it is accessible, frequent enough, register-compatible, available in exact-count contexts, and close enough in reference for the relevant communicative task. \mention{Officer} is not equivalent to \mention{police}; \mention{cow} is not equivalent to \mention{cattle}; \mention{priest} is not equivalent to \mention{clergy}. The theory should tolerate mismatch only when the exact-count task tolerates it too.
+
+Table~\ref{tab:anchoring-v3} shows offloading capacity: ordinary count alternatives occur with \mention{three} far more readily than the quasi-count nouns do. That is expected if they are ordinary count nouns, so it doesn't prove that they stabilize the quasi-count profile. It motivates a testable prediction: where exact-counting pressure is routinely satisfied by a salient count alternative, pressure on the quasi-count noun to regularize should be weaker.
+
+\subsection{Homeostasis or shared cause?}\label{sec:homeostasis-v3}
+
+The strongest homeostatic claim would say that perturbing one count property can cause changes in the others while conventional individuation is held fixed. The present evidence doesn't establish that. It establishes clustering, ordered dissociation, and plausible stabilizers. A one-variable conventional-individuation model remains a serious rival.
+
+\mention{Data} illustrates the problem. The older count-plural use depended on \mention{datum} as a singular counterpart. As \mention{datum} recedes, \mention{data} increasingly occurs with singular agreement, \mention{this data}, and mass-like uses such as \mention{much data} \citep{garner2016}. This is compatible with homeostasis: loss of a singulative property is followed by changes elsewhere in the profile.
+
+But it is also compatible with a shared-cause account. The conventional individuation profile of \mention{data} may have changed. Speakers may now package the domain as information, evidence, or a dataset rather than as individual observations. The referent ontology hasn't changed, but the relevant variable in this paper is not ontology. It is conventionalized semantic individuation, and that can change.
+
+\mention{Pease} to \mention{pea} raises the same issue in reverse. The final /z/ of \mention{pease} was reanalysed as plural morphology; speakers then back-formed singular \mention{pea}, with \mention{a pea}, \mention{three peas}, and \mention{many peas} following \citep[s.v.\ \mention{pea}, \emph{n.\textsuperscript{1}}]{oed}. The \emph{OED} attests singular \mention{pea} by 1666, and \textcite[p.~49]{greenwood1711} documents the singular/plural contrast explicitly.
+
+This looks like a property-level perturbation, but it can also be described as lexical reanalysis. Speakers created a new count lexical item \mention{pea}/\mention{peas}; once the new item had a count profile, the diagnostics aligned. Again, the sequence is consistent with homeostasis, not decisive evidence for it.
+
+The conclusion is methodological. The paper should not ask readers to choose between \term{HPC} and \term{shared cause} as if they were mutually exclusive. Shared causal structure is part of the architecture. The open question is whether the shared node is static and one-directional, or whether form--meaning mappings produce feedback strong enough to count as homeostatic maintenance.
+
+%~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- --
+\section{Alternatives}\label{sec:alternatives-v3}
+%~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- --
+
+Feature-bundle accounts treat countability as a lexical or grammatical feature: [\(\pm\)count], [\(\pm\)plural], [\(\pm\)bounded] \citep{chomsky1965,allan1980}. They capture real co-occurrence patterns and can label quasi-count nouns. But the ordered dissociation has to be stipulated. Why should \mention{cattle} keep \mention{many} and plural agreement while losing \mention{a}(\mention{n}) and \mention{three}? A feature label describes the profile; it doesn't predict the hierarchy.
+
+Syntacticist approaches move countability into functional structure. On \textcite{borer2005}'s view, nouns become countable through functional heads rather than lexical essence. This is a useful correction to lexical-feature views. But the same question recurs: why do some diagnostics interact more tightly with individuation than others? A syntactic account can add thresholds to functional heads, but then it has accepted the hierarchy rather than explained it away.
+
+Semantics-driven accounts have the strongest overlap with the present proposal. Atomicity, minimal parts, and counting versus measuring matter \citep{chierchia1998,rothstein2010,grimm2018}. The present account relies on that work for the independent precision scale. Low cardinals require access to atoms that can be exhaustively enumerated. \mention{Many} requires a quantity comparison against a contextual standard. Agreement can track non-singular construal even when exact atoms are not fully available.
+
+That semantic grounding is a virtue, not a concession. It prevents \term{precision} from being merely a name for the observed corpus distribution. The price is that semantic accounts become serious competitors. If atom-access semantics plus noun-specific conventional individuation predicts the whole diagnostic matrix, the stronger homeostatic claim loses its independent role.
+
+The added claim here is morphosyntactic and projective. Semantic demands become grammatical expectations over noun senses. Once a speaker learns that a noun accepts one diagnostic, that evidence licenses predictions about others. A semantic account explains why \mention{three} and \mention{many} differ; the cluster account explains why that contrast becomes a stable profile across articles, numerals, agreement, modifier behaviour, and lexical alternatives.
+
+Prototype approaches easily accommodate gradience \citep{taylor2003,aarts2007}. \mention{Cattle} can be less count-like than \mention{cow}; \mention{folks} can be peripheral. But prototypes by themselves don't state the implicational direction. They don't predict that a noun can keep \mention{many} while losing \mention{three}, but not the reverse. A frequency-weighted prototype account also struggles with the \mention{two}/\mention{numerous} contrast in Table~\ref{tab:frequency-v3}.
+
+The proposed account is strongest where it stays sequential. First, establish a structured property cluster. Second, show that the cluster is projectible for grammatical purposes. Third, locate the cluster in a causal network centred on conventionalized individuation. Fourth, propose homeostatic maintenance where there is evidence for feedback or stabilizing pressure. The fourth step should not bear the whole argument.
+
+%~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- --
+\section{What would decide the issue?}\label{sec:tests-v3}
+%~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- --
+
+The central empirical challenge is to separate three things: referent discreteness, conventional individuation, and property-level feedback. The present corpus evidence separates the first from the other two. It shows that discrete referents do not guarantee full count syntax. It does less to separate conventional individuation from homeostatic feedback.
+
+A result favouring the one-variable model would be broad. If a preregistered precision scale plus noun-specific conventional individuation values predicted diagnostic behaviour across many nouns, registers, and decades, with no lagged effects among diagnostics after controlling for sense and genre, the stronger homeostatic claim should be abandoned. The cluster would still be projectible, but its causal organization would be thresholded rather than feedback-driven.
+
+A result favouring homeostasis would show propagation. Diachronic time-series could help if one diagnostic changed first and later predicted changes in other diagnostics while semantic domain, sense, register, and genre stayed controlled. For \mention{data}, that would mean showing that loss of \mention{datum} preceded and statistically predicted singular agreement, \mention{this data}, \mention{much data}, and reduced numeral compatibility, rather than merely co-occurring with a broader sense shift.
+
+Experimental perturbation would be cleaner. Speakers could learn nonce nouns with fixed referent scenes but different diagnostic exposure. One group hears a novel noun with plural agreement; another hears it with \mention{many}; another hears it with neutral mass syntax. If exposure to one count diagnostic increases acceptance of untrained diagnostics such as \mention{three}, \mention{a}(\mention{n}), or \mention{several}, beyond what the visual/semantic scene predicts, the homeostatic-feedback claim gains support.
+
+Human acceptability work is also needed for \mention{folks}. The relevant study should estimate speaker variation, register effects, and construction effects. The prediction is not simply that \mention{three folks} is bad. It is that \mention{three folks} should be worse than \mention{several folks}, worse than \mention{three people}, and especially sensitive to constructions that foreground exact enumeration. The LLM probe cannot settle this.
+
+Functional anchoring requires matched tests. Before looking at the target distribution, define anchor strength by reference overlap, accessibility, frequency, register match, substitution in exact-count contexts, and diachronic availability. Then compare quasi-count nouns with strong, weak, and absent anchors. If anchor strength predicts long-term stability after controlling for frequency and semantic domain, the offloading hypothesis earns causal status.
+
+The strongest analysis, then, does not have to choose between SPC, Khalidian causal nodes, and Boydian HPC. It uses them in order. SPC states the empirical floor. Khalidi-style causal structure explains why conventional individuation is a real node rather than an essence. Boydian HPC names the stronger maintenance claim where projectibility is stabilized by mechanisms. In the present case, projectibility is supported in a focused domain; causal organization is argued; homeostasis remains a constrained research hypothesis.
+
+%~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- --
+\section{Conclusion}\label{sec:conclusion-v3}
+%~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- ~-- --
+
+English morphosyntactic countability is a projectible causal cluster. The diagnostics are not definitionally linked, and they do not merely report the discreteness of the world. They dissociate in a constrained order because English noun senses differ in conventionalized individuation, and the diagnostics place different precision demands on that individuation.
+
+This reframing preserves the paper's main empirical contribution. Quasi-count nouns are not awkward exceptions to a binary count/mass distinction. They reveal an implicational hierarchy: tight diagnostics fail first, loose diagnostics persist longest, and intermediate nouns occupy predictable regions of the space.
+
+It also keeps the philosophical claim appropriately narrow. The argument does not rely on the \mention{data} and \mention{pea} histories to defeat every shared-cause model. Those cases are consistent with homeostatic maintenance, and they suggest useful diachronic tests, but they are not decisive perturbation experiments. The shared-cause model is partly right: conventional individuation is central. The issue is whether that node sits in a static threshold model or in a feedback system maintained by learning, processing, and lexical competition.
+
+The payoff is projectibility. From partial evidence about a noun's count profile, speakers and analysts can make licensed predictions about other diagnostics. \mention{Many cattle} predicts plural agreement without predicting \mention{a cattle}. \mention{Three people} predicts \mention{how many people}. \mention{Fiction} and \mention{story} can overlap extensionally while projecting different grammatical and disciplinary inferences. That is the right scale for countability: not ontology, not an arbitrary feature, but a field-relative grammatical cluster embedded in causal structure.
+
+\section*{Acknowledgments}
+
+I used Claude Opus 4.6, Claude Sonnet 4.5, ChatGPT 5.1, and GPT-5 as drafting aids. I take responsibility for all remaining claims, errors, and interpretations.
+
+\newpage
+
+\printbibliography
+
+\end{document}
