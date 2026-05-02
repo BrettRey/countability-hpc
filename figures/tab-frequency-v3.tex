@@ -1,0 +1,18 @@
+\begin{table}[H]
+\centering
+\caption{Frequency does not by itself predict compatibility}
+\label{tab:frequency-v3}
+\begin{tabular}{@{}l r l l r r@{}}
+\toprule
+Determinative & COCA freq. & Tier & Noun & Observed & PMI \\
+\midrule
+\mention{two}      & 1{,}141{,}704 & tight & \mention{cattle} & 3   & $-2.46$ \\
+\mention{numerous} & 35{,}176      & loose & \mention{cattle} & 1   & $+0.97$ \\
+\mention{three}    & 571{,}941     & tight & \mention{folks}  & 17  & $-1.16$ \\
+\mention{many}     & 904{,}039     & loose & \mention{folks}  & 783 & $+3.71$ \\
+\bottomrule
+\end{tabular}
+
+\smallskip
+\footnotesize{Note: PMI = pointwise mutual information. Positive values indicate attraction relative to chance; negative values indicate repulsion. The \mention{two cattle} count is filtered to head uses. The \mention{numerous cattle} cell is sparse and should be read directionally.}
+\end{table}
